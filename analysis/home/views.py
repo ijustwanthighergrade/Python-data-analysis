@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from django.shortcuts import render
 import mpld3
-
+from home.models import MarriageSurvey
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
         # Construct the full path to the Excel file
@@ -38,8 +38,48 @@ def home(request):
     return render(request, 'home/home.html', c)
 
 def analysis(request):
-
-    return render(request, 'home/analysis.html')
+    survey_data = MarriageSurvey.objects.all()
+    data_list = []
+    for survey in survey_data:
+        survey_data = {
+            'timestamp': survey.timestamp,
+            'gender': survey.gender,
+            'education': survey.education,
+            'age': survey.age,
+            'salary': survey.salary,
+            'is_married': survey.is_married,
+            'marriage_intention': survey.marriage_intention,
+            'agree_buying_house': survey.agree_buying_house,
+            'buying_house_influence': survey.buying_house_influence,
+            'marriage_house_requirement': survey.marriage_house_requirement,
+            'afford_house_price': survey.afford_house_price,
+            'buying_house_impact_life': survey.buying_house_impact_life,
+            'government_support': survey.government_support,
+            'family_planning': survey.family_planning,
+            'desire_for_children': survey.desire_for_children,
+            'legal_recognition': survey.legal_recognition,
+            'tradition': survey.tradition,
+            'responsibility_sharing': survey.responsibility_sharing,
+            'sacrifice_lifestyle': survey.sacrifice_lifestyle,
+            'affordability': survey.affordability,
+            'marriage_expenses_affordability': survey.marriage_expenses_affordability,
+            'stable_career_before_family': survey.stable_career_before_family,
+            'child_rearing_cost_affordability': survey.child_rearing_cost_affordability,
+            'non_economic_factor_relationship': survey.non_economic_factor_relationship,
+            'family_adjustment_concerns': survey.family_adjustment_concerns,
+            'trustworthiness': survey.trustworthiness,
+            'fear_of_commitment': survey.fear_of_commitment,
+            'freedom_loss_after_marriage': survey.freedom_loss_after_marriage,
+            'no_partner': survey.no_partner,
+            'fear_of_marriage_failure': survey.fear_of_marriage_failure,
+            'anycommond': survey.anycommond,
+        }
+        data_list.append(survey_data)  # 将该对象的字段数据添加到列表中
+        
+    alliwanttoshow={}
+    alliwanttoshow['data_list']=data_list
+    # print(alliwanttoshow['data_list'])
+    return render(request, 'home/analysis.html',alliwanttoshow)
 
 # The graph in home
 def birthrate():
