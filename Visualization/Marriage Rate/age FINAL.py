@@ -7,8 +7,12 @@ Created on Fri Dec  8 20:01:54 2023
 
 import matplotlib.pyplot as plt
 import pandas as pd
+import os
+script_dir = os.path.dirname(os.path.abspath(__file__))
 
-file = pd.read_excel('age1.xlsx')
+    # Construct the full path to the Excel file
+age = os.path.join(script_dir, 'age1.xlsx')
+file = pd.read_excel(age)
 
 # Assuming columns D to O contain the values you want for the pie chart
 # Adjust the column selection as needed

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualization</title>
+    <script type="text/javascript" src="{% static "js/nav.js" %}"> </script> 
+</head>
+<body>
+
+    {% include 'home\header.html' %}
+    <div class="wrapper">
+        <div class="content">
+
+            <h1>Data Visualization</h1>
+            <div class="tab-container">
+                <div class="tab" onclick="showContent('content1', this)">House Price</div>
+                <div class="tab" onclick="showContent('content2', this)">Marriage Rate</div>
+                <div class="tab" onclick="showContent('content3', this)">Birth Rate</div>
+            </div>
+            <div class="contentofallgraph">
+                <div class="actualcontent">
+                     <div id="content1" class="contenta">
+                        <div class="wgraph"> 
+                            {{housepriceindex|safe}}
+                        </div>
+                    </div>
+                    <div id="content2" class="contenta">
+                        <h2>Education Level</h2>
+                        <div class="wgraph"> 
+                            {{educationlevelM|safe}}
+                        </div>
+                        <div class="wgraph"> 
+                            {{educationlevelF|safe}}
+                        </div>
+                        <div class="wgraph"> 
+                            {{educationlevelTotlePieChart|safe}}
+                        </div>
+                        <h2>Marriage Status</h2>
+                        <div class="wgraph"> 
+                            {{maritalstatusM|safe}}
+                        </div>
+                        
+                        <div class="wgraph"> 
+                            {{maritalstatusF|safe}}
+                        </div>
+                        <div class="wgraph"> 
+                            {{maritalstatusPIECHART|safe}}
+                        </div>
+                        <h2>Total Marriage Number</h2>
+                        
+                        <div class="wgraph"> 
+                            {{totalmarriagesnumber|safe}}
+                        </div>
+                        <div class="wgraph"> 
+                            {{totalmarriagesnumberF|safe}}
+                        </div>
+                        <div class="wgraph"> 
+                            {{totalmarriagesnumberM|safe}}
+                        </div>
+                        <div class="wgraph"> 
+                            {{totalmarriagesPIECHART|safe}}
+                        </div>
+                    </div>
+                    <div id="content3" class="contenta">
+                        <div class="wgraph"> 
+                            {{birthrate|safe}}
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+            
+        </div>    
+    </div>
+
+    {% include 'home\footer.html' %}
+
+
+</body>
+</html>
+<script>
+    showContent('content1', document.querySelector('.tab.active'));
+
+    function showContent(contentId, tab) {
+        var allContents = document.querySelectorAll('.contenta');
+        var allTabs = document.querySelectorAll('.tab');
+        
+        allContents.forEach(function(content) {
+            if (content.id === contentId) {
+                content.style.display = 'block';
+                
+            } else {
+                content.style.display = 'none';
+            }
+        });
+        allTabs.forEach(function (tab) {
+            tab.classList.remove('active');
+        });
+        tab.classList.add('active');
+    }
+</script>

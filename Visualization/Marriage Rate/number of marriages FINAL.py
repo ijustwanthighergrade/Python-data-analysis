@@ -11,9 +11,14 @@ Created on Fri Dec  8 21:31:22 2023
 
 import matplotlib.pyplot as plt
 import pandas as pd
-
+import os
 # Read the Excel file
 totalmarriages = 'number of marriages1.xlsx'
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
+        # Construct the full path to the Excel file
+totalmarriages = os.path.join(script_dir, 'number of marriages1.xlsx')
+
 df = pd.read_excel(totalmarriages)
 
 # Filter data for 'Male' and 'Female'
@@ -59,7 +64,7 @@ plt.show()
 import matplotlib.pyplot as plt
 import pandas as pd
 
-file = pd.read_excel('number of marriages1.xlsx')
+file = pd.read_excel(totalmarriages)
 
 # Extract relevant data for 'First Marriage' and 'Remarriage'
 First_marriage = file['First Marriage'].sum()
@@ -85,7 +90,7 @@ plt.show()
 import matplotlib.pyplot as plt
 import pandas as pd
 
-file = pd.read_excel('number of marriages1.xlsx')
+file = pd.read_excel(totalmarriages)
 
 # Filter data for 'Male'
 Male_data = file[file['Sex'] == 'Male']
@@ -117,7 +122,7 @@ plt.show()
 import matplotlib.pyplot as plt
 import pandas as pd
 
-file = pd.read_excel('number of marriages1.xlsx')
+file = pd.read_excel(totalmarriages)
 
 # Filter data for 'Female'
 female_data = file[file['Sex'] == 'Female']

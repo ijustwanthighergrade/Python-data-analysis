@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analysis</title>
+    <link href="{% static "css/index.css" %}" rel="stylesheet">   
+    <script type="text/javascript" src="{% static "js/nav.js" %}"> </script>
+</head>
+<body>
+
+    <header>
+        <div id="menu-btn" onclick="openNav()">&#9776;</div>
+        <h1>Correlation Analysis Between Housing Prices and Willingness To Get Married
+        </h1>
+    </header>
+    
+    <div id="sidebar">
+      <div class="sidebartop">
+        <div class="sidebartitle" >MENU</div>
+        <div id="cmenu-btn" onclick="closeNav()">&#9932;</div>
+      </div>
+        
+      <div class="sidebarbot">
+        <ul class="nav-section">
+          <li><a href="#">Hypothesis</a></li>
+          <li><a href="#">Data collection</a></li>
+          <li><a href="">Data Visualization</a></li>
+          <li><a href="analysis">Data Analysis</a></li>
+          <li><a href="#">Conclusion</a></li>
+        </ul> 
+      </div>
+    </div>
+
+</body>
+</html>

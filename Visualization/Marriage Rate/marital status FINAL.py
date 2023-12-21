@@ -9,8 +9,12 @@ Created on Fri Dec  8 22:54:10 2023
 #####################################
 import pandas as pd
 import matplotlib.pyplot as plt
-
+import os
 maritalstatus = 'maritalstatus1.xlsx'
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
+    # Construct the full path to the Excel file
+maritalstatus = os.path.join(script_dir, 'maritalstatus1.xlsx')
 
 df = pd.read_excel(maritalstatus)
 
@@ -63,6 +67,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 maritalstatus = 'maritalstatus1.xlsx'
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
+    # Construct the full path to the Excel file
+maritalstatus = os.path.join(script_dir, 'maritalstatus1.xlsx')
 
 df = pd.read_excel(maritalstatus)
 
@@ -113,8 +121,13 @@ plt.show()
 
 import matplotlib.pyplot as plt
 import pandas as pd
+maritalstatus = 'maritalstatus1.xlsx'
+script_dir = os.path.dirname(os.path.abspath(__file__))
 
-file = pd.read_excel('maritalstatus1.xlsx')
+    # Construct the full path to the Excel file
+maritalstatus = os.path.join(script_dir, 'maritalstatus1.xlsx')
+
+file = pd.read_excel(maritalstatus)
 
 # Filter data for 'Male' and 'Female'
 male_data = file[file['Sex'] == 'Male']

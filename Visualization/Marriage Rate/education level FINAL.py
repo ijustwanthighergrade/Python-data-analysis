@@ -12,7 +12,11 @@ Created on Sat Dec  9 00:03:41 2023
 import pandas as pd
 import matplotlib.pyplot as plt
 
-educationlevel = 'educationlevel1.xlsx'
+import os
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
+    # Construct the full path to the Excel file
+educationlevel = os.path.join(script_dir, 'educationlevel1.xlsx')
 
 df = pd.read_excel(educationlevel)
 
@@ -63,7 +67,11 @@ plt.show()
 import pandas as pd
 import matplotlib.pyplot as plt
 
-educationlevel = 'educationlevel1.xlsx'
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
+    # Construct the full path to the Excel file
+educationlevel = os.path.join(script_dir, 'educationlevel1.xlsx')
+
 
 df = pd.read_excel(educationlevel)
 
@@ -111,8 +119,12 @@ plt.show()
 
 import matplotlib.pyplot as plt
 import pandas as pd
+script_dir = os.path.dirname(os.path.abspath(__file__))
 
-file = pd.read_excel('educationlevel1.xlsx')
+    # Construct the full path to the Excel file
+educationlevel = os.path.join(script_dir, 'educationlevel1.xlsx')
+
+file = pd.read_excel(educationlevel)
 
 # Filter data for 'Male' and 'Female'
 male_data = file[file['Sex'] == 'Male']

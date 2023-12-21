@@ -7,9 +7,15 @@ Created on Sun Dec  3 22:56:04 2023
 
 import pandas as pd
 import matplotlib.pyplot as plt
-
+import os
 birthrate1 = 'birthrate1.xlsx'
+# Get the directory of the script
+script_dir = os.path.dirname(os.path.abspath(__file__))
 
+# Construct the full path to the Excel file
+birthrate1 = os.path.join(script_dir, 'birthrate1.xlsx')
+
+# Read the Excel file
 df = pd.read_excel(birthrate1)
 
 # Sort the DataFrame by 'Year'

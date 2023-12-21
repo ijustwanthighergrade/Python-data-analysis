@@ -7,9 +7,14 @@ Created on Sat Dec  9 00:55:00 2023
 
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
 
 housepriceindex = 'housepriceindex1.xlsx'
 
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
+    # Construct the full path to the Excel file
+housepriceindex = os.path.join(script_dir, 'housepriceindex1.xlsx')
 df = pd.read_excel(housepriceindex)
 
 # Variables: Taipei City, New Taipei City, Taoyuan City, Hsinchu County and City, Taichung City, Tainan City, Kaohsiung City
@@ -32,9 +37,10 @@ for city in cities:
 plt.xlabel('Years')
 plt.ylabel('House Price Index')
 plt.title('House Price Index in Different Cities in Taiwan (years 89-110)')
+print(df.columns)
 
 # Set x-axis ticks and labels
-plt.xticks(line_positions, df['Year'])
+plt.xticks(line_positions, df['Annual season'])
 
 # Show legend
 plt.legend()
