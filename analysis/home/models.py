@@ -1,16 +1,15 @@
-# Create your models here.
 # models.py
 from django.db import models
 
 class MarriageSurvey(models.Model):
-    timestamp = models.DateTimeField(auto_now_add=True)
+    timestamp = models.DateTimeField()
     gender = models.CharField(max_length=10)
     education = models.CharField(max_length=50)
-    age = models.IntegerField()
-    salary = models.DecimalField(max_digits=10, decimal_places=2)
-    is_married = models.BooleanField()
-    marriage_intention = models.CharField(max_length=255)
-    agree_buying_house = models.BooleanField()
+    age = models.CharField(max_length=10)  # Modify this based on your actual age data
+    salary = models.CharField(max_length=50)
+    is_married = models.CharField(max_length=3)  # Assuming "是" or "否"
+    marriage_intention = models.IntegerField()
+    agree_buying_house = models.IntegerField()
     buying_house_influence = models.IntegerField()
     marriage_house_requirement = models.IntegerField()
     afford_house_price = models.IntegerField()
@@ -33,6 +32,7 @@ class MarriageSurvey(models.Model):
     freedom_loss_after_marriage = models.IntegerField()
     no_partner = models.IntegerField()
     fear_of_marriage_failure = models.IntegerField()
-    anycommond = models.CharField(max_length=50)
+    anycommond = models.CharField(max_length=50, blank=True, null=True)  # Add blank=True, null=True to handle existing rows
+
     def __str__(self):
         return f"Marriage Survey - {self.timestamp}"
