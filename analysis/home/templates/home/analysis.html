@@ -14,7 +14,9 @@
 
         <div class="content">
             <h1>Preface</h1>
-            <p>Your content goes here.</p>
+            {% for item in data_list %}
+                <div>{{item}}</div>
+            {% endfor %}
         </div>    
     </div>
 
