@@ -7,9 +7,11 @@ import pandas as pd
 from django.shortcuts import render
 import mpld3
 from home.models import MarriageSurvey
+from apyori import apriori
+
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
-        # Construct the full path to the Excel file
+# Construct the full path to the Excel file
 maritalstatus = os.path.join(script_dir, 'data\maritalstatus1.xlsx')
 script_dir = os.path.dirname(os.path.abspath(__file__))
 totalmarriages = os.path.join(script_dir, r'data\number_of_marriages1.xlsx')
@@ -74,8 +76,7 @@ def analysis(request):
             'fear_of_marriage_failure': survey.fear_of_marriage_failure,
             'anycommond': survey.anycommond,
         }
-        data_list.append(survey_data)  # 将该对象的字段数据添加到列表中
-        
+        data_list.append(survey_data)  
     alliwanttoshow={}
     alliwanttoshow['data_list']=data_list
     # print(alliwanttoshow['data_list'])

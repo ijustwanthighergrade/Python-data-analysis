@@ -1,0 +1,38 @@
+
+#analysis_container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+
+#analysis_sidebar {
+    width: 15%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#analysis_main-content {
+    flex-grow: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 85%;
+    background-color: aliceblue;
+}
+
+.analysis_menu-title {
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.analysis_sub-menu {
+    display: none;
+    margin-left: 15px;
+}
+
+.analysis_sub-menu-item {
+    cursor: pointer;
+    margin-bottom: 5px;
+}

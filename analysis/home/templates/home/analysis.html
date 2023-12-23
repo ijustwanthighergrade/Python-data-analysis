@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Analysis</title>
     <script type="text/javascript" src="{% static "js/nav.js" %}"> </script>
+    <link href="{% static "css/analysis.css" %}" rel="stylesheet">   
 </head>
 <body>
 
@@ -14,9 +15,42 @@
 
         <div class="content">
             <h1>Preface</h1>
-            {% for item in data_list %}
-                <div>{{item}}</div>
-            {% endfor %}
+            
+        <div id="analysis_container">
+            <div id="analysis_sidebar">
+                <div class="analysis_menu-title" onclick="toggleSubMenu('analysis_menu1')">Menu 1</div>
+                <div class="analysis_sub-menu" id="analysis_menu1">
+                    <div class="analysis_sub-menu-item" onclick="showContent('content1')">Submenu 1.1</div>
+                    <div class="analysis_sub-menu-item" onclick="showContent('content1')">Submenu 1.2</div>
+                    <!-- Add more submenu items as needed -->
+                </div>
+
+                <div class="analysis_menu-title" onclick="toggleSubMenu('analysis_menu2')">Menu 2</div>
+                <div class="analysis_sub-menu" id="analysis_menu2">
+                    <div class="analysis_sub-menu-item" onclick="showContent('content2')">Submenu 2.1</div>
+                    <div class="analysis_sub-menu-item" onclick="showContent('content2')">Submenu 2.2</div>
+                    <!-- Add more submenu items as needed -->
+                </div>
+
+                <!-- Add more menu titles and submenus as needed -->
+            </div>
+
+            <div id="analysis_main-content">
+                <div id="content1" style="display: none;">
+                    <!-- Content for Submenu 1 -->
+                    <h2>Content for Submenu 1</h2>
+                    {% for item in data_list %}
+                        <div>{{item}}</div>
+                    {% endfor %}
+                </div>
+                <div id="content2" style="display: none;">
+                    <!-- Content for Submenu 2 -->
+                    <h2>Content for Submenu 2</h2>
+                </div>
+                <!-- Your main content goes here -->
+            </div>
+        </div>
+            
         </div>    
     </div>
 
@@ -25,3 +59,17 @@
 
 </body>
 </html>
+<script>
+    function toggleSubMenu(menuId) {
+        const subMenu = document.getElementById(menuId);
+        subMenu.style.display = subMenu.style.display === 'none' ? 'block' : 'none';
+    }
+    function showContent(contentId) {
+        const contentDiv = document.getElementById(contentId);
+        // Hide all content divs
+        const allContentDivs = document.querySelectorAll('#analysis_main-content > div');
+        allContentDivs.forEach(div => div.style.display = 'none');
+        // Show the selected content div
+        contentDiv.style.display = 'block';
+    }
+</script>
