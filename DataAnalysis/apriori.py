@@ -6,16 +6,16 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 age = os.path.join(script_dir, "collect.xlsx")
 all_columns = pd.read_excel(age, nrows=0).columns.tolist()
 df = pd.read_excel(age)
-last_column_index = df.index[-1]-1
+last_column_index = df.index[-1]
 print("最后一列的索引:", last_column_index)
 
 output_file_path = os.path.join(script_dir, "output.txt")
 with open(output_file_path, "w") as output_file:
-    for k in range(7,last_column_index):
+    for k in range(7,last_column_index-1):
         for i in range(6):
 
-
             selected_columns = [i+1, k]
+            
             selected_columns_names = [all_columns[j] for j in selected_columns]
             
             print(selected_columns_names)
@@ -26,9 +26,7 @@ with open(output_file_path, "w") as output_file:
             # print(data_list)
 
             # 使用apriori算法
-            results = list(apriori(data_list, min_support=0.1, min_confidence=0.2, min_lift=1.3, max_length=2))
-
-            # print(results)
+            results = list(apriori(data_list, min_support=0.1, min_confidence=0.2, min_lift=1.3, max_length=2))# print(results)
             # 
             for result in results:
                 pair = result[0] 
