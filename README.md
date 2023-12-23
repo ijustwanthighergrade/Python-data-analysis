@@ -9,3 +9,4 @@ After you check it, please run:
 python manage.py runserver
 
 Then you can see the website.
+test
