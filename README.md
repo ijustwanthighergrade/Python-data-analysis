@@ -10,3 +10,7 @@ After you check it, please run:
 python manage.py runserver
 
 Then you can see the website.
+## Before update new code, clone the project from github first:
+click Git bash here, and type:
+git clone https://github.com/ijustwanthighergrade/Python-data-analysis.git
+
