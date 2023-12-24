@@ -3,3 +3,5 @@ django
 pandas
 openpyxl
 matplotlib
+apyori
+mpld3
