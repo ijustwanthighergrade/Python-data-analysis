@@ -26,7 +26,7 @@ with open(output_file_path, "w") as output_file:
             # print(data_list)
 
             # 使用apriori算法
-            results = list(apriori(data_list, min_support=0.1, min_confidence=0.2, min_lift=1.3, max_length=2))# print(results)
+            results = list(apriori(data_list, min_support=0.1, min_confidence=0.3, min_lift=1.3, max_length=2))# print(results)
             # 
             for result in results:
                 pair = result[0] 
