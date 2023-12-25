@@ -10,7 +10,7 @@ After you check it, please run:
 python manage.py runserver
 
 Then you can see the website.
-## Before update new code, clone the project from github first:
-click Git bash here, and type:
-git clone https://github.com/ijustwanthighergrade/Python-data-analysis.git
+## Before update your code, update the project from github first:
+Use vscode open the terminal, and make sure the termial path is on project path,
+then type "git pull" on the terminal. p.s. don't type "" on terminal.
 
