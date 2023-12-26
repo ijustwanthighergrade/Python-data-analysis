@@ -28,17 +28,17 @@ with open(output_file_path, "w") as output_file:
             # 使用apriori算法
             results = list(apriori(data_list, min_support=0.1, min_confidence=0.3, min_lift=1.3, max_length=2))# print(results)
             # 
+            outputnum=0
             for result in results:
                 pair = result[0] 
                 products = [x for x in pair]
-                output_file.write("Selected Columns: " + str(selected_columns_names) + "\n")
-                output_file.write("Rule: " + products[0] + " →" + products[1] + "\n")
-                output_file.write("Support: " + str(result[1]) + "\n")
-                output_file.write("Confidence: " + str(result[2][0][2]) + "\n")
                 if len(result[2]) > 1:
+                    print(outputnum+1)
+                    output_file.write("Selected Columns: " + str(selected_columns_names) + "\n")
+                    output_file.write("Rule: " + products[0] + " →" + products[1] + "\n")
+                    output_file.write("Support: " + str(result[1]) + "\n")
+                    output_file.write("Confidence: " + str(result[2][0][2]) + "\n")
                     output_file.write("Lift: " + str(result[2][1][3]) + "\n")
-                else:
-                    output_file.write("Lift: N/A\n")
-                output_file.write("==================================\n")
+                    output_file.write("==================================\n")
 
 print("Output written to:", output_file_path)

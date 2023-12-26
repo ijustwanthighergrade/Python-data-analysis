@@ -17,11 +17,41 @@
             <h1>Data Visualization</h1>
             <div class="tab-container">
                 <div class="tab" onclick="showContent('content1', this)">House Price</div>
+                <div class="tab" onclick="showContent('content4', this)">Income</div>
                 <div class="tab" onclick="showContent('content2', this)">Marriage Rate</div>
                 <div class="tab" onclick="showContent('content3', this)">Birth Rate</div>
             </div>
             <div class="contentofallgraph">
                 <div class="actualcontent">
+                    <div id="content4" class="contenta">
+                        <div class="wgraph"> 
+                            {{incomeMidtermpopulation|safe}}
+                        </div>
+                        <div class="wgraph"> 
+                            {{incomeAverageexchangerate|safe}}
+                        </div>
+                        <div class="wgraph"> 
+                            {{incomeEconomicgrowthrate|safe}}
+                        </div>
+                        <div class="wgraph"> 
+                            {{incomeGDP|safe}}
+                        </div>
+                        <div class="wgraph"> 
+                            {{incomeAverageGDP|safe}}
+                        </div>
+                        <div class="wgraph"> 
+                            {{incomeGNI|safe}}
+                        </div>
+                        <div class="wgraph"> 
+                            {{incomeAverageGNI|safe}}
+                        </div>
+                        <div class="wgraph"> 
+                            {{incomeNational|safe}}
+                        </div>
+                        <div class="wgraph"> 
+                            {{incomeAverageperson|safe}}
+                        </div>
+                    </div>
                      <div id="content1" class="contenta">
                         <div class="wgraph"> 
                             {{housepriceindex|safe}}
@@ -30,29 +60,41 @@
                     <div id="content2" class="contenta">
                         <h2>Education Level</h2>
                         <div class="wgraph"> 
-                            {{educationlevelM|safe}}
+                            {{educationlevelUNIVERSITY|safe}}
                         </div>
                         <div class="wgraph"> 
-                            {{educationlevelF|safe}}
+                            {{educationlevelDIPLOMA|safe}}
+                        </div>
+                        <div class="wgraph"> 
+                            {{educationlevelHIGHSCHOOL|safe}}
+                        </div>
+                        <div class="wgraph"> 
+                            {{educationlevelJUNIORHIGH|safe}}
+                        </div>
+                        <div class="wgraph"> 
+                            {{educationlevelElemental|safe}}
                         </div>
                         <div class="wgraph"> 
                             {{educationlevelTotlePieChart|safe}}
                         </div>
                         <h2>Marriage Status</h2>
                         <div class="wgraph"> 
-                            {{maritalstatusM|safe}}
-                        </div>
-                        
-                        <div class="wgraph"> 
-                            {{maritalstatusF|safe}}
+                            {{maritalstatusUNMARRIED|safe}}
                         </div>
                         <div class="wgraph"> 
-                            {{maritalstatusPIECHART|safe}}
+                            {{maritalstatusDIVORCED|safe}}
+                        </div>
+                        <div class="wgraph"> 
+                            {{maritalstatusWIDOWED|safe}}
                         </div>
                         <h2>Total Marriage Number</h2>
                         
                         <div class="wgraph"> 
                             {{totalmarriagesnumber|safe}}
+                        </div>
+                        
+                        <div class="wgraph"> 
+                            {{age|safe}}
                         </div>
                         <div class="wgraph"> 
                             {{totalmarriagesnumberF|safe}}

@@ -3,6 +3,7 @@ import os
 import io
 import base64
 import matplotlib.pyplot as plt
+from matplotlib.ticker import MaxNLocator
 import pandas as pd
 from django.shortcuts import render
 import mpld3
@@ -13,29 +14,47 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Construct the full path to the Excel file
 maritalstatus = os.path.join(script_dir, 'data\maritalstatus1.xlsx')
-script_dir = os.path.dirname(os.path.abspath(__file__))
 totalmarriages = os.path.join(script_dir, r'data\number_of_marriages1.xlsx')
+
+educationlevel = os.path.join(script_dir, r'data\educationlevel1.xlsx')
+file_path = os.path.join(script_dir, r'data\income1.xlsx')
 
 def home(request):
     c = {}
-    c['birthrate'] = birthrate_to_base64()
+    c['birthrate'] = birthrate()
     
-    c['housepriceindex'] = housepriceindex_to_base64()
+    c['housepriceindex'] = housepriceindex()
     
-    c['age'] =age_to_base64()
+    c['age'] =age()
     
-    c['educationlevelM'] =educationlevelM_to_base64()
-    c['educationlevelF'] =educationlevelF_to_base64()
-    c['educationlevelTotlePieChart'] =educationlevelTotlePieChart_to_base64()
+    c['educationlevelUNIVERSITY'] =UNIVERSITY()
+    c['educationlevelDIPLOMA'] =DIPLOMA()
+    c['educationlevelHIGHSCHOOL'] =HIGHSCHOOL()
+    c['educationlevelJUNIORHIGH'] =JUNIORHIGH()
+    c['educationlevelElemental'] =Elemental()
+    c['educationlevelTotlePieChart'] =educationlevelTotlePieChart()
     
-    c['maritalstatusM'] =maritalstatusM_to_base64()
-    c['maritalstatusF'] =maritalstatusF_to_base64()
-    c['maritalstatusPIECHART'] =maritalstatusPIECHART_to_base64()
+    # c['maritalstatusPIECHART'] =maritalstatusPIECHART()
+    c['maritalstatusUNMARRIED'] =maritalstatusUNMARRIED()
+    c['maritalstatusDIVORCED'] =maritalstatusDIVORCED()
+    c['maritalstatusWIDOWED'] =maritalstatusWIDOWED()
+
     
-    c['totalmarriagesnumber'] =totalmarriagesnumber_to_base64()
-    c['totalmarriagesnumberF'] =totalmarriagesnumberF_to_base64()
-    c['totalmarriagesnumberM'] =totalmarriagesnumberM_to_base64()
-    c['totalmarriagesPIECHART'] =totalmarriagesPIECHART_to_base64()
+    c['totalmarriagesnumber'] =totalmarriagesnumber()
+    c['totalmarriagesnumberF'] =totalmarriagesnumberF()
+    c['totalmarriagesnumberM'] =totalmarriagesnumberM()
+    c['totalmarriagesPIECHART'] =totalmarriagesPIECHART()
+    
+    #income
+    c['incomeMidtermpopulation'] =incomeMidtermpopulation()
+    c['incomeAverageexchangerate'] =incomeAverageexchangerate()
+    c['incomeEconomicgrowthrate'] =incomeEconomicgrowthrate()
+    c['incomeGDP'] =incomeGDP()
+    c['incomeAverageGDP'] =incomeAverageGDP()
+    c['incomeGNI'] =incomeGNI()
+    c['incomeAverageGNI'] =incomeAverageGNI()
+    c['incomeNational'] =incomeNational()
+    c['incomeAverageperson'] =incomeAverageperson()
 
     return render(request, 'home/home.html', c)
 
@@ -91,7 +110,6 @@ def birthrate():
     # Construct the full path to the Excel file
     birthrate1 = os.path.join(script_dir, 'data/birthrate1.xlsx')
 
-    # Read the Excel file
     df = pd.read_excel(birthrate1)
 
     # Sort the DataFrame by 'Year'
@@ -110,10 +128,8 @@ def birthrate():
     ax.set_xlabel('Year')
     ax.set_ylabel('Number of Births')
     ax.set_title('Total number of births (89 ~ 110 Taiwan years)')
+    fig = fig_to_base64(fig)
 
-    # Do not show the plot here
-
-    # Return the Matplotlib figure
     return fig
 
 def housepriceindex():
@@ -122,31 +138,37 @@ def housepriceindex():
 
     # Construct the full path to the Excel file
     housepriceindex = os.path.join(script_dir, 'data/housepriceindex1.xlsx')
-    df = pd.read_excel(housepriceindex)
+    df_house_price = pd.read_excel(housepriceindex)
 
-    # Variables: Taipei City, New Taipei City, Taoyuan City, Hsinchu County and City, Taichung City, Tainan City, Kaohsiung City
+    # Define a list of cities for which the analysis will be conducted
     cities = ['Taipei City', 'New Taipei City', 'Taoyuan City', 'Hsinchu County and City', 'Taichung City', 'Tainan City', 'Kaohsiung City']
 
-    # Reverse the order of the data
-    df = df[::-1]
+    # Reverse the order of the data in the DataFrame
+    df_house_price = df_house_price[::-1]
 
-    # Create a line chart for education levels
+    # Create a new figure and axis for the plot
     fig, ax = plt.subplots(figsize=(13, 8))
 
-    # Set the positions for the lines
-    line_positions = range(len(df))
+    # Set the positions for the lines on the x-axis
+    line_positions = range(len(df_house_price))
 
     # Plot lines for each city with different colors
     for city in cities:
-        plt.plot(line_positions, df[city], marker='o', label=city, alpha=0.7)
-
-    # Set labels and title
+        plt.plot(line_positions, df_house_price[city], marker='o', label=city, alpha=0.7)
+        
+    # Set labels and title for the plot
     plt.xlabel('Years')
     plt.ylabel('House Price Index')
     plt.title('House Price Index in Different Cities in Taiwan (years 89-110)')
 
-    # Set x-axis ticks and labels
-    plt.xticks(line_positions, df['Annual season'])
+    # Set x-axis ticks and labels with custom locator
+    ax.xaxis.set_major_locator(MaxNLocator(nbins=10))
+    plt.xticks(line_positions[::len(line_positions)//10], df_house_price['Years'][::len(df_house_price)//10])
+
+    # Show legend for the plotted lines
+    plt.legend()
+
+    fig = fig_to_base64(fig)
 
     # Return the Matplotlib figure
     return fig
@@ -159,8 +181,6 @@ def age():
 
     file = pd.read_excel(age)
 
-    # Assuming columns D to O contain the values you want for the pie chart
-    # Adjust the column selection as needed
     total_under_15 = file['Under 15 years old'].sum()
     total_15_19 = file['15-19 years old'].sum()
     total_20_24 = file['20-24 years old'].sum()
@@ -187,6 +207,206 @@ def age():
     )
 
     plt.title('Total Average Number of Marriages divided by age from years 89 - 110')
+    fig = fig_to_base64(fig)
+
+    return fig
+def DIPLOMA():
+    df = pd.read_excel(educationlevel)
+    # Filter data for 'Male'
+    male_data = df[df['Sex'] == 'Male']
+    female_data = df[df['Sex'] == 'Female']
+
+    # Reverse the order of the data
+    male_data = male_data[::-1]
+    female_data = female_data[::-1]
+
+    # Create a line chart for 'Male' education levels
+    fig, ax = plt.subplots(figsize=(13, 8))
+
+    def create_line_positions(data):
+        return {
+            'diploma': range(len(data)),
+        }
+
+    line_positions_male = create_line_positions(male_data)
+    line_positions_female = create_line_positions(female_data)
+
+    # Plot 'Male' lines for education levels with different colors
+    plt.plot(line_positions_male['diploma'], male_data['Diploma'], marker='o', label='Male Diploma', color='blue')
+    plt.plot(line_positions_female['diploma'], female_data['Diploma'], marker='o', label='Female Diploma', color='salmon')
+
+    # Set labels and title
+    plt.xlabel('Years')
+    plt.ylabel('Number of Individuals')
+    plt.title('Education Level of the Male Population in Taiwan years 89-110 (Diploma)')
+
+    # Set x-axis ticks and labels with rotation
+    plt.xticks(line_positions_male['diploma'], male_data['Year'], rotation=45, ha='right')
+
+    # Show grid lines
+    plt.grid(True)
+
+    # Show legend
+    plt.legend()
+    fig = fig_to_base64(fig)
+    return fig
+
+def UNIVERSITY():
+   
+    df = pd.read_excel(educationlevel)
+
+    # Filter data for 'Male'
+    male_data = df[df['Sex'] == 'Male']
+    female_data = df[df['Sex'] == 'Female']
+
+    # Reverse the order of the data
+    male_data = male_data[::-1]
+    female_data = female_data[::-1]
+
+    # Create a line chart for 'Male' education levels
+    fig, ax = plt.subplots(figsize=(13, 8))
+
+    def create_line_positions(data):
+        return {
+            'university': range(len(data)),
+        }
+
+    line_positions_male = create_line_positions(male_data)
+    line_positions_female = create_line_positions(female_data)
+
+    # Plot 'Male' lines for education levels with different colors
+    plt.plot(line_positions_male['university'], male_data['University Graduate'], marker='o', label='Male University Graduate', color='blue')
+    plt.plot(line_positions_female['university'], female_data['University Graduate'], marker='o', label='Female University Graduate', color='salmon')
+
+    # Set labels and title
+    plt.xlabel('Years')
+    plt.ylabel('Number of Individuals')
+    plt.title('Education Level of the Male Population in Taiwan years 89-110 (University level)')
+
+    # Set x-axis ticks and labels with rotation
+    plt.xticks(line_positions_male['university'], male_data['Year'], rotation=45, ha='right')
+
+    # Show grid lines
+    plt.grid(True)
+
+    # Show legend
+    plt.legend()
+    fig = fig_to_base64(fig)
+    return fig
+
+def HIGHSCHOOL():
+    df = pd.read_excel(educationlevel)
+
+    # Filter data for 'Male'
+    male_data = df[df['Sex'] == 'Male']
+    female_data = df[df['Sex'] == 'Female']
+
+    # Reverse the order of the data
+    male_data = male_data[::-1]
+    female_data = female_data[::-1]
+
+    # Create a line chart for 'Male' education levels
+    fig, ax = plt.subplots(figsize=(13, 8))
+
+    def create_line_positions(data):
+        return {
+            'High School Graduate': range(len(data)),
+        }
+
+    line_positions_male = create_line_positions(male_data)
+    line_positions_female = create_line_positions(female_data)
+
+    plt.plot(line_positions_male['High School Graduate'], male_data['High School Graduate'], marker='o', label='Male High School Graduate', color='blue')
+    plt.plot(line_positions_female['High School Graduate'], female_data['High School Graduate'], marker='o', label='Female High School Graduate', color='salmon')
+
+    # Set labels and title
+    plt.xlabel('Years')
+    plt.ylabel('Number of Individuals')
+    plt.title('Education Level of the Male Population in Taiwan years 89-110 (High School level)')
+
+    # Set x-axis ticks and labels with rotation
+    plt.xticks(line_positions_male['High School Graduate'], male_data['Year'], rotation=45, ha='right')
+
+    # Show grid lines
+    plt.grid(True)
+
+    # Show legend
+    plt.legend()
+    fig = fig_to_base64(fig)
+    return fig
+
+def JUNIORHIGH():
+    df = pd.read_excel(educationlevel)
+
+    # Filter data for 'Male'
+    male_data = df[df['Sex'] == 'Male']
+    female_data = df[df['Sex'] == 'Female']
+
+    # Reverse the order of the data
+    male_data = male_data[::-1]
+    female_data = female_data[::-1]
+
+    # Create a line chart for 'Male' education levels
+    fig, ax = plt.subplots(figsize=(13, 8))
+
+    line_positions_male_junior_high = range(len(male_data))
+    line_positions_female_junior_high = range(len(female_data))
+
+    # Plot 'Male' lines for education levels with different colors
+    plt.plot(line_positions_male_junior_high, male_data['Junior High Graduate'], marker='o', label='Male Junior High Graduate', color='blue')
+    plt.plot(line_positions_female_junior_high, female_data['Junior High Graduate'], marker='o', label='Female Junior High Graduate', color='salmon')
+
+    # Set labels and title
+    plt.xlabel('Years')
+    plt.ylabel('Number of Individuals')
+    plt.title('Education Level of the Male Population in Taiwan years 89-110 (Junior High Level)')
+
+    # Set x-axis ticks and labels with rotation
+    plt.xticks(line_positions_male_junior_high, male_data['Year'], rotation=45, ha='right')
+
+    # Show grid lines
+    plt.grid(True)
+
+    # Show legend
+    plt.legend()
+    fig = fig_to_base64(fig)
+    return fig
+
+def Elemental():
+    df = pd.read_excel(educationlevel)
+
+    # Filter data for 'Male'
+    male_data = df[df['Sex'] == 'Male']
+    female_data = df[df['Sex'] == 'Female']
+
+    # Reverse the order of the data
+    male_data = male_data[::-1]
+    female_data = female_data[::-1]
+
+    # Create a line chart for 'Male' education levels
+    fig, ax = plt.subplots(figsize=(13, 8))
+
+    line_positions_male_elementary = range(len(male_data))
+    line_positions_female_elementary = range(len(female_data))
+
+    # Plot 'Male' lines for education levels with different colors
+    plt.plot(line_positions_male_elementary, male_data['Elemental School Graduate'], marker='o', label='Male Elemental School Graduate', color='blue')
+    plt.plot(line_positions_female_elementary, female_data['Elemental School Graduate'], marker='o', label='Female Elemental School Graduate', color='salmon')
+
+    # Set labels and title
+    plt.xlabel('Years')
+    plt.ylabel('Number of Individuals')
+    plt.title('Education Level of the Male Population in Taiwan years 89-110 (Elementary School Level)')
+
+    # Set x-axis ticks and labels with rotation
+    plt.xticks(line_positions_male_elementary, male_data['Year'], rotation=45, ha='right')
+
+    # Show grid lines
+    plt.grid(True)
+
+    # Show legend
+    plt.legend()
+    fig = fig_to_base64(fig)
     return fig
 
 def educationlevelM():
@@ -230,6 +450,7 @@ def educationlevelM():
 
     # Show legend
     plt.legend()
+    fig = fig_to_base64(fig)
     return fig
 
 def educationlevelF():
@@ -273,6 +494,8 @@ def educationlevelF():
 
     # Show legend
     plt.legend()
+    
+    fig = fig_to_base64(fig)
     return fig
 
 def educationlevelTotlePieChart():
@@ -295,9 +518,12 @@ def educationlevelTotlePieChart():
     fig=plt.figure(figsize=(10, 8))
     plt.pie([total_male, total_female], labels=['Male', 'Female'], autopct='%1.1f%%', startangle=90, colors=['lightblue', 'pink'])
     plt.title('Education Level of Male and Female Population in Taiwan from years 89-110')
+    
+    
+    fig = fig_to_base64(fig)
     return fig
 
-def maritalstatusM():
+def maritalstatusUNMARRIED():
     script_dir = os.path.dirname(os.path.abspath(__file__))
 
     # Construct the full path to the Excel file
@@ -305,43 +531,46 @@ def maritalstatusM():
 
     df = pd.read_excel(maritalstatus)
 
-    # Filter data for 'Male'
+   # Filter data for 'Male' and 'Female'
     male_data = df[df['Sex'] == 'Male']
+    female_data = df[df['Sex'] == 'Female']
 
     # Reverse the order of the data
     male_data = male_data[::-1]
+    female_data = female_data[::-1]
 
-    # Create a grouped bar chart for 'Male' Unmarried, Divorced, and Widowed values
+    # Create a bar chart for 'Male' and 'Female' Unmarried values
     fig, ax = plt.subplots(figsize=(14, 6))
 
     # Set the bar width
-    bar_width = 0.25
+    bar_width = 0.35
 
     # Set the positions for the bars
     bar_positions_male_unmarried = range(len(male_data))
+    bar_positions_female_unmarried = [pos + bar_width for pos in bar_positions_male_unmarried]
 
-    bar_positions_male_divorced = [pos + bar_width for pos in bar_positions_male_unmarried]
-    bar_positions_male_widowed = [pos + 2 * bar_width for pos in bar_positions_male_unmarried]
-
-    # Plot 'Male' bars for 'Unmarried', 'Divorced', and 'Widowed'
+    # Plot 'Male' and 'Female' bars for 'Unmarried'
     plt.bar(bar_positions_male_unmarried, male_data['Unmarried'], width=bar_width, label='Male (Unmarried)', color='blue')
-    plt.bar(bar_positions_male_divorced, male_data['Divorced'], width=bar_width, label='Male (Divorced)', color='lightblue')
-    plt.bar(bar_positions_male_widowed, male_data['Widowed'], width=bar_width, label='Male (Widowed)', color='lightskyblue')
+    plt.bar(bar_positions_female_unmarried, female_data['Unmarried'], width=bar_width, label='Female (Unmarried)', color='pink')
 
     # Set labels and title
     plt.xlabel('Years')
-    plt.ylabel('Number of Individuals')
-    plt.title('Marital Status Distribution (Male)')
+    plt.ylabel('Number of Unmarried Individuals')
+    plt.title('Unmarried Individuals Distribution (Male and Female)')
 
     # Set x-axis ticks and labels
-    ticks_positions = [pos + bar_width for pos in bar_positions_male_unmarried]
+    ticks_positions = [pos + 0.5 * bar_width for pos in bar_positions_male_unmarried]
     plt.xticks(ticks_positions, male_data['Year'])
 
     # Show legend
     plt.legend()
+    plt.grid(True)
+    # Show the plot
+    
+    fig = fig_to_base64(fig)
     return fig
 
-def maritalstatusF():
+def maritalstatusDIVORCED():
     
     script_dir = os.path.dirname(os.path.abspath(__file__))
 
@@ -350,43 +579,90 @@ def maritalstatusF():
 
     df = pd.read_excel(maritalstatus)
 
-    # Filter data for 'Female'
+    # Filter data for 'Male' and 'Female'
+    male_data = df[df['Sex'] == 'Male']
     female_data = df[df['Sex'] == 'Female']
 
     # Reverse the order of the data
+    male_data = male_data[::-1]
     female_data = female_data[::-1]
 
-    # Create a grouped bar chart for 'Female' Unmarried, Divorced, and Widowed values
+    # Create a bar chart for 'Male' and 'Female' Divorced values
     fig, ax = plt.subplots(figsize=(14, 6))
 
     # Set the bar width
-    bar_width = 0.25
+    bar_width = 0.35
 
     # Set the positions for the bars
-    bar_positions_female_unmarried = range(len(female_data))
+    bar_positions_male_divorced = range(len(male_data))
+    bar_positions_female_divorced = [pos + bar_width for pos in bar_positions_male_divorced]
 
-    bar_positions_female_divorced = [pos + bar_width for pos in bar_positions_female_unmarried]
-    bar_positions_female_widowed = [pos + 2 * bar_width for pos in bar_positions_female_unmarried]
-
-    # Plot 'Female' bars for 'Unmarried', 'Divorced', and 'Widowed'
-    plt.bar(bar_positions_female_unmarried, female_data['Unmarried'], width=bar_width, label='Female (Unmarried)', color='pink')
+    # Plot 'Male' and 'Female' bars for 'Divorced'
+    plt.bar(bar_positions_male_divorced, male_data['Divorced'], width=bar_width, label='Male (Divorced)', color='lightblue')
     plt.bar(bar_positions_female_divorced, female_data['Divorced'], width=bar_width, label='Female (Divorced)', color='violet')
+
+    # Set labels and title
+    plt.xlabel('Years')
+    plt.ylabel('Number of Divorced Individuals')
+    plt.title('Divorced Individuals Distribution (Male and Female)')
+
+    # Set x-axis ticks and labels
+    ticks_positions = [pos + 0.5 * bar_width for pos in bar_positions_male_divorced]
+    plt.xticks(ticks_positions, male_data['Year'])
+
+    # Show legend
+    plt.legend()
+    plt.grid(True)
+    # Show the plot
+        
+    fig = fig_to_base64(fig)
+    return fig
+
+def maritalstatusWIDOWED():
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+
+        # Construct the full path to the Excel file
+    maritalstatus = os.path.join(script_dir, 'data\maritalstatus1.xlsx')
+
+    df = pd.read_excel(maritalstatus)
+    # Filter data for 'Male' and 'Female'
+    male_data = df[df['Sex'] == 'Male']
+    female_data = df[df['Sex'] == 'Female']
+
+    # Reverse the order of the data
+    male_data = male_data[::-1]
+    female_data = female_data[::-1]
+
+    # Create a bar chart for 'Male' and 'Female' Widowed values
+    fig, ax = plt.subplots(figsize=(14, 6))
+
+    # Set the bar width
+    bar_width = 0.35
+
+    # Set the positions for the bars
+    bar_positions_male_widowed = range(len(male_data))
+    bar_positions_female_widowed = [pos + bar_width for pos in bar_positions_male_widowed]
+
+    # Plot 'Male' and 'Female' bars for 'Widowed'
+    plt.bar(bar_positions_male_widowed, male_data['Widowed'], width=bar_width, label='Male (Widowed)', color='lightskyblue')
     plt.bar(bar_positions_female_widowed, female_data['Widowed'], width=bar_width, label='Female (Widowed)', color='plum')
 
     # Set labels and title
     plt.xlabel('Years')
-    plt.ylabel('Number of Individuals')
-    plt.title('Marital Status Distribution (Female)')
+    plt.ylabel('Number of Widowed Individuals')
+    plt.title('Widowed Individuals Distribution (Male and Female)')
 
     # Set x-axis ticks and labels
-    ticks_positions = [pos + bar_width for pos in bar_positions_female_unmarried]
-    plt.xticks(ticks_positions, female_data['Year'])
+    ticks_positions = [pos + 0.5 * bar_width for pos in bar_positions_male_widowed]
+    plt.xticks(ticks_positions, male_data['Year'])
 
     # Show legend
     plt.legend()
+    plt.grid(True)
+    fig = fig_to_base64(fig)
     return fig
 
-def maritalstatusPIECHART():
+# def maritalstatusPIECHART():
     script_dir = os.path.dirname(os.path.abspath(__file__))
 
         # Construct the full path to the Excel file
@@ -416,6 +692,7 @@ def maritalstatusPIECHART():
 
     plt.title('Total of out-of-marriage males and females from years 89-110')
 
+    fig = fig_to_base64(fig)
     return fig
 
 def totalmarriagesPIECHART():
@@ -435,6 +712,8 @@ def totalmarriagesPIECHART():
     )
 
     plt.title('Total Number of Marriages years 89 - 110')
+    
+    fig = fig_to_base64(fig)
     return fig
 
 def totalmarriagesnumber():
@@ -472,6 +751,8 @@ def totalmarriagesnumber():
 
     # Show legend
     plt.legend()
+    
+    fig = fig_to_base64(fig)
     return fig
 
 def totalmarriagesnumberF():
@@ -497,7 +778,9 @@ def totalmarriagesnumberF():
 
     plt.title('Total Number of Marriages (Female) years 89 - 110')
 
+    fig = fig_to_base64(fig)
     return fig
+
 def totalmarriagesnumberM():
     file = pd.read_excel(totalmarriages)
 
@@ -521,7 +804,219 @@ def totalmarriagesnumberM():
 
     plt.title('Total Number of Marriages (Male) years 89 - 110')
 
+    fig = fig_to_base64(fig)
     return fig
+
+def incomeMidtermpopulation():
+    df = pd.read_excel(file_path)
+
+    # Assuming 'Midterm population (person)' is the new midterm population column name
+    midterm_population_column = 'Midterm population (person)'
+
+    # Create a line plot for Midterm population
+    fig=plt.figure(figsize=(10, 6))  # Adjust the figure size if needed
+    plt.plot(df[midterm_population_column], label='Midterm population (person)', marker='o')  # Plot Midterm population
+
+    # Set x-axis ticks using reversed order of Statistical Periods
+    plt.xticks(range(len(df)), reversed(df['Statistical Period']), rotation=45, ha='right')
+
+    plt.title('Midterm Population over the years Taiwan years 80-110')
+    plt.xlabel('Statistical Period')
+    plt.ylabel('Population in millions')
+    plt.legend()  # Display legend
+    plt.grid(True)  # Display grid
+    plt.tight_layout()  # Adjust layout to prevent clipping of labels
+    fig = fig_to_base64(fig)
+    return fig
+
+def incomeAverageexchangerate():
+    df = pd.read_excel(file_path)
+
+    # Assuming 'Average exchange rate (yuan/USD)' is the new average exchange rate column name
+    average_exchange_rate_column = 'Average exchange rate (yuan/USD)'
+
+    # Create a line plot for Average exchange rate with purple color
+    fig=plt.figure(figsize=(10, 6))  # Adjust the figure size if needed
+    plt.plot(df[average_exchange_rate_column], label='Average exchange rate (yuan/USD)', marker='o', color='purple')  # Plot Average exchange rate
+
+    # Set x-axis ticks using reversed order of Statistical Periods
+    plt.xticks(range(len(df)), reversed(df['Statistical Period']), rotation=45, ha='right')
+
+    plt.title('Average Exchange Rate over the years Taiwan years 80-110')
+    plt.xlabel('Statistical Period')
+    plt.ylabel('Exchange Rate (yuan/USD)')
+    plt.legend()  # Display legend
+    plt.grid(True)  # Display grid
+    plt.tight_layout()  # Adjust layout to prevent clipping of labels
+    fig = fig_to_base64(fig)
+    return fig
+
+def incomeEconomicgrowthrate():
+    
+    # Load the data into a pandas DataFrame
+    df = pd.read_excel(file_path)
+
+    # Assuming 'Economic growth rate (%)' is the new economic growth rate column name
+    economic_growth_rate_column = 'Economic growth rate (%)'
+
+    # Create a line plot for Economic growth rate
+    fig=plt.figure(figsize=(10, 6))  # Adjust the figure size if needed
+    plt.plot(df[economic_growth_rate_column], label='Economic growth rate (%)', marker='o', color='gold')  # Plot Economic growth rate
+
+    # Set x-axis ticks using reversed order of Statistical Periods
+    plt.xticks(range(len(df)), reversed(df['Statistical Period']), rotation=45, ha='right')
+
+    plt.title('Economic Growth Rate over the years Taiwan years 80-110')
+    plt.xlabel('Statistical Period')
+    plt.ylabel('Growth Rate (%)')
+    plt.legend()  # Display legend
+    plt.grid(True)  # Display grid
+    plt.tight_layout()  # Adjust layout to prevent clipping of labels
+    fig = fig_to_base64(fig)
+    return fig
+
+def incomeGDP():
+    
+    # Load the data into a pandas DataFrame
+    df = pd.read_excel(file_path)
+
+        # Assuming 'Gross domestic product GDP (nominal value, million yuan)' is the GDP column name
+    gdp_column = 'Gross domestic product GDP (nominal value, million yuan)'
+
+    # Create a line plot for GDP only
+    fig=plt.figure(figsize=(10, 6))  # Adjust the figure size if needed
+    plt.plot(df[gdp_column], label='Gross domestic product GDP (nominal value, million yuan)', marker='o', color='brown')  # Plot GDP
+
+    # Set x-axis ticks using reversed order of Statistical Periods
+    plt.xticks(range(len(df)), reversed(df['Statistical Period']), rotation=45, ha='right')
+
+    plt.title('Income over the years Taiwan years 80-110 (Gross Domestic Product GDP)')
+    plt.xlabel('Statistical Period')
+    plt.ylabel('Amount in Millions yuan')
+    plt.legend()  # Display legend
+    plt.grid(True)  # Display grid
+    plt.tight_layout()  # Adjust layout to prevent clipping of labels
+    fig = fig_to_base64(fig)
+    return fig
+
+def incomeAverageGDP():
+    
+    # Load the data into a pandas DataFrame
+    df = pd.read_excel(file_path)
+
+        # Assuming 'Average GDP per capita (nominal value, yuan)' is the new GDP column name
+    gdp_column = 'Average GDP per capita (nominal value, yuan)'
+
+    # Create a line plot for Average GDP per capita
+    fig=plt.figure(figsize=(10, 6))  # Adjust the figure size if needed
+    plt.plot(df[gdp_column], label='Average GDP per capita (nominal value, yuan)', marker='o', color='red')  # Plot Average GDP per capita
+
+    # Set x-axis ticks using reversed order of Statistical Periods
+    plt.xticks(range(len(df)), reversed(df['Statistical Period']), rotation=45, ha='right')
+
+    plt.title('Income over the years Taiwan years 80-110 (Average GDP per capita)')
+    plt.xlabel('Statistical Period')
+    plt.ylabel('Amount in Yuan')
+    plt.legend()  # Display legend
+    plt.grid(True)  # Display grid
+    plt.tight_layout()  # Adjust layout to prevent clipping of labels
+    fig = fig_to_base64(fig)
+    return fig
+
+def incomeGNI():
+    
+    # Load the data into a pandas DataFrame
+    df = pd.read_excel(file_path)
+
+    # Assuming 'Gross national income GNI (nominal value, million yuan)' is the new GNI column name
+    gni_column = 'Gross national income GNI (nominal value, million yuan)'
+
+    # Create a line plot for Gross national income GNI
+    fig=plt.figure(figsize=(10, 6))  # Adjust the figure size if needed
+    plt.plot(df[gni_column], label='Gross national income GNI (nominal value, million yuan)', marker='o', color='skyblue')  # Plot GNI
+
+    # Set x-axis ticks using reversed order of Statistical Periods
+    plt.xticks(range(len(df)), reversed(df['Statistical Period']), rotation=45, ha='right')
+
+    plt.title('Income over the years Taiwan years 80-110 (Gross National Income GNI)')
+    plt.xlabel('Statistical Period')
+    plt.ylabel('Amount in Millions yuan')
+    plt.legend()  # Display legend
+    plt.grid(True)  # Display grid
+    plt.tight_layout()  # Adjust layout to prevent clipping of labels
+    fig = fig_to_base64(fig)
+    return fig
+
+def incomeAverageGNI():
+    
+    # Load the data into a pandas DataFrame
+    df = pd.read_excel(file_path)
+
+    # Assuming 'Average GNI per person (nominal value, yuan)' is the new GNI per person column name
+    gni_per_person_column = 'Average GNI per person (nominal value, yuan)'
+
+    # Create a line plot for Average GNI per person
+    fig=plt.figure(figsize=(10, 6))  # Adjust the figure size if needed
+    plt.plot(df[gni_per_person_column], label='Average GNI per person (nominal value, yuan)', marker='o', color='green')  # Plot Average GNI per person
+
+    # Set x-axis ticks using reversed order of Statistical Periods
+    plt.xticks(range(len(df)), reversed(df['Statistical Period']), rotation=45, ha='right')
+
+    plt.title('Income over the years Taiwan years 80-110 (Average GNI per person)')
+    plt.xlabel('Statistical Period')
+    plt.ylabel('Amount in Yuan')
+    plt.legend()  # Display legend
+    plt.grid(True)  # Display grid
+    plt.tight_layout()  # Adjust layout to prevent clipping of labels
+    fig = fig_to_base64(fig)
+    return fig
+
+def incomeNational():
+    
+    # Load the data into a pandas DataFrame
+    df = pd.read_excel(file_path)
+
+    # Assuming 'National income (nominal value, million yuan)' is the new national income column name
+    national_income_column = 'National income (nominal value, million yuan)'
+
+    # Create a line plot for National income
+    fig=plt.figure(figsize=(10, 6))  # Adjust the figure size if needed
+    plt.plot(df[national_income_column], label='National income (nominal value, million yuan)', marker='o', color='grey')  # Plot National income
+
+    # Set x-axis ticks using reversed order of Statistical Periods
+    plt.xticks(range(len(df)), reversed(df['Statistical Period']), rotation=45, ha='right')
+
+    plt.title('Income over the years Taiwan years 80-110 (National Income)')
+    plt.xlabel('Statistical Period')
+    plt.ylabel('Amount in Millions yuan')
+    plt.legend()  # Display legend
+    plt.grid(True)  # Display grid
+    plt.tight_layout()  # Adjust layout to prevent clipping of labels
+    fig = fig_to_base64(fig)
+    return fig
+
+def incomeAverageperson():
+    df = pd.read_excel(file_path)
+
+    # Assuming 'Average income per person (nominal value, yuan)' is the new average income per person column name
+    average_income_per_person_column = 'Average income per person (nominal value, yuan)'
+
+    # Create a line plot for Average income per person
+    fig=plt.figure(figsize=(10, 6))  # Adjust the figure size if needed
+    plt.plot(df[average_income_per_person_column], label='Average income per person (nominal value, yuan)', marker='o', color='slateblue')  # Plot Average income per person
+
+    # Set x-axis ticks using reversed order of Statistical Periods
+    plt.xticks(range(len(df)), reversed(df['Statistical Period']), rotation=45, ha='right')
+
+    plt.title('Income over the years Taiwan years 80-110 (Average Income per person)')
+    plt.xlabel('Statistical Period')
+    plt.ylabel('Amount in Yuan')
+    plt.legend()  # Display legend
+    plt.grid(True)  # Display grid
+    plt.tight_layout()  # Adjust layout to prevent clipping of labels
+    fig = fig_to_base64(fig)
+    return fig
+
 
 def fig_to_base64(fig):
     # Convert the Matplotlib figure to base64
@@ -533,95 +1028,5 @@ def fig_to_base64(fig):
 
     # Create the data URI for the image
     img_tag = f'<img class="graph" src="data:image/png;base64,{data_uri}" alt="Matplotlib Chart"/>'
-    return img_tag
-
-def birthrate_to_base64():
-    # Call the birthrate function to get the Matplotlib figure
-    fig = birthrate()
-
-    # Convert the Matplotlib figure to base64
-    img_tag = fig_to_base64(fig)
-
-    return img_tag
-def housepriceindex_to_base64():
-    # Call the birthrate function to get the Matplotlib figure
-    fig = housepriceindex()
-
-    # Convert the Matplotlib figure to base64
-    img_tag = fig_to_base64(fig)
-
-    return img_tag
-def age_to_base64():
-    # Call the birthrate function to get the Matplotlib figure
-    fig = age()
-
-    # Convert the Matplotlib figure to base64
-    img_tag = fig_to_base64(fig)
-
-    return img_tag
-
-def educationlevelM_to_base64():
-    fig = educationlevelM()
-    # Convert the Matplotlib figure to base64
-    img_tag = fig_to_base64(fig)
-    return img_tag
-
-def educationlevelF_to_base64():
-    fig = educationlevelF()
-    # Convert the Matplotlib figure to base64
-    img_tag = fig_to_base64(fig)
-    return img_tag
-
-def educationlevelTotlePieChart_to_base64():
-    fig = educationlevelTotlePieChart()
-    # Convert the Matplotlib figure to base64
-    img_tag = fig_to_base64(fig)
-    return img_tag
-
-def maritalstatusM_to_base64():
-    # Call the birthrate function to get the Matplotlib figure
-    fig = maritalstatusM()
-    # Convert the Matplotlib figure to base64
-    img_tag = fig_to_base64(fig)
-    return img_tag
-
-def maritalstatusF_to_base64():
-    # Call the birthrate function to get the Matplotlib figure
-    fig = maritalstatusF()
-    # Convert the Matplotlib figure to base64
-    img_tag = fig_to_base64(fig)
-    return img_tag
-
-def maritalstatusPIECHART_to_base64():
-    # Call the birthrate function to get the Matplotlib figure
-    fig = maritalstatusPIECHART()
-    # Convert the Matplotlib figure to base64
-    img_tag = fig_to_base64(fig)
-    return img_tag
-
-def totalmarriagesPIECHART_to_base64():
-    # Call the birthrate function to get the Matplotlib figure
-    fig = totalmarriagesPIECHART()
-    # Convert the Matplotlib figure to base64
-    img_tag = fig_to_base64(fig)
-    return img_tag
-
-def totalmarriagesnumber_to_base64():
-    # Call the birthrate function to get the Matplotlib figure
-    fig = totalmarriagesnumber()
-    # Convert the Matplotlib figure to base64
-    img_tag = fig_to_base64(fig)
-    return img_tag
-def totalmarriagesnumberF_to_base64():
-    # Call the birthrate function to get the Matplotlib figure
-    fig = totalmarriagesnumberF()
-    # Convert the Matplotlib figure to base64
-    img_tag = fig_to_base64(fig)
-    return img_tag
-def totalmarriagesnumberM_to_base64():
-    # Call the birthrate function to get the Matplotlib figure
-    fig = totalmarriagesnumberM()
-    # Convert the Matplotlib figure to base64
-    img_tag = fig_to_base64(fig)
     return img_tag
 

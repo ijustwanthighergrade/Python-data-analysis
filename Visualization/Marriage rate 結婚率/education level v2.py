@@ -9,8 +9,12 @@ Created on Sun Dec 24 22:17:19 2023
 
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
+script_dir = os.path.dirname(os.path.abspath(__file__))
 
 educationlevel = 'educationlevel1.xlsx'
+educationlevel = os.path.join(script_dir, r'educationlevel1.xlsx')
+
 
 df = pd.read_excel(educationlevel)
 
@@ -62,7 +66,11 @@ plt.show()
 import pandas as pd
 import matplotlib.pyplot as plt
 
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
 educationlevel = 'educationlevel1.xlsx'
+educationlevel = os.path.join(script_dir, r'educationlevel1.xlsx')
+
 
 df = pd.read_excel(educationlevel)
 
@@ -113,8 +121,10 @@ plt.show()
 
 import pandas as pd
 import matplotlib.pyplot as plt
+script_dir = os.path.dirname(os.path.abspath(__file__))
 
 educationlevel = 'educationlevel1.xlsx'
+educationlevel = os.path.join(script_dir, r'educationlevel1.xlsx')
 
 df = pd.read_excel(educationlevel)
 
@@ -164,7 +174,10 @@ plt.show()
 import pandas as pd
 import matplotlib.pyplot as plt
 
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
 educationlevel = 'educationlevel1.xlsx'
+educationlevel = os.path.join(script_dir, r'educationlevel1.xlsx')
 
 df = pd.read_excel(educationlevel)
 
@@ -209,7 +222,10 @@ plt.show()
 import pandas as pd
 import matplotlib.pyplot as plt
 
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
 educationlevel = 'educationlevel1.xlsx'
+educationlevel = os.path.join(script_dir, r'educationlevel1.xlsx')
 
 df = pd.read_excel(educationlevel)
 
