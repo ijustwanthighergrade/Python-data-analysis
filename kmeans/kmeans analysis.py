@@ -2,9 +2,11 @@ import pandas as pd
 from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
 
 def load_data(file_path):
-    
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.join(script_dir, file_path)
     return pd.read_excel(file_path)
 
 def preprocess_data(data):
@@ -24,7 +26,7 @@ def perform_clustering(data, n_clusters=3):
     data['Cluster'] = kmeans.labels_
     return data
 
-file_path = '/mnt/data/房價與結婚意願之相關分析_1214修改版 的副本 (回覆).xlsx'
+file_path = '房價與結婚意願之相關分析_1214修改版 的副本 (回覆).xlsx'
 data = load_data(file_path)
 preprocessed_data = preprocess_data(data)
 

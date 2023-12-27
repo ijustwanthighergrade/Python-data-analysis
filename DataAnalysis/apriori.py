@@ -8,7 +8,7 @@ all_columns = pd.read_excel(age, nrows=0).columns.tolist()
 df = pd.read_excel(age)
 last_column_index = df.index[-1]
 print("最后一列的索引:", last_column_index)
-
+outputnum=0
 output_file_path = os.path.join(script_dir, "output.txt")
 with open(output_file_path, "w") as output_file:
     for k in range(7,last_column_index-1):
@@ -25,20 +25,23 @@ with open(output_file_path, "w") as output_file:
             data_list = df.values.tolist()
             # print(data_list)
 
-            # 使用apriori算法
+            # 使用apriori
             results = list(apriori(data_list, min_support=0.1, min_confidence=0.3, min_lift=1.3, max_length=2))# print(results)
             # 
-            outputnum=0
+            
             for result in results:
                 pair = result[0] 
                 products = [x for x in pair]
+                outputnum=outputnum+1
+                output_file.write(str(outputnum)+ "\n")
+                output_file.write("Selected Columns: " + str(selected_columns_names) + "\n")
+                output_file.write("Rule: " + products[0] + " →" + products[1] + "\n")
+                output_file.write("Support: " + str(result[1]) + "\n")
+                output_file.write("Confidence: " + str(result[2][0][2]) + "\n")
                 if len(result[2]) > 1:
-                    print(outputnum+1)
-                    output_file.write("Selected Columns: " + str(selected_columns_names) + "\n")
-                    output_file.write("Rule: " + products[0] + " →" + products[1] + "\n")
-                    output_file.write("Support: " + str(result[1]) + "\n")
-                    output_file.write("Confidence: " + str(result[2][0][2]) + "\n")
                     output_file.write("Lift: " + str(result[2][1][3]) + "\n")
-                    output_file.write("==================================\n")
+                else:
+                    output_file.write("Lift: " + "N\A" + "\n")
+                output_file.write("==================================\n")
 
 print("Output written to:", output_file_path)
