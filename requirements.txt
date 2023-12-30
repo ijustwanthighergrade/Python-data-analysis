@@ -6,3 +6,4 @@ matplotlib
 apyori
 mpld3
 seaborn
+sklearn

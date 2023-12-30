@@ -8,10 +8,12 @@ all_columns = pd.read_excel(age, nrows=0).columns.tolist()
 df = pd.read_excel(age)
 last_column_index = df.index[-1]
 print("最后一列的索引:", last_column_index)
+total_columns = len(all_columns)
+
 outputnum=0
 output_file_path = os.path.join(script_dir, "output.txt")
 with open(output_file_path, "w") as output_file:
-    for k in range(7,last_column_index-1):
+    for k in range(7,total_columns-1):
         for i in range(6):
 
             selected_columns = [i+1, k]

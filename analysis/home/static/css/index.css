@@ -6,8 +6,8 @@ body,body {
 }
 
 .wrapper {
-    min-height: calc(100% - 50px); /*減去footer高度*/
-    margin-bottom: -50px; /*隨footer高度需做調整*/
+    min-height: calc(100% - 50px); 
+    margin-bottom: -50px; 
     margin: 0 auto;    
     padding: 20px;
     transition: margin-left 0.3s ease;
@@ -140,7 +140,7 @@ footer {
     height: max-content;
     /* background-color: bisque; */
     text-align: center;    
-    margin-top: 8%; /* Add margin to separate from the above content */
+    margin-top: 8%; 
 
 }
 .contentofgraph{
@@ -191,7 +191,7 @@ footer {
     font-weight: bolder;
 }
 .tab.active {
-    background-color: rgb(164, 255, 246); /* Set the background color for the active tab */
+    background-color: rgb(164, 255, 246); 
 }
 .contenta {
     display: none;

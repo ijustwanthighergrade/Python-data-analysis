@@ -18,36 +18,59 @@
             
         <div id="analysis_container">
             <div id="analysis_sidebar">
-                <div class="analysis_menu-title" onclick="toggleSubMenu('analysis_menu1')">Menu 1</div>
+                <div class="analysis_menu-title" onclick="toggleSubMenu('analysis_menu1')">Raw Data</div>
                 <div class="analysis_sub-menu" id="analysis_menu1">
-                    <div class="analysis_sub-menu-item" onclick="showContent('content1')">Submenu 1.1</div>
-                    <div class="analysis_sub-menu-item" onclick="showContent('content1')">Submenu 1.2</div>
-                    <!-- Add more submenu items as needed -->
+                    <div class="analysis_sub-menu-item" onclick="showContent('content1')">Questionnaire Design</div>
+                    <div class="analysis_sub-menu-item" onclick="showContent('content2')">Submenu 1.2</div>
                 </div>
 
-                <div class="analysis_menu-title" onclick="toggleSubMenu('analysis_menu2')">Menu 2</div>
+                <div class="analysis_menu-title" onclick="toggleSubMenu('analysis_menu2')">Analysis</div>
                 <div class="analysis_sub-menu" id="analysis_menu2">
-                    <div class="analysis_sub-menu-item" onclick="showContent('content2')">Submenu 2.1</div>
-                    <div class="analysis_sub-menu-item" onclick="showContent('content2')">Submenu 2.2</div>
-                    <!-- Add more submenu items as needed -->
+                    <div class="analysis_sub-menu-item" onclick="showContent('content3')">K-Means</div>
+                    <div class="analysis_sub-menu-item" onclick="showContent('content4')">Submenu 2.2</div>
                 </div>
-
-                <!-- Add more menu titles and submenus as needed -->
             </div>
 
             <div id="analysis_main-content">
-                <div id="content1" style="display: none;">
-                    <!-- Content for Submenu 1 -->
-                    <h2>Content for Submenu 1</h2>
+                <div id="content1" style="display: block;">
+                    <h2>Questionnaire Design</h2>
+                    <table id="questionnaireTable">
+                        <tr>
+                            <th>分類</th>
+                            <th>問卷項目</th>
+                        </tr>
+                    </table>
                     {% for item in data_list %}
                         <div>{{item}}</div>
                     {% endfor %}
                 </div>
                 <div id="content2" style="display: none;">
-                    <!-- Content for Submenu 2 -->
-                    <h2>Content for Submenu 2</h2>
+                    <h2>Relationl Factors for Marriage Intention</h2>
+                    <div class="wgraph"> 
+                        {{kmeansAgeIntention|safe}}
+                    </div>
+                    <div class="wgraph"> 
+                        {{kmeansIncomeIntention|safe}}
+                    </div>
                 </div>
-                <!-- Your main content goes here -->
+                <div id="content3" style="display: none;">
+                    <h2>Relationl Factors for Marriage Intention</h2>
+                    <div class="wgraph"> 
+                        {{kmeansAgeIntention|safe}}
+                    </div>
+                    <div class="wgraph"> 
+                        {{kmeansIncomeIntention|safe}}
+                    </div>
+                </div>
+                <div id="content4" style="display: none;">
+                    <h2>Relationl Factors for Marriage Intention</h2>
+                    <div class="wgraph"> 
+                        {{kmeansAgeIntention|safe}}
+                    </div>
+                    <div class="wgraph"> 
+                        {{kmeansIncomeIntention|safe}}
+                    </div>
+                </div>
             </div>
         </div>
             
@@ -72,4 +95,25 @@
         // Show the selected content div
         contentDiv.style.display = 'block';
     }
+
+
+    const dataFromBackend = [
+    { category: "一般資訊", items: ["時間戳記", "生理性別", "最高學歷", "您的年齡", "目前月薪資水平(台幣)", "您是否已婚？", "您目前是否有結婚意願(不論單身與否)", "已婚者可以是否後悔結婚來考量"] },
+    { category: "買房觀念", items: ["您認同買房是影響多數人結婚的重要因素嗎？", "請問買房影響您結婚意願的程度為？", "您對結婚一定得買房的認同度為何？", "請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？", "您認同買房會影響到個人生活水平的程度為？", "您認為政府在買房上已擁有完善配套措施的程度為？"] },
+    { category: "可能使擁有結婚意願的因素", items: ["想要與心愛的人共組家庭", "想要小孩", "想要讓伴侶關係被法律所認同", "傳統上結婚是人生的必經之路", "想要伴侶一同承擔責任"] },
+    { category: "可能影響您結婚意願的經濟因素", items: ["不想因為結婚犧牲現有生活水平", "無法負擔高額房價", "無法負擔結婚開銷", "想要先穩定事業再組建家庭"] },
+    { category: "可能影響您結婚意願的非經濟因素", items: ["只需要情感需求，不想綁定法律義務", "害怕要與對方家庭磨合", "不知是否對方值得信任", "不想養小孩", "婚後會失去自由", "沒有對象", "害怕婚姻失敗"] }
+];
+
+// 動態生成表格
+const table = document.getElementById('questionnaireTable');
+dataFromBackend.forEach(category => {
+    const row = table.insertRow();
+    const cell1 = row.insertCell(0);
+    const cell2 = row.insertCell(1);
+    cell1.textContent = category.category;
+    cell2.innerHTML = category.items.join("<br>");
+});
+</script>
+
 </script>
