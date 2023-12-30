@@ -1,4 +1,8 @@
-
+.adjustdiv{
+    width: 100%;
+    overflow: scroll;
+    height: 400px;
+}
 #analysis_container {
     width: 100%;
     margin: 0 auto;

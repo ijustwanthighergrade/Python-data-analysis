@@ -7,130 +7,268 @@
     <title>Data Analysis</title>
     <script type="text/javascript" src="{% static "js/nav.js" %}"> </script>
     <link href="{% static "css/analysis.css" %}" rel="stylesheet">   
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
 </head>
 <body>
-
     {% include 'home\header.html' %}
+
     <div class="wrapper">
-
         <div class="content">
-            <h1>Preface</h1>
+            <h1>Data Analysis</h1>
             
-        <div id="analysis_container">
-            <div id="analysis_sidebar">
-                <div class="analysis_menu-title" onclick="toggleSubMenu('analysis_menu1')">Raw Data</div>
-                <div class="analysis_sub-menu" id="analysis_menu1">
-                    <div class="analysis_sub-menu-item" onclick="showContent('content1')">Questionnaire Design</div>
-                    <div class="analysis_sub-menu-item" onclick="showContent('content2')">Submenu 1.2</div>
-                </div>
+            <div id="analysis_container">
+                <div id="analysis_sidebar">
+                    <div class="analysis_menu-title" onclick="toggleSubMenu('analysis_menu1')">Raw Data</div>
+                    <div class="analysis_sub-menu" id="analysis_menu1">
+                        <div class="analysis_sub-menu-item" onclick="showContent('content1')">Questionnaire Design</div>
+                        <div class="analysis_sub-menu-item" onclick="showContent('content2')">Data</div>
+                    </div>
 
-                <div class="analysis_menu-title" onclick="toggleSubMenu('analysis_menu2')">Analysis</div>
-                <div class="analysis_sub-menu" id="analysis_menu2">
-                    <div class="analysis_sub-menu-item" onclick="showContent('content3')">K-Means</div>
-                    <div class="analysis_sub-menu-item" onclick="showContent('content4')">Submenu 2.2</div>
-                </div>
-            </div>
-
-            <div id="analysis_main-content">
-                <div id="content1" style="display: block;">
-                    <h2>Questionnaire Design</h2>
-                    <table id="questionnaireTable">
-                        <tr>
-                            <th>分類</th>
-                            <th>問卷項目</th>
-                        </tr>
-                    </table>
-                </div>
-                <div id="content2" style="display: none;">
-                    <h2>Relationl Factors for Marriage Intention</h2>
-                    <table>
-                        <tr>
-                            <th>Timestamp</th>
-                            <th>Gender</th>
-                            <th>Education</th>
-                            <th>Age</th>
-                            <th>Salary</th>
-                            <th>Is Married</th>
-                            <th>Marriage Intention</th>
-                            <th>Agree Buying House</th>
-                            <th>Buying House Influence</th>
-                            <th>Marriage House Requirement</th>
-                            <th>Afford House Price</th>
-                            <th>Buying House Impact Life</th>
-                            <th>Government Support</th>
-                            <th>Family Planning</th>
-                            <th>Desire for Children</th>
-                            <th>Legal Recognition</th>
-                            <th>Tradition</th>
-                            <th>Responsibility Sharing</th>
-                            <th>Sacrifice Lifestyle</th>
-                            <th>Affordability</th>
-                            <th>Marriage Expenses Affordability</th>
-                            <th>Stable Career Before Family</th>
-                            <th>Child Rearing Cost Affordability</th>
-                            <th>Non-Economic Factor Relationship</th>
-                            <th>Family Adjustment Concerns</th>
-                            <th>Trustworthiness</th>
-                            <th>Fear of Commitment</th>
-                            <th>Freedom Loss After Marriage</th>
-                            <th>No Partner</th>
-                            <th>Fear of Marriage Failure</th>
-                            <th>Any Commond</th>
-                        </tr>
-                        {% for data_object in data_list %}
-                        <tr>
-                            <td>{{ data_object.timestamp }}</td>
-                            <td>{{ data_object.gender }}</td>
-                            <td>{{ data_object.education }}</td>
-                            <td>{{ data_object.age }}</td>
-                            <td>{{ data_object.salary }}</td>
-                            <td>{{ data_object.is_married }}</td>
-                            <td>{{ data_object.marriage_intention }}</td>
-                            <td>{{ data_object.agree_buying_house }}</td>
-                            <td>{{ data_object.buying_house_influence }}</td>
-                            <td>{{ data_object.marriage_house_requirement }}</td>
-                            <td>{{ data_object.afford_house_price }}</td>
-                            <td>{{ data_object.buying_house_impact_life }}</td>
-                            <td>{{ data_object.government_support }}</td>
-                            <td>{{ data_object.family_planning }}</td>
-                            <td>{{ data_object.desire_for_children }}</td>
-                            <td>{{ data_object.legal_recognition }}</td>
-                            <td>{{ data_object.tradition }}</td>
-                            <td>{{ data_object.responsibility_sharing }}</td>
-                            <td>{{ data_object.sacrifice_lifestyle }}</td>
-                            <td>{{ data_object.affordability }}</td>
-                            <td>{{ data_object.marriage_expenses_affordability }}</td>
-                            <td>{{ data_object.stable_career_before_family }}</td>
-                            <td>{{ data_object.child_rearing_cost_affordability }}</td>
-                            <td>{{ data_object.non_economic_factor_relationship }}</td>
-                            <td>{{ data_object.family_adjustment_concerns }}</td>
-                            <td>{{ data_object.trustworthiness }}</td>
-                            <td>{{ data_object.fear_of_commitment }}</td>
-                            <td>{{ data_object.freedom_loss_after_marriage }}</td>
-                            <td>{{ data_object.no_partner }}</td>
-                            <td>{{ data_object.fear_of_marriage_failure }}</td>
-                            <td>{{ data_object.anycommond }}</td>
-                        </tr>
-                        {% endfor %}
-                    </table>
-                    {% for item in data_list %}
-                        <div>{{item}}</div>
-                    {% endfor %}
-                </div>
-                <div id="content3" style="display: none;">
-                    <h2>Relationl Factors for Marriage Intention</h2>
-                    <div class="wgraph"> 
-                        {{kmeansAgeIntention|safe}}
+                    <div class="analysis_menu-title" onclick="toggleSubMenu('analysis_menu2')">Analysis</div>
+                    <div class="analysis_sub-menu" id="analysis_menu2">
+                        <div class="analysis_sub-menu-item" onclick="showContent('content3')">K-Means</div>
+                        <div class="analysis_sub-menu-item" onclick="showContent('content4')">Apriori</div>
                     </div>
                 </div>
-                <div id="content4" style="display: none;">
-                    <h2>Relationl Factors for Marriage Intention</h2>
-                </div>
-            </div>
-        </div>
-            
-        </div>    
-    </div>
+
+                <div id="analysis_main-content">
+                    <div id="content1" style="display: block;">
+                        <h2>Questionnaire Design</h2>
+                        <table id="questionnaireTable">
+                            <tr>
+                                <th>分類</th>
+                                <th>問卷項目</th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="content2" style="display: none;">
+                        <h2>Questionnaire Data</h2>
+                        <div>
+                            <form action="/analysis">
+                                <select id="attr_select" name="selected_option">
+                                    <option value="None">None</option>
+                                    <optgroup label="gender">
+                                        {% for data_object in gender %}
+                                            <option value="gender:{{data_object}}">{{data_object}}</option>
+                                        {% endfor %}
+                                    </optgroup>
+                                    <optgroup label="education_levels">
+                                        {% for data_object in education_levels %}
+                                            <option value="education:{{data_object}}">{{data_object}}</option>
+                                        {% endfor %}
+                                    </optgroup>
+                                    <optgroup label="age">
+                                        {% for data_object in age %}
+                                            <option value="age:{{data_object}}">{{data_object}}</option>
+                                        {% endfor %}
+                                    </optgroup>
+                                    <optgroup label="income">
+                                        {% for data_object in income %}
+                                            <option value="salary:{{data_object}}">{{data_object}}</option>
+                                        {% endfor %}
+                                    </optgroup>
+                                    <optgroup label="marriagestatus">
+                                        {% for data_object in marriageornot %}
+                                            <option value="is_married:{{data_object}}">{{data_object}}</option>
+                                        {% endfor %}
+                                    </optgroup>
+                                    <optgroup label="目前是否有結婚意願">
+                                        {% for data_object in optionalnum %}
+                                            <option value="marriage_intention:{{data_object}}">{{data_object}}</option>
+                                        {% endfor %}
+                                    </optgroup>
+                                    <optgroup label="買房是影響多數人結婚的重要因素">
+                                        {% for data_object in optionalnum %}
+                                            <option value="agree_buying_house:{{data_object}}">{{data_object}}</option>
+                                        {% endfor %}
+                                    </optgroup>
+                                    <optgroup label="買房影響您結婚意願的程度">
+                                        {% for data_object in optionalnum %}
+                                            <option value="buying_house_influence:{{data_object}}">{{data_object}}</option>
+                                        {% endfor %}
+                                    </optgroup>
+                                    <optgroup label="結婚一定得買房的認同度">
+                                        {% for data_object in optionalnum %}
+                                            <option value="marriage_house_requirement:{{data_object}}">{{data_object}}</option>
+                                        {% endfor %}
+                                    </optgroup>
+                                    <optgroup label="目前薪資能獨自負擔逐年攀升的房價的程度">
+                                        {% for data_object in optionalnum %}
+                                            <option value="afford_house_price:{{data_object}}">{{data_object}}</option>
+                                        {% endfor %}
+                                    </optgroup>
+                                    <optgroup label="買房會影響到個人生活水平的程度">
+                                        {% for data_object in optionalnum %}
+                                            <option value="buying_house_impact_life:{{data_object}}">{{data_object}}</option>
+                                        {% endfor %}
+                                    </optgroup>
+                                    <optgroup label="政府在買房上已擁有完善配套措施的程度">
+                                        {% for data_object in optionalnum %}
+                                            <option value="government_support:{{data_object}}">{{data_object}}</option>
+                                        {% endfor %}
+                                    </optgroup>
+                                    <optgroup label="想要與心愛的人共組家庭">
+                                        {% for data_object in optionalnum %}
+                                            <option value="family_planning:{{data_object}}">{{data_object}}</option>
+                                        {% endfor %}
+                                    </optgroup>
+                                    <optgroup label="想要小孩">
+                                        {% for data_object in optionalnum %}
+                                            <option value="desire_for_children:{{data_object}}">{{data_object}}</option>
+                                        {% endfor %}
+                                    </optgroup>
+                                    <optgroup label="想要讓伴侶關係被法律所認同">
+                                        {% for data_object in optionalnum %}
+                                            <option value="legal_recognition:{{data_object}}">{{data_object}}</option>
+                                        {% endfor %}
+                                    </optgroup>
+                                    <optgroup label="傳統上結婚是人生的必經之路">
+                                        {% for data_object in optionalnum %}
+                                            <option value="tradition:{{data_object}}">{{data_object}}</option>
+                                        {% endfor %}
+                                    </optgroup>
+                                    <optgroup label="想要伴侶一同承擔責任">
+                                        {% for data_object in optionalnum %}
+                                            <option value="responsibility_sharing:{{data_object}}">{{data_object}}</option>
+                                        {% endfor %}
+                                    </optgroup>
+                                    <optgroup label="不想因為結婚犧牲現有生活水平">
+                                        {% for data_object in optionalnum %}
+                                            <option value="sacrifice_lifestyle:{{data_object}}">{{data_object}}</option>
+                                        {% endfor %}
+                                    </optgroup>
+                                    <optgroup label="無法負擔高額房價">
+                                        {% for data_object in optionalnum %}
+                                            <option value="affordability:{{data_object}}">{{data_object}}</option>
+                                        {% endfor %}
+                                    </optgroup>
+                                    <optgroup label="無法負擔結婚開銷">
+                                        {% for data_object in optionalnum %}
+                                            <option value="marriage_expenses_affordability:{{data_object}}">{{data_object}}</option>
+                                        {% endfor %}
+                                    </optgroup>
+                                    <optgroup label="想要先穩定事業再組建家庭">
+                                        {% for data_object in optionalnum %}
+                                            <option value="stable_career_before_family:{{data_object}}">{{data_object}}</option>
+                                        {% endfor %}
+                                    </optgroup>
+                                    <optgroup label="無法負擔子女教養費用">
+                                        {% for data_object in optionalnum %}
+                                            <option value="child_rearing_cost_affordability:{{data_object}}">{{data_object}}</option>
+                                        {% endfor %}
+                                    </optgroup>
+                                    <optgroup label="只需要情感需求，不想綁定法律義務">
+                                        {% for data_object in optionalnum %}
+                                            <option value="non_economic_factor_relationship:{{data_object}}">{{data_object}}</option>
+                                        {% endfor %}
+                                    </optgroup>
+                                    <optgroup label="害怕要與對方家庭磨合">
+                                        {% for data_object in optionalnum %}
+                                            <option value="family_adjustment_concerns:{{data_object}}">{{data_object}}</option>
+                                        {% endfor %}
+                                    </optgroup>
+                                    <optgroup label="不知是否對方值得信任">
+                                        {% for data_object in optionalnum %}
+                                            <option value="trustworthiness:{{data_object}}">{{data_object}}</option>
+                                        {% endfor %}
+                                    </optgroup>
+                                    <optgroup label="不想養小孩">
+                                        {% for data_object in optionalnum %}
+                                            <option value="fear_of_commitment:{{data_object}}">{{data_object}}</option>
+                                        {% endfor %}
+                                    </optgroup>
+                                    <optgroup label="婚後會失去自由">
+                                        {% for data_object in optionalnum %}
+                                            <option value="freedom_loss_after_marriage:{{data_object}}">{{data_object}}</option>
+                                        {% endfor %}
+                                    </optgroup>
+                                    <optgroup label="沒有對象">
+                                        {% for data_object in optionalnum %}
+                                            <option value="no_partner:{{data_object}}">{{data_object}}</option>
+                                        {% endfor %}
+                                    </optgroup>
+                                    <optgroup label="害怕婚姻失敗">
+                                        {% for data_object in optionalnum %}
+                                            <option value="fear_of_marriage_failure:{{data_object}}">{{data_object}}</option>
+                                        {% endfor %}
+                                    </optgroup>
+                                </select>
+                                
+                                <input type="button" value="Filiter" id="filterButton"/>
+                            </form>
+                        </div>
+                        <div id="ajaxResponse">
+
+                        </div>
+                        <div class="adjustdiv">
+                            <table id="dataListContainer">
+                                <tr>
+                                    {% for data_object in column_names %}
+                                    <th>{{data_object}}</th>
+                                    {% endfor %}
+                                </tr>
+                                {% for data_object in data_list %}
+                                <tr>
+                                    <td>{{ data_object.timestamp }}</td>
+                                    <td>{{ data_object.gender }}</td>
+                                    <td>{{ data_object.education }}</td>
+                                    <td>{{ data_object.age }}</td>
+                                    <td>{{ data_object.salary }}</td>
+                                    <td>{{ data_object.is_married }}</td>
+                                    <td>{{ data_object.marriage_intention }}</td>
+                                    <td>{{ data_object.agree_buying_house }}</td>
+                                    <td>{{ data_object.buying_house_influence }}</td>
+                                    <td>{{ data_object.marriage_house_requirement }}</td>
+                                    <td>{{ data_object.afford_house_price }}</td>
+                                    <td>{{ data_object.buying_house_impact_life }}</td>
+                                    <td>{{ data_object.government_support }}</td>
+                                    <td>{{ data_object.family_planning }}</td>
+                                    <td>{{ data_object.desire_for_children }}</td>
+                                    <td>{{ data_object.legal_recognition }}</td>
+                                    <td>{{ data_object.tradition }}</td>
+                                    <td>{{ data_object.responsibility_sharing }}</td>
+                                    <td>{{ data_object.sacrifice_lifestyle }}</td>
+                                    <td>{{ data_object.affordability }}</td>
+                                    <td>{{ data_object.marriage_expenses_affordability }}</td>
+                                    <td>{{ data_object.stable_career_before_family }}</td>
+                                    <td>{{ data_object.child_rearing_cost_affordability }}</td>
+                                    <td>{{ data_object.non_economic_factor_relationship }}</td>
+                                    <td>{{ data_object.family_adjustment_concerns }}</td>
+                                    <td>{{ data_object.trustworthiness }}</td>
+                                    <td>{{ data_object.fear_of_commitment }}</td>
+                                    <td>{{ data_object.freedom_loss_after_marriage }}</td>
+                                    <td>{{ data_object.no_partner }}</td>
+                                    <td>{{ data_object.fear_of_marriage_failure }}</td>
+                                    <td>{{ data_object.anycommond }}</td>
+                                </tr>
+                                {% endfor %}
+                            </table>
+                        </div>
+                        <div id="sectiontoputgraph">
+                            {% for data_object in barchart %}
+                            <div class="wgraph"> 
+                                {{data_object|safe}}
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div id="content3" style="display: none;">
+                        <h2>Relationl Factors for Marriage Intention</h2>
+                        <div class="wgraph"> 
+                            {{kmeansAgeIntention|safe}}
+                        </div>
+                    </div>
+                    <div id="content4" style="display: none;">
+                        <h2>Relationl Factors for Marriage Intention</h2>
+                    </div>
+                </div>{% comment %} analysis_main-content  {% endcomment %}
+
+            </div>{% comment %} analysis_container  {% endcomment %}
+
+        </div>{% comment %} content  {% endcomment %}
+
+    </div>{% comment %} wrapper  {% endcomment %}
 
 
     {% include 'home\footer.html' %}
@@ -153,22 +291,84 @@
 
 
     const dataFromBackend = [
-    { category: "一般資訊", items: ["時間戳記", "生理性別", "最高學歷", "您的年齡", "目前月薪資水平(台幣)", "您是否已婚？", "您目前是否有結婚意願(不論單身與否)", "已婚者可以是否後悔結婚來考量"] },
-    { category: "買房觀念", items: ["您認同買房是影響多數人結婚的重要因素嗎？", "請問買房影響您結婚意願的程度為？", "您對結婚一定得買房的認同度為何？", "請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？", "您認同買房會影響到個人生活水平的程度為？", "您認為政府在買房上已擁有完善配套措施的程度為？"] },
-    { category: "可能使擁有結婚意願的因素", items: ["想要與心愛的人共組家庭", "想要小孩", "想要讓伴侶關係被法律所認同", "傳統上結婚是人生的必經之路", "想要伴侶一同承擔責任"] },
-    { category: "可能影響您結婚意願的經濟因素", items: ["不想因為結婚犧牲現有生活水平", "無法負擔高額房價", "無法負擔結婚開銷", "想要先穩定事業再組建家庭"] },
-    { category: "可能影響您結婚意願的非經濟因素", items: ["只需要情感需求，不想綁定法律義務", "害怕要與對方家庭磨合", "不知是否對方值得信任", "不想養小孩", "婚後會失去自由", "沒有對象", "害怕婚姻失敗"] }
-];
+        { category: "一般資訊", items: ["時間戳記", "生理性別", "最高學歷", "您的年齡", "目前月薪資水平(台幣)", "您是否已婚？", "您目前是否有結婚意願(不論單身與否)", "已婚者可以是否後悔結婚來考量"] },
+        { category: "買房觀念", items: ["您認同買房是影響多數人結婚的重要因素嗎？", "請問買房影響您結婚意願的程度為？", "您對結婚一定得買房的認同度為何？", "請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？", "您認同買房會影響到個人生活水平的程度為？", "您認為政府在買房上已擁有完善配套措施的程度為？"] },
+        { category: "可能使擁有結婚意願的因素", items: ["想要與心愛的人共組家庭", "想要小孩", "想要讓伴侶關係被法律所認同", "傳統上結婚是人生的必經之路", "想要伴侶一同承擔責任"] },
+        { category: "可能影響您結婚意願的經濟因素", items: ["不想因為結婚犧牲現有生活水平", "無法負擔高額房價", "無法負擔結婚開銷", "想要先穩定事業再組建家庭"] },
+        { category: "可能影響您結婚意願的非經濟因素", items: ["只需要情感需求，不想綁定法律義務", "害怕要與對方家庭磨合", "不知是否對方值得信任", "不想養小孩", "婚後會失去自由", "沒有對象", "害怕婚姻失敗"] }
+    ];
 
-// 動態生成表格
-const table = document.getElementById('questionnaireTable');
-dataFromBackend.forEach(category => {
-    const row = table.insertRow();
-    const cell1 = row.insertCell(0);
-    const cell2 = row.insertCell(1);
-    cell1.textContent = category.category;
-    cell2.innerHTML = category.items.join("<br>");
-});
-</script>
+    // 動態生成表格
+    const table = document.getElementById('questionnaireTable');
+    dataFromBackend.forEach(category => {
+        const row = table.insertRow();
+        const cell1 = row.insertCell(0);
+        const cell2 = row.insertCell(1);
+        cell1.textContent = category.category;
+        cell2.innerHTML = category.items.join("<br>");
+    });
+    $(document).ready(function () {
+        // Handle the button click event
+        $("#filterButton").click(function () {
+            // Get the selected option value
+            var selectedOption = $("#attr_select").val();
 
+            // Make an AJAX request
+            $.ajax({
+                type: 'GET',
+                url: '/analysis',
+                data: { selected_option: selectedOption },
+                success: function (response) {
+                    // Display the response in the designated div
+                    $("#ajaxResponse").html(response.html);
+                    updateDataList(response.data_list,response.column_names);
+                    updateGraph(response.barchart);
+                    console.log(response.data_list);
+                },
+                error: function (error) {
+                    console.log('Error:', error);
+                }
+            });
+        });
+    });
+    function updateGraph(chart) {
+        // Assuming you have a container with the id "dataListContainer" to display the data list
+        var container = $("#sectiontoputgraph");
+    
+        // Clear the existing content
+        container.html(chart);
+         
+        
+    }
+    function updateDataList(data,column_names) {
+        // Assuming you have a container with the id "dataListContainer" to display the data list
+        var container = $("#dataListContainer");
+    
+        // Clear the existing content
+        container.html('');
+          // Append the header row
+    var rowHtml = "<tr>";
+        for (var i = 0; i < column_names.length; i++) {
+            rowHtml += "<th>" + column_names[i] + " </th>";
+        }
+        rowHtml += "</tr>";
+        container.append(rowHtml);
+    
+        // Append the new data list content
+        for (var i = 0; i < data.length; i++) {
+            rowHtml = "<tr>";
+    
+            // Iterate over each attribute in the object
+            for (var key in data[i]) {
+                if (data[i].hasOwnProperty(key)) {
+                    rowHtml += "<td>" + data[i][key] + "</td>";
+                }
+            }
+    
+            rowHtml += "</tr>";
+    
+            // Append the row to the container
+            container.append(rowHtml);
+        }
+    }
 </script>

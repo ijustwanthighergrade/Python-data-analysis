@@ -15,23 +15,30 @@ file_path = 'income1.xlsx'
 # Load the data into a pandas DataFrame
 df = pd.read_excel(file_path)
 
-# Assuming 'Midterm population (person)' is the new midterm population column name
-midterm_population_column = 'Midterm population (person)'
+# Assuming 'Population (person)' is the new population column name
+population_column = 'Population (person)'
 
-# Create a line plot for Midterm population
+# Create a line plot for Population with purple color
 plt.figure(figsize=(10, 6))  # Adjust the figure size if needed
-plt.plot(df[midterm_population_column], label='Midterm population (person)', marker='o')  # Plot Midterm population
+plt.plot(df[population_column], label='Population (person)', marker='o', color='blue')  # Plot Population
 
-# Set x-axis ticks using reversed order of Statistical Periods
-plt.xticks(range(len(df)), reversed(df['Statistical Period']), rotation=45, ha='right')
+# Set x-axis ticks using the actual values from 'Population (person)' column
+tick_positions = range(len(df))
+tick_labels = df['Statistical Period']
 
-plt.title('Midterm Population over the years Taiwan years 80-110')
+plt.xticks(tick_positions, tick_labels, rotation=45, ha='right')
+
+plt.title('Population over the years Taiwan years 89-110')
 plt.xlabel('Statistical Period')
-plt.ylabel('Population in millions')
+plt.ylabel('Population (person) in millions')
 plt.legend()  # Display legend
 plt.grid(True)  # Display grid
 plt.tight_layout()  # Adjust layout to prevent clipping of labels
 plt.show()
+
+
+
+
 
 
 
@@ -53,8 +60,11 @@ average_exchange_rate_column = 'Average exchange rate (yuan/USD)'
 plt.figure(figsize=(10, 6))  # Adjust the figure size if needed
 plt.plot(df[average_exchange_rate_column], label='Average exchange rate (yuan/USD)', marker='o', color='purple')  # Plot Average exchange rate
 
-# Set x-axis ticks using reversed order of Statistical Periods
-plt.xticks(range(len(df)), reversed(df['Statistical Period']), rotation=45, ha='right')
+# Set x-axis ticks using the 'Statistical Period' column values
+tick_positions = range(len(df))
+tick_labels = df['Statistical Period']
+
+plt.xticks(tick_positions, tick_labels, rotation=45, ha='right')
 
 plt.title('Average Exchange Rate over the years Taiwan years 80-110')
 plt.xlabel('Statistical Period')
@@ -85,8 +95,11 @@ economic_growth_rate_column = 'Economic growth rate (%)'
 plt.figure(figsize=(10, 6))  # Adjust the figure size if needed
 plt.plot(df[economic_growth_rate_column], label='Economic growth rate (%)', marker='o', color='gold')  # Plot Economic growth rate
 
-# Set x-axis ticks using reversed order of Statistical Periods
-plt.xticks(range(len(df)), reversed(df['Statistical Period']), rotation=45, ha='right')
+# Set x-axis ticks using the 'Statistical Period' column values
+tick_positions = range(len(df))
+tick_labels = df['Statistical Period']
+
+plt.xticks(tick_positions, tick_labels, rotation=45, ha='right')
 
 plt.title('Economic Growth Rate over the years Taiwan years 80-110')
 plt.xlabel('Statistical Period')
@@ -114,8 +127,11 @@ gdp_column = 'Gross domestic product GDP (nominal value, million yuan)'
 plt.figure(figsize=(10, 6))  # Adjust the figure size if needed
 plt.plot(df[gdp_column], label='Gross domestic product GDP (nominal value, million yuan)', marker='o', color='brown')  # Plot GDP
 
-# Set x-axis ticks using reversed order of Statistical Periods
-plt.xticks(range(len(df)), reversed(df['Statistical Period']), rotation=45, ha='right')
+# Set x-axis ticks using the 'Statistical Period' column values
+tick_positions = range(len(df))
+tick_labels = df['Statistical Period']
+
+plt.xticks(tick_positions, tick_labels, rotation=45, ha='right')
 
 plt.title('Income over the years Taiwan years 80-110 (Gross Domestic Product GDP)')
 plt.xlabel('Statistical Period')
@@ -144,8 +160,11 @@ gdp_column = 'Average GDP per capita (nominal value, yuan)'
 plt.figure(figsize=(10, 6))  # Adjust the figure size if needed
 plt.plot(df[gdp_column], label='Average GDP per capita (nominal value, yuan)', marker='o', color='red')  # Plot Average GDP per capita
 
-# Set x-axis ticks using reversed order of Statistical Periods
-plt.xticks(range(len(df)), reversed(df['Statistical Period']), rotation=45, ha='right')
+# Set x-axis ticks using the 'Statistical Period' column values
+tick_positions = range(len(df))
+tick_labels = df['Statistical Period']
+
+plt.xticks(tick_positions, tick_labels, rotation=45, ha='right')
 
 plt.title('Income over the years Taiwan years 80-110 (Average GDP per capita)')
 plt.xlabel('Statistical Period')
@@ -174,8 +193,11 @@ gni_column = 'Gross national income GNI (nominal value, million yuan)'
 plt.figure(figsize=(10, 6))  # Adjust the figure size if needed
 plt.plot(df[gni_column], label='Gross national income GNI (nominal value, million yuan)', marker='o', color='skyblue')  # Plot GNI
 
-# Set x-axis ticks using reversed order of Statistical Periods
-plt.xticks(range(len(df)), reversed(df['Statistical Period']), rotation=45, ha='right')
+# Set x-axis ticks using the 'Statistical Period' column values
+tick_positions = range(len(df))
+tick_labels = df['Statistical Period']
+
+plt.xticks(tick_positions, tick_labels, rotation=45, ha='right')
 
 plt.title('Income over the years Taiwan years 80-110 (Gross National Income GNI)')
 plt.xlabel('Statistical Period')
@@ -204,8 +226,11 @@ gni_per_person_column = 'Average GNI per person (nominal value, yuan)'
 plt.figure(figsize=(10, 6))  # Adjust the figure size if needed
 plt.plot(df[gni_per_person_column], label='Average GNI per person (nominal value, yuan)', marker='o', color='green')  # Plot Average GNI per person
 
-# Set x-axis ticks using reversed order of Statistical Periods
-plt.xticks(range(len(df)), reversed(df['Statistical Period']), rotation=45, ha='right')
+# Set x-axis ticks using the 'Statistical Period' column values
+tick_positions = range(len(df))
+tick_labels = df['Statistical Period']
+
+plt.xticks(tick_positions, tick_labels, rotation=45, ha='right')
 
 plt.title('Income over the years Taiwan years 80-110 (Average GNI per person)')
 plt.xlabel('Statistical Period')
@@ -230,12 +255,18 @@ df = pd.read_excel(file_path)
 # Assuming 'National income (nominal value, million yuan)' is the new national income column name
 national_income_column = 'National income (nominal value, million yuan)'
 
+# Reverse the order of the data for the line plot
+reversed_data = df[national_income_column][::-1]
+
 # Create a line plot for National income
 plt.figure(figsize=(10, 6))  # Adjust the figure size if needed
-plt.plot(df[national_income_column], label='National income (nominal value, million yuan)', marker='o', color='grey')  # Plot National income
+plt.plot(reversed_data, label='National income (nominal value, million yuan)', marker='o', color='grey')  # Plot National income
 
-# Set x-axis ticks using reversed order of Statistical Periods
-plt.xticks(range(len(df)), reversed(df['Statistical Period']), rotation=45, ha='right')
+# Set x-axis ticks using the 'Statistical Period' column values
+tick_positions = range(len(df))
+tick_labels = df['Statistical Period']
+
+plt.xticks(tick_positions, tick_labels, rotation=45, ha='right')
 
 plt.title('Income over the years Taiwan years 80-110 (National Income)')
 plt.xlabel('Statistical Period')
@@ -243,7 +274,7 @@ plt.ylabel('Amount in Millions yuan')
 plt.legend()  # Display legend
 plt.grid(True)  # Display grid
 plt.tight_layout()  # Adjust layout to prevent clipping of labels
-plt.show
+plt.show()
 
 
 ##### Average income per person #######################################################
@@ -264,8 +295,11 @@ average_income_per_person_column = 'Average income per person (nominal value, yu
 plt.figure(figsize=(10, 6))  # Adjust the figure size if needed
 plt.plot(df[average_income_per_person_column], label='Average income per person (nominal value, yuan)', marker='o', color='slateblue')  # Plot Average income per person
 
-# Set x-axis ticks using reversed order of Statistical Periods
-plt.xticks(range(len(df)), reversed(df['Statistical Period']), rotation=45, ha='right')
+# Set x-axis ticks using the 'Statistical Period' column values
+tick_positions = range(len(df))
+tick_labels = df['Statistical Period']
+
+plt.xticks(tick_positions, tick_labels, rotation=45, ha='right')
 
 plt.title('Income over the years Taiwan years 80-110 (Average Income per person)')
 plt.xlabel('Statistical Period')

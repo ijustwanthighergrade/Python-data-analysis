@@ -17,6 +17,13 @@ import seaborn as sns
 from matplotlib import rcParams
 import django
 from django.utils import timezone
+from django.views.decorators.csrf import csrf_exempt
+from django.http import HttpRequest
+from django.http import JsonResponse
+from django.db.models import Q
+import numpy as np
+from collections import defaultdict
+from collections import OrderedDict
 
 
 # 設定字型，使用支援中文的字型（例如 Microsoft JhengHei）
@@ -31,7 +38,7 @@ totalmarriages = os.path.join(script_dir, r'data\number_of_marriages1.xlsx')
 educationlevel = os.path.join(script_dir, r'data\educationlevel1.xlsx')
 file_path = os.path.join(script_dir, r'data\income1.xlsx')
 
-
+# The page to show Data Visualization
 def home(request):
     c = {}
     c['birthrate'] = birthrate()
@@ -71,8 +78,77 @@ def home(request):
 
     return render(request, 'home/home.html', c)
 
-def analysis(request):
+def analysis(request: HttpRequest):
     importdata()
+    alliwanttoshow={}
+    alliwanttoshow['kmeansAgeIntention']=kmeansAgeIntention()
+    
+    alliwanttoshow['gender']=['男','女']
+    alliwanttoshow['education_levels'] = ['小學','國中','高中','大學','碩士','博士']
+    alliwanttoshow['age'] = [
+    '17歲(含)以下',
+    '18～20',
+    '21～29',
+    '30～39',
+    '40～49',
+    '50～59',
+    '60～69',
+    '70～79',
+    '80～89',
+    '90以上']
+    alliwanttoshow['income'] = [
+    '0～19999',
+    '20000～39999',
+    '40000～59999',
+    '60000~79999',
+    '80000~99999',
+    '100000~119000',
+    '120000～139999',
+    '140000以上',
+    '家管',
+    '學生無收入'
+    ]
+    alliwanttoshow['marriageornot']=["是","否"]
+    alliwanttoshow['column_names'] = [
+    '時間戳記', '生理性別', '最高學歷', '您的年齡', '目前月薪資水平(台幣)', '您是否已婚？',
+    '您目前是否有結婚意願(不論單身與否)', '您認同買房是影響多數人結婚的重要因素嗎？', '請問買房影響您結婚意願的程度為？',
+    '您對結婚一定得買房的認同度為何？', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？',
+    '您認同買房會影響到個人生活水平的程度為？', '您認為政府在買房上已擁有完善配套措施的程度為？',
+    '想要與心愛的人共組家庭', '想要小孩', '想要讓伴侶關係被法律所認同', '傳統上結婚是人生的必經之路',
+    '想要伴侶一同承擔責任', '不想因為結婚犧牲現有生活水平', '無法負擔高額房價', '無法負擔結婚開銷',
+    '想要先穩定事業再組建家庭', '無法負擔子女教養費用', '只需要情感需求，不想綁定法律義務',
+    '害怕因為結婚要進行家庭調整', '信任度', '害怕承擔長期法律義務', '害怕婚後失去個人自由', '尚未找到適合的結婚對象',
+    '害怕婚姻失敗', '任何指教'
+    ]
+    alliwanttoshow['data_list']=[]
+    alliwanttoshow['optionalnum']=[1,2,3,4,5]
+    allofdata=getalldata()
+    allofdatanum=len(allofdata)
+    if request.GET.get('selected_option'):
+        selected_option = request.GET.get('selected_option')
+        html=""
+        # Extracting optgroup and option
+        if selected_option:
+            optgroup, option = selected_option.split(':')
+            alliwanttoshow['data_list']=filiterdata(optgroup,option)
+            filiterdatanum=len(alliwanttoshow['data_list'])
+            alliwanttoshow['html']=f"<div>Optgroup: {optgroup}, Option: {option}, Filitered Data Number: {filiterdatanum}, Ratio of all data: {filiterdatanum/allofdatanum}</div>"
+            alliwanttoshow['barchart']=create_bar_chart(count_results(alliwanttoshow['data_list']))
+        return JsonResponse(alliwanttoshow)
+    else:
+        alliwanttoshow['data_list']=allofdata
+        
+        alliwanttoshow['barchart']=create_bar_chart(count_results(allofdata))
+        # print(alliwanttoshow['barchart'])
+        return render(request, 'home/analysis.html',alliwanttoshow)
+def count_results(allofdata):
+    count_results = defaultdict(OrderedDict)
+    for respondent in allofdata:
+        for series, response in respondent.items():
+            count_results[series][response] = count_results[series].get(response, 0) + 1
+    return count_results
+
+def getalldata():
     survey_data = MarriageSurvey.objects.all()
     data_list = []
     for survey in survey_data:
@@ -110,12 +186,81 @@ def analysis(request):
             'anycommond': survey.anycommond,
         }
         data_list.append(survey_data)  
-    alliwanttoshow={}
-    alliwanttoshow['data_list']=data_list
-    alliwanttoshow['kmeansAgeIntention']=kmeansAgeIntention()
-    # print(alliwanttoshow['data_list'])
+    return data_list
+
+def filiterdata(optgroup,option):
+    query = Q(**{f"{optgroup}__exact": option})
+    survey_data = MarriageSurvey.objects.filter(query)
+    data_list = []
+    for survey in survey_data:
+        survey_data = {
+            'timestamp': survey.timestamp,
+            'gender': survey.gender,
+            'education': survey.education,
+            'age': survey.age,
+            'salary': survey.salary,
+            'is_married': survey.is_married,
+            'marriage_intention': survey.marriage_intention,
+            'agree_buying_house': survey.agree_buying_house,
+            'buying_house_influence': survey.buying_house_influence,
+            'marriage_house_requirement': survey.marriage_house_requirement,
+            'afford_house_price': survey.afford_house_price,
+            'buying_house_impact_life': survey.buying_house_impact_life,
+            'government_support': survey.government_support,
+            'family_planning': survey.family_planning,
+            'desire_for_children': survey.desire_for_children,
+            'legal_recognition': survey.legal_recognition,
+            'tradition': survey.tradition,
+            'responsibility_sharing': survey.responsibility_sharing,
+            'sacrifice_lifestyle': survey.sacrifice_lifestyle,
+            'affordability': survey.affordability,
+            'marriage_expenses_affordability': survey.marriage_expenses_affordability,
+            'stable_career_before_family': survey.stable_career_before_family,
+            'child_rearing_cost_affordability': survey.child_rearing_cost_affordability,
+            'non_economic_factor_relationship': survey.non_economic_factor_relationship,
+            'family_adjustment_concerns': survey.family_adjustment_concerns,
+            'trustworthiness': survey.trustworthiness,
+            'fear_of_commitment': survey.fear_of_commitment,
+            'freedom_loss_after_marriage': survey.freedom_loss_after_marriage,
+            'no_partner': survey.no_partner,
+            'fear_of_marriage_failure': survey.fear_of_marriage_failure,
+            'anycommond': survey.anycommond,
+        }
+        data_list.append(survey_data)  
     
-    return render(request, 'home/analysis.html',alliwanttoshow)
+    return data_list
+
+def create_bar_chart(data):
+    allofchart=[]
+    before_special_field = True
+
+    for i,(series, counts) in enumerate(data.items()):
+        options = list(counts.keys())
+        counts_values = list(counts.values())
+        special_field = 'marriage_intention'
+        if series== special_field:
+            before_special_field = False
+
+        if i == 0 or i == len(data) - 1:
+            continue
+        
+        if before_special_field:
+            fig=plt.figure(figsize=(8, 8))
+            plt.pie(counts_values, labels=options, autopct='%1.1f%%', startangle=90)
+            plt.title(f'Pie Chart for {series}')
+            fig=fig_to_base64(fig)
+            allofchart.append(fig)
+        else:
+            fig=plt.figure(figsize=(10, 6))
+            bars =plt.bar(options, counts_values, color='skyblue')
+            plt.xlabel('Options')
+            plt.ylabel('Number of People')
+            plt.title(f'Bar Chart for {series}')
+            plt.bar_label(bars, labels=counts_values)
+
+            fig=fig_to_base64(fig)
+            allofchart.append(fig)
+    return allofchart
 
 # The graph in home
 def birthrate():
@@ -826,37 +971,43 @@ def totalmarriagesnumberM():
 def incomeMidtermpopulation():
     df = pd.read_excel(file_path)
 
-    # Assuming 'Midterm population (person)' is the new midterm population column name
-    midterm_population_column = 'Midterm population (person)'
+    # Assuming 'Population (person)' is the new population column name
+    population_column = 'Population (person)'
 
-    # Create a line plot for Midterm population
+    # Create a line plot for Population with purple color
     fig=plt.figure(figsize=(10, 6))  # Adjust the figure size if needed
-    plt.plot(df[midterm_population_column], label='Midterm population (person)', marker='o')  # Plot Midterm population
+    plt.plot(df[population_column], label='Population (person)', marker='o', color='blue')  # Plot Population
 
-    # Set x-axis ticks using reversed order of Statistical Periods
-    plt.xticks(range(len(df)), reversed(df['Statistical Period']), rotation=45, ha='right')
+    # Set x-axis ticks using the actual values from 'Population (person)' column
+    tick_positions = range(len(df))
+    tick_labels = df['Statistical Period']
 
-    plt.title('Midterm Population over the years Taiwan years 80-110')
+    plt.xticks(tick_positions, tick_labels, rotation=45, ha='right')
+
+    plt.title('Population over the years Taiwan years 89-110')
     plt.xlabel('Statistical Period')
-    plt.ylabel('Population in millions')
+    plt.ylabel('Population (person) in millions')
     plt.legend()  # Display legend
     plt.grid(True)  # Display grid
     plt.tight_layout()  # Adjust layout to prevent clipping of labels
+
     fig = fig_to_base64(fig)
     return fig
 
 def incomeAverageexchangerate():
     df = pd.read_excel(file_path)
 
-    # Assuming 'Average exchange rate (yuan/USD)' is the new average exchange rate column name
     average_exchange_rate_column = 'Average exchange rate (yuan/USD)'
 
     # Create a line plot for Average exchange rate with purple color
     fig=plt.figure(figsize=(10, 6))  # Adjust the figure size if needed
     plt.plot(df[average_exchange_rate_column], label='Average exchange rate (yuan/USD)', marker='o', color='purple')  # Plot Average exchange rate
 
-    # Set x-axis ticks using reversed order of Statistical Periods
-    plt.xticks(range(len(df)), reversed(df['Statistical Period']), rotation=45, ha='right')
+    # Set x-axis ticks using the 'Statistical Period' column values
+    tick_positions = range(len(df))
+    tick_labels = df['Statistical Period']
+
+    plt.xticks(tick_positions, tick_labels, rotation=45, ha='right')
 
     plt.title('Average Exchange Rate over the years Taiwan years 80-110')
     plt.xlabel('Statistical Period')
@@ -864,6 +1015,7 @@ def incomeAverageexchangerate():
     plt.legend()  # Display legend
     plt.grid(True)  # Display grid
     plt.tight_layout()  # Adjust layout to prevent clipping of labels
+
     fig = fig_to_base64(fig)
     return fig
 
@@ -876,11 +1028,14 @@ def incomeEconomicgrowthrate():
     economic_growth_rate_column = 'Economic growth rate (%)'
 
     # Create a line plot for Economic growth rate
-    fig=plt.figure(figsize=(10, 6))  # Adjust the figure size if needed
+    fig = plt.figure(figsize=(10, 6))  # Adjust the figure size if needed
     plt.plot(df[economic_growth_rate_column], label='Economic growth rate (%)', marker='o', color='gold')  # Plot Economic growth rate
 
-    # Set x-axis ticks using reversed order of Statistical Periods
-    plt.xticks(range(len(df)), reversed(df['Statistical Period']), rotation=45, ha='right')
+    # Set x-axis ticks using the 'Statistical Period' column values
+    tick_positions = range(len(df))
+    tick_labels = df['Statistical Period']
+
+    plt.xticks(tick_positions, tick_labels, rotation=45, ha='right')
 
     plt.title('Economic Growth Rate over the years Taiwan years 80-110')
     plt.xlabel('Statistical Period')
@@ -896,15 +1051,18 @@ def incomeGDP():
     # Load the data into a pandas DataFrame
     df = pd.read_excel(file_path)
 
-        # Assuming 'Gross domestic product GDP (nominal value, million yuan)' is the GDP column name
+    # Assuming 'Gross domestic product GDP (nominal value, million yuan)' is the GDP column name
     gdp_column = 'Gross domestic product GDP (nominal value, million yuan)'
 
     # Create a line plot for GDP only
-    fig=plt.figure(figsize=(10, 6))  # Adjust the figure size if needed
+    fig = plt.figure(figsize=(10, 6))  # Adjust the figure size if needed
     plt.plot(df[gdp_column], label='Gross domestic product GDP (nominal value, million yuan)', marker='o', color='brown')  # Plot GDP
 
-    # Set x-axis ticks using reversed order of Statistical Periods
-    plt.xticks(range(len(df)), reversed(df['Statistical Period']), rotation=45, ha='right')
+    # Set x-axis ticks using the 'Statistical Period' column values
+    tick_positions = range(len(df))
+    tick_labels = df['Statistical Period']
+
+    plt.xticks(tick_positions, tick_labels, rotation=45, ha='right')
 
     plt.title('Income over the years Taiwan years 80-110 (Gross Domestic Product GDP)')
     plt.xlabel('Statistical Period')
@@ -920,15 +1078,18 @@ def incomeAverageGDP():
     # Load the data into a pandas DataFrame
     df = pd.read_excel(file_path)
 
-        # Assuming 'Average GDP per capita (nominal value, yuan)' is the new GDP column name
+    # Assuming 'Average GDP per capita (nominal value, yuan)' is the new GDP column name
     gdp_column = 'Average GDP per capita (nominal value, yuan)'
 
     # Create a line plot for Average GDP per capita
-    fig=plt.figure(figsize=(10, 6))  # Adjust the figure size if needed
+    fig = plt.figure(figsize=(10, 6))  # Adjust the figure size if needed
     plt.plot(df[gdp_column], label='Average GDP per capita (nominal value, yuan)', marker='o', color='red')  # Plot Average GDP per capita
 
-    # Set x-axis ticks using reversed order of Statistical Periods
-    plt.xticks(range(len(df)), reversed(df['Statistical Period']), rotation=45, ha='right')
+    # Set x-axis ticks using the 'Statistical Period' column values
+    tick_positions = range(len(df))
+    tick_labels = df['Statistical Period']
+
+    plt.xticks(tick_positions, tick_labels, rotation=45, ha='right')
 
     plt.title('Income over the years Taiwan years 80-110 (Average GDP per capita)')
     plt.xlabel('Statistical Period')
@@ -948,11 +1109,14 @@ def incomeGNI():
     gni_column = 'Gross national income GNI (nominal value, million yuan)'
 
     # Create a line plot for Gross national income GNI
-    fig=plt.figure(figsize=(10, 6))  # Adjust the figure size if needed
+    fig = plt.figure(figsize=(10, 6))  # Adjust the figure size if needed
     plt.plot(df[gni_column], label='Gross national income GNI (nominal value, million yuan)', marker='o', color='skyblue')  # Plot GNI
 
-    # Set x-axis ticks using reversed order of Statistical Periods
-    plt.xticks(range(len(df)), reversed(df['Statistical Period']), rotation=45, ha='right')
+    # Set x-axis ticks using the 'Statistical Period' column values
+    tick_positions = range(len(df))
+    tick_labels = df['Statistical Period']
+
+    plt.xticks(tick_positions, tick_labels, rotation=45, ha='right')
 
     plt.title('Income over the years Taiwan years 80-110 (Gross National Income GNI)')
     plt.xlabel('Statistical Period')
@@ -972,11 +1136,14 @@ def incomeAverageGNI():
     gni_per_person_column = 'Average GNI per person (nominal value, yuan)'
 
     # Create a line plot for Average GNI per person
-    fig=plt.figure(figsize=(10, 6))  # Adjust the figure size if needed
+    fig = plt.figure(figsize=(10, 6))  # Adjust the figure size if needed
     plt.plot(df[gni_per_person_column], label='Average GNI per person (nominal value, yuan)', marker='o', color='green')  # Plot Average GNI per person
 
-    # Set x-axis ticks using reversed order of Statistical Periods
-    plt.xticks(range(len(df)), reversed(df['Statistical Period']), rotation=45, ha='right')
+    # Set x-axis ticks using the 'Statistical Period' column values
+    tick_positions = range(len(df))
+    tick_labels = df['Statistical Period']
+
+    plt.xticks(tick_positions, tick_labels, rotation=45, ha='right')
 
     plt.title('Income over the years Taiwan years 80-110 (Average GNI per person)')
     plt.xlabel('Statistical Period')
@@ -995,12 +1162,18 @@ def incomeNational():
     # Assuming 'National income (nominal value, million yuan)' is the new national income column name
     national_income_column = 'National income (nominal value, million yuan)'
 
-    # Create a line plot for National income
-    fig=plt.figure(figsize=(10, 6))  # Adjust the figure size if needed
-    plt.plot(df[national_income_column], label='National income (nominal value, million yuan)', marker='o', color='grey')  # Plot National income
+    # Reverse the order of the data for the line plot
+    reversed_data = df[national_income_column][::-1]
 
-    # Set x-axis ticks using reversed order of Statistical Periods
-    plt.xticks(range(len(df)), reversed(df['Statistical Period']), rotation=45, ha='right')
+    # Create a line plot for National income
+    fig = plt.figure(figsize=(10, 6))  # Adjust the figure size if needed
+    plt.plot(reversed_data, label='National income (nominal value, million yuan)', marker='o', color='grey')  # Plot National income
+
+    # Set x-axis ticks using the 'Statistical Period' column values
+    tick_positions = range(len(df))
+    tick_labels = df['Statistical Period']
+
+    plt.xticks(tick_positions, tick_labels, rotation=45, ha='right')
 
     plt.title('Income over the years Taiwan years 80-110 (National Income)')
     plt.xlabel('Statistical Period')
@@ -1018,11 +1191,14 @@ def incomeAverageperson():
     average_income_per_person_column = 'Average income per person (nominal value, yuan)'
 
     # Create a line plot for Average income per person
-    fig=plt.figure(figsize=(10, 6))  # Adjust the figure size if needed
+    fig = plt.figure(figsize=(10, 6))  # Adjust the figure size if needed
     plt.plot(df[average_income_per_person_column], label='Average income per person (nominal value, yuan)', marker='o', color='slateblue')  # Plot Average income per person
 
-    # Set x-axis ticks using reversed order of Statistical Periods
-    plt.xticks(range(len(df)), reversed(df['Statistical Period']), rotation=45, ha='right')
+    # Set x-axis ticks using the 'Statistical Period' column values
+    tick_positions = range(len(df))
+    tick_labels = df['Statistical Period']
+
+    plt.xticks(tick_positions, tick_labels, rotation=45, ha='right')
 
     plt.title('Income over the years Taiwan years 80-110 (Average Income per person)')
     plt.xlabel('Statistical Period')
@@ -1082,6 +1258,7 @@ def fig_to_base64(fig):
     img_tag = f'<img class="graph" src="data:image/png;base64,{data_uri}" alt="Matplotlib Chart"/>'
     return img_tag
 
+# import data from .xlxs to database
 def importdata():
     # Set up Django
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "analysis.settings")
