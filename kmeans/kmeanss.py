@@ -11,11 +11,20 @@ import seaborn as sns
 from sklearn.cluster import KMeans
 from mpl_toolkits.mplot3d import Axes3D
 
-# File path
-file_path = '/mnt/data/房價與結婚意願之相關分析_1214修改版 的副本 (回覆) (1).xlsx'
+import os
+from matplotlib import rcParams
+
+# 設定字型，使用支援中文的字型（例如 Microsoft JhengHei）
+rcParams['font.sans-serif'] = ['Microsoft JhengHei']
+
+# 顯示全形字符警告
+rcParams['axes.unicode_minus'] = False
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
+file_path = os.path.join(script_dir, '房價與結婚意願之相關分析_1214修改版 的副本 (回覆) (1).xlsx')
 
 # Reading the Excel file with an explicit encoding
-df = pd.read_excel(file_path, encoding='utf-8')
+df = pd.read_excel(file_path)
 
 # Mapping age ranges to numeric values
 age_mapping = {'21～29': 25, '30～39': 35, '40～49': 45, '50～59': 55, '60以上': 65}

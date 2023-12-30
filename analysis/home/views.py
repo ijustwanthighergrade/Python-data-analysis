@@ -14,14 +14,22 @@ from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
 import matplotlib.pyplot as plt
 import seaborn as sns
+from matplotlib import rcParams
+import django
+from django.utils import timezone
 
+
+# 設定字型，使用支援中文的字型（例如 Microsoft JhengHei）
+rcParams['font.sans-serif'] = ['Microsoft JhengHei']
+
+# 顯示全形字符警告
+rcParams['axes.unicode_minus'] = False
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
 maritalstatus = os.path.join(script_dir, 'data\maritalstatus1.xlsx')
 totalmarriages = os.path.join(script_dir, r'data\number_of_marriages1.xlsx')
 educationlevel = os.path.join(script_dir, r'data\educationlevel1.xlsx')
 file_path = os.path.join(script_dir, r'data\income1.xlsx')
-kmeans = os.path.join(script_dir, r'data\房價與結婚意願之相關分析_1214修改版 的副本 (回覆) (1).xlsx')
 
 
 def home(request):
@@ -64,6 +72,7 @@ def home(request):
     return render(request, 'home/home.html', c)
 
 def analysis(request):
+    importdata()
     survey_data = MarriageSurvey.objects.all()
     data_list = []
     for survey in survey_data:
@@ -1025,26 +1034,36 @@ def incomeAverageperson():
     return fig
 
 def kmeansAgeIntention():
-    data = pd.read_excel(kmeans)
+    kmeans = os.path.join(script_dir, r'data\房價與結婚意願之相關分析_1214修改版 的副本 (回覆) (1).xlsx')
 
-    data.head()
+    # Reading the Excel file with an explicit encoding
+    df = pd.read_excel(kmeans)
 
+    # Mapping age ranges to numeric values
     age_mapping = {'21～29': 25, '30～39': 35, '40～49': 45, '50～59': 55, '60以上': 65}
-    data['年齡數值'] = data['您的年齡'].map(age_mapping)
+    df['年齡數值'] = df['您的年齡'].map(age_mapping)
 
+    # Mapping salary ranges to numeric values
+    salary_mapping = {'0～19999': 10000, '20000～39999': 30000, '40000～59999': 50000, '60000～79999': 70000, '80000以上': 90000}
+    df['月薪資數值'] = df['目前月薪資水平(台幣)'].map(salary_mapping)
 
-    age_marriage_intention = data.groupby('年齡數值')['您目前是否有結婚意願(不論單身與否)\n已婚者可以是否後悔結婚來考量'].mean()
-    """
-    繪製折線圖
-    顯示不同年齡組別的平均結婚意願，有助於理解不同年齡層對結婚的看法和意願如何隨年齡變化。
-    """
-    fig = plt.figure(figsize=(10, 6))
-    plt.plot(age_marriage_intention, marker='o', linestyle='-', color='b')
-    plt.title('Average Marriage Intention by Age Group')
-    plt.xlabel('Age Group')
-    plt.ylabel('Average Marriage Intention Score')
-    plt.xticks(ticks=age_marriage_intention.index)
-    plt.grid(True)
+    # Selecting relevant features for K-means clustering
+    features = ['年齡數值', '月薪資數值', '請問買房影響您結婚意願的程度為？']
+    data_for_clustering = df[features].dropna()
+
+    # Applying K-means clustering
+    kmeans = KMeans(n_clusters=3, random_state=0)
+    clusters = kmeans.fit_predict(data_for_clustering)
+
+    # Adding cluster information to the dataframe
+    data_for_clustering['Cluster'] = clusters
+
+    # Creating a correlation matrix and visualizing it using a heatmap
+    correlation_matrix = data_for_clustering.corr()
+    fig=plt.figure(figsize=(10, 8))
+    sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt=".2f")
+    plt.title('Heatmap of Correlation Between Age, Monthly Salary, and Influence on Marriage Intention')
+
     fig = fig_to_base64(fig)
     return fig
 
@@ -1063,3 +1082,54 @@ def fig_to_base64(fig):
     img_tag = f'<img class="graph" src="data:image/png;base64,{data_uri}" alt="Matplotlib Chart"/>'
     return img_tag
 
+def importdata():
+    # Set up Django
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "analysis.settings")
+    django.setup()
+
+    from home.models import MarriageSurvey  
+    MarriageSurvey.objects.all().delete()
+
+    # Path to Excel file
+    excel_file_path = r"C:\Users\DAIYUNWU\Desktop\Python-data-analysis\analysis\home\data\collect.xlsx"
+
+    # Read the Excel file and insert data into the database
+    df = pd.read_excel(excel_file_path)
+
+    for _, row in df.iterrows():
+        timestamp_str = str(row["時間戳記"])
+        timestamp = timezone.make_aware(pd.Timestamp(timestamp_str).to_pydatetime())
+
+        MarriageSurvey.objects.create(
+            timestamp=timestamp,
+            gender=row["生理性別"],
+            education=row["最高學歷"],
+            age=row["您的年齡"],
+            salary=row["目前月薪資水平(台幣)"],
+            is_married=row["您是否已婚？"],
+            marriage_intention = row["您目前是否有結婚意願(不論單身與否)"],
+            agree_buying_house = row["您認同買房是影響多數人結婚的重要因素嗎？"],
+            buying_house_influence = row["請問買房影響您結婚意願的程度為？"],
+            marriage_house_requirement = row["您對結婚一定得買房的認同度為何？"],
+            afford_house_price = row["請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？"],
+            buying_house_impact_life = row["您認同買房會影響到個人生活水平的程度為？"],
+            government_support = row["您認為政府在買房上已擁有完善配套措施的程度為？"],
+            family_planning = row["想要與心愛的人共組家庭"],
+            desire_for_children = row["想要小孩"],
+            legal_recognition = row["想要讓伴侶關係被法律所認同"],
+            tradition = row["傳統上結婚是人生的必經之路"],
+            responsibility_sharing = row["想要伴侶一同承擔責任"],
+            sacrifice_lifestyle = row["不想因為結婚犧牲現有生活水平"],
+            affordability = row["無法負擔高額房價"],
+            marriage_expenses_affordability = row["無法負擔結婚開銷"],
+            stable_career_before_family = row["想要先穩定事業再組建家庭"],
+            child_rearing_cost_affordability = row["無法負擔子女教養費用"],
+            non_economic_factor_relationship = row["只需要情感需求，不想綁定法律義務"],
+            family_adjustment_concerns = row["害怕要與對方家庭磨合"],
+            trustworthiness = row["不知是否對方值得信任"],
+            fear_of_commitment = row["不想養小孩"],
+            freedom_loss_after_marriage = row["婚後會失去自由"],
+            no_partner = row["沒有對象"],
+            fear_of_marriage_failure = row["害怕婚姻失敗"],
+            anycommond = row["任何指教"]
+            )
