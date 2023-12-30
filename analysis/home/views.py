@@ -104,7 +104,6 @@ def analysis(request):
     alliwanttoshow={}
     alliwanttoshow['data_list']=data_list
     alliwanttoshow['kmeansAgeIntention']=kmeansAgeIntention()
-    alliwanttoshow['kmeansIncomeIntention']=kmeansIncomeIntention()
     # print(alliwanttoshow['data_list'])
     
     return render(request, 'home/analysis.html',alliwanttoshow)
@@ -1049,34 +1048,6 @@ def kmeansAgeIntention():
     fig = fig_to_base64(fig)
     return fig
 
-def kmeansIncomeIntention():
-    data = pd.read_excel(kmeans)
-
-    data.head()
-
-    # 數據預處理
-    salary_midpoints = {
-        '0～19999': 10000, 
-        '20000～39999': 30000, 
-        '40000～59999': 50000, 
-        '60000～79999': 70000, 
-        '80000以上': 90000
-    }
-    data['月薪資水平(台幣)_中點'] = data['目前月薪資水平(台幣)'].map(salary_midpoints)
-    """
-    創建傘點圖箱形的中間線：
-    表示中位數，即該收入範圍內一半人的結婚意願得分高於此值，另一半低於此值。
-    箱形的上下界：表示第一四分位數和第三四分位數，也就是該收入範圍內25%和75%的人的結婚意願得分分佈範圍。
-    突出的點：可能表示異常值，即特別高或特別低的結婚意願得分。
-    """
-    fig=plt.figure(figsize=(12, 8))
-    sns.boxplot(x='月薪資水平(台幣)_中點', y='您目前是否有結婚意願(不論單身與否)\n已婚者可以是否後悔結婚來考量', data=data)
-    plt.title('Relationship Between Monthly Income and Marriage Intention')
-    plt.xlabel('Monthly Income (NTD)')
-    plt.ylabel('Marriage Intention Score')
-    plt.grid(True)
-    fig = fig_to_base64(fig)
-    return fig
 
 
 
