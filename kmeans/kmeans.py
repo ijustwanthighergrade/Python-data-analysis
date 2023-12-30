@@ -9,8 +9,11 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
+script_dir = os.path.dirname(os.path.abspath(__file__))
 
-file_path = '/mnt/data/房價與結婚意願之相關分析_1214修改版 的副本 (回覆) (1).xlsx'
+file_path = os.path.join(script_dir, '房價與結婚意願之相關分析_1214修改版 的副本 (回覆) (1).xlsx')
+
 data = pd.read_excel(file_path)
 
 data.head()
