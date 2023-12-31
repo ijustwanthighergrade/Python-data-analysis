@@ -44,7 +44,7 @@ plt.plot(line_positions_female['university'], female_data['University Graduate']
 # Set labels and title
 plt.xlabel('Years')
 plt.ylabel('Number of Individuals')
-plt.title('Education Level of the Male Population in Taiwan years 89-110 (University level)')
+plt.title('Education Level of the Population in Taiwan years 89-110 (University level)')
 
 # Set x-axis ticks and labels with rotation
 plt.xticks(line_positions_male['university'], male_data['Year'], rotation=45, ha='right')
@@ -100,7 +100,7 @@ plt.plot(line_positions_female['diploma'], female_data['Diploma'], marker='o', l
 # Set labels and title
 plt.xlabel('Years')
 plt.ylabel('Number of Individuals')
-plt.title('Education Level of the Male Population in Taiwan years 89-110 (Diploma)')
+plt.title('Education Level of the Population in Taiwan years 89-110 (Diploma)')
 
 # Set x-axis ticks and labels with rotation
 plt.xticks(line_positions_male['diploma'], male_data['Year'], rotation=45, ha='right')
@@ -153,7 +153,7 @@ plt.plot(line_positions_female['High School Graduate'], female_data['High School
 # Set labels and title
 plt.xlabel('Years')
 plt.ylabel('Number of Individuals')
-plt.title('Education Level of the Male Population in Taiwan years 89-110 (High School level)')
+plt.title('Education Level of the Population in Taiwan years 89-110 (High School level)')
 
 # Set x-axis ticks and labels with rotation
 plt.xticks(line_positions_male['High School Graduate'], male_data['Year'], rotation=45, ha='right')
@@ -202,7 +202,7 @@ plt.plot(line_positions_female_junior_high, female_data['Junior High Graduate'],
 # Set labels and title
 plt.xlabel('Years')
 plt.ylabel('Number of Individuals')
-plt.title('Education Level of the Male Population in Taiwan years 89-110 (Junior High Level)')
+plt.title('Education Level of the Population in Taiwan years 89-110 (Junior High Level)')
 
 # Set x-axis ticks and labels with rotation
 plt.xticks(line_positions_male_junior_high, male_data['Year'], rotation=45, ha='right')
@@ -250,7 +250,7 @@ plt.plot(line_positions_female_elementary, female_data['Elemental School Graduat
 # Set labels and title
 plt.xlabel('Years')
 plt.ylabel('Number of Individuals')
-plt.title('Education Level of the Male Population in Taiwan years 89-110 (Elementary School Level)')
+plt.title('Education Level of the Population in Taiwan years 89-110 (Elementary School Level)')
 
 # Set x-axis ticks and labels with rotation
 plt.xticks(line_positions_male_elementary, male_data['Year'], rotation=45, ha='right')
