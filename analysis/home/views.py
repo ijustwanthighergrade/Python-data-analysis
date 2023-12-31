@@ -24,7 +24,7 @@ from django.db.models import Q
 import numpy as np
 from collections import defaultdict
 from collections import OrderedDict
-
+import json
 
 # 設定字型，使用支援中文的字型（例如 Microsoft JhengHei）
 rcParams['font.sans-serif'] = ['Microsoft JhengHei']
@@ -121,6 +121,13 @@ def analysis(request: HttpRequest):
     allofdata=getalldata()
     allofdatanum=len(allofdata)
     dictfordatalist={}
+    
+    
+    jsonf = os.path.join(script_dir, r'C:\Users\DAIYUNWU\Desktop\Python-data-analysis\analysis\output.json')
+    with open(jsonf, 'r') as json_file:
+            data = json.load(json_file)
+    alliwanttoshow['json']=data
+    
     if request.GET.get('selected_option'):
         selected_option = request.GET.get('selected_option')
         html=""
@@ -129,7 +136,10 @@ def analysis(request: HttpRequest):
             optgroup, option = selected_option.split(':')
             alliwanttoshow['data_list']=filiterdata(optgroup,option)
             filiterdatanum=len(alliwanttoshow['data_list'])
-            alliwanttoshow['html']=f"<div>Optgroup: {optgroup}, Option: {option}, Filitered Data Number: {filiterdatanum}, Ratio of all data: {filiterdatanum/allofdatanum}</div>"
+            alliwanttoshow['html']=f"<p class='optgroup'>Optgroup: {optgroup}</p>"
+            alliwanttoshow['html']+=f"<p class='option'>Option: {option}</p>"
+            alliwanttoshow['html']+=f"<p class='filtered-data'>Filtered Data Number: {filiterdatanum}</p>"
+            alliwanttoshow['html']+=f"<p class='ratio'>Ratio of all data: {filiterdatanum/allofdatanum}</p>"
             dictfordatalist=count_results(alliwanttoshow['data_list'])
             alliwanttoshow['barchart']=create_bar_chart(dictfordatalist)
             
@@ -146,6 +156,14 @@ def count_results(allofdata):
         for series, response in respondent.items():
             count_results[series][response] = count_results[series].get(response, 0) + 1
     return count_results
+
+def apriori(request):
+    alliwanttoshow={}
+    jsonf = os.path.join(script_dir, r'C:\Users\DAIYUNWU\Desktop\Python-data-analysis\analysis\output.json')
+    with open(jsonf, 'r') as json_file:
+            data = json.load(json_file)
+    alliwanttoshow['json']=data
+    return render(request, 'home/apriori.html',alliwanttoshow)
 
 def getalldata():
     survey_data = MarriageSurvey.objects.all()
@@ -232,7 +250,12 @@ def filiterdata(optgroup,option):
 def create_bar_chart(data):
     allofchart=[]
     before_special_field = True
-
+    macaron_colors = [
+        "#ffd9e1", "#99ccff", "#98fb98", "#ddbbff", "#9cfcf9",
+        "#ffcc99", "#4888db", "#75d0ba", "#3b8265", "#ffdb58",
+        "#f0e68c", "#890f51", "#73114e", "#5c0e46", "#480c3e",
+        "#360934", "#24062b", "#14031d", "#08000d", "#000000"
+    ]
     for i,(series, counts) in enumerate(data.items()):
         options = list(counts.keys())
         counts_values = list(counts.values())
@@ -244,8 +267,13 @@ def create_bar_chart(data):
             continue
         
         if before_special_field:
-            fig=plt.figure(figsize=(8, 8))
-            plt.pie(counts_values, labels=options, autopct='%1.1f%%', startangle=90)
+            fig, ax = plt.subplots(figsize=(8, 8))
+
+            # 為每個扇形手動設置顏色
+            patches, texts, autotexts = ax.pie(counts_values, labels=options, autopct='%1.1f%%', startangle=90)
+            for i, patch in enumerate(patches):
+                patch.set_facecolor(macaron_colors[i])
+                
             plt.title(f'Pie Chart for {series}')
             fig=fig_to_base64(fig)
             allofchart.append(fig)

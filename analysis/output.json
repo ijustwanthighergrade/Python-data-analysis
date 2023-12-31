@@ -1,0 +1,2226 @@
+{
+  "2": {
+    "\u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": {
+      "\u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f, \u76ee\u524d\u6708\u85aa\u8cc7\u6c34\u5e73(\u53f0\u5e63)": [
+        {
+          "Rule": "1-afford_house_price\u2192 0\uff5e19999-salary",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.85",
+          "Lift": "N\\A"
+        }
+      ]
+    },
+    "\u60a8\u662f\u5426\u5df2\u5a5a\uff1f": {
+      "\u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u76ee\u524d\u6708\u85aa\u8cc7\u6c34\u5e73(\u53f0\u5e63)": [
+        {
+          "Rule": "\u5426-is_married\u2192 0\uff5e19999-salary",
+          "Support": "0.15079365079365079",
+          "Confidence": "0.95",
+          "Lift": "N\\A"
+        },
+        {
+          "Rule": "\u662f-is_married\u2192 60000~79999-salary",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.7391304347826086",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "\u5426-is_married\u2192 1-afford_house_price",
+          "Support": "0.2777777777777778",
+          "Confidence": "0.7291666666666667",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528": [
+        {
+          "Rule": "\u662f-is_married\u2192 2-child_rearing_cost_affordability",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.72",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u990a\u5c0f\u5b69": [
+        {
+          "Rule": "\u662f-is_married\u2192 2-fear_of_commitment",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.72",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u7d50\u5a5a\u958b\u92b7": [
+        {
+          "Rule": "\u662f-is_married\u2192 2-marriage_expenses_affordability",
+          "Support": "0.15079365079365079",
+          "Confidence": "0.6333333333333333",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u60f3\u8981\u5148\u7a69\u5b9a\u4e8b\u696d\u518d\u7d44\u5efa\u5bb6\u5ead": [
+        {
+          "Rule": "\u662f-is_married\u2192 2-stable_career_before_family",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.6666666666666666",
+          "Lift": "N\\A"
+        },
+        {
+          "Rule": "\u5426-is_married\u2192 5-stable_career_before_family",
+          "Support": "0.1984126984126984",
+          "Confidence": "0.78125",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u6c92\u6709\u5c0d\u8c61": [
+        {
+          "Rule": "\u5426-is_married\u2192 5-no_partner",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.8095238095238095",
+          "Lift": "N\\A"
+        }
+      ]
+    },
+    "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u5c0f\u5b69": {
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u5c0f\u5b69, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "1-desire_for_children\u2192 1-afford_house_price",
+          "Support": "0.15079365079365079",
+          "Confidence": "0.6333333333333333",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u5c0f\u5b69, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u990a\u5c0f\u5b69": [
+        {
+          "Rule": "1-desire_for_children\u2192 5-fear_of_commitment",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.8",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u5c0f\u5b69, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "1-desire_for_children\u2192 \u5426-is_married",
+          "Support": "0.20634920634920634",
+          "Confidence": "0.8666666666666667",
+          "Lift": "N\\A"
+        },
+        {
+          "Rule": "3-desire_for_children\u2192 \u662f-is_married",
+          "Support": "0.15873015873015872",
+          "Confidence": "0.6666666666666666",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u5c0f\u5b69, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8207\u5fc3\u611b\u7684\u4eba\u5171\u7d44\u5bb6\u5ead": [
+        {
+          "Rule": "4-desire_for_children\u2192 4-family_planning",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.6071428571428571",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u5c0f\u5b69, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8b93\u4f34\u4fb6\u95dc\u4fc2\u88ab\u6cd5\u5f8b\u6240\u8a8d\u540c": [
+        {
+          "Rule": "4-desire_for_children\u2192 4-legal_recognition",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.6428571428571429",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u5c0f\u5b69, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u4f34\u4fb6\u4e00\u540c\u627f\u64d4\u8cac\u4efb": [
+        {
+          "Rule": "4-desire_for_children\u2192 4-responsibility_sharing",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.6071428571428571",
+          "Lift": "N\\A"
+        }
+      ]
+    },
+    "\u60a8\u8a8d\u70ba\u653f\u5e9c\u5728\u8cb7\u623f\u4e0a\u5df2\u64c1\u6709\u5b8c\u5584\u914d\u5957\u63aa\u65bd\u7684\u7a0b\u5ea6\u70ba\uff1f": {
+      "\u60a8\u8a8d\u70ba\u653f\u5e9c\u5728\u8cb7\u623f\u4e0a\u5df2\u64c1\u6709\u5b8c\u5584\u914d\u5957\u63aa\u65bd\u7684\u7a0b\u5ea6\u70ba\uff1f, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "1-government_support\u2192 1-afford_house_price",
+          "Support": "0.2777777777777778",
+          "Confidence": "0.7291666666666667",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u60a8\u8a8d\u70ba\u653f\u5e9c\u5728\u8cb7\u623f\u4e0a\u5df2\u64c1\u6709\u5b8c\u5584\u914d\u5957\u63aa\u65bd\u7684\u7a0b\u5ea6\u70ba\uff1f, \u60a8\u8a8d\u540c\u8cb7\u623f\u662f\u5f71\u97ff\u591a\u6578\u4eba\u7d50\u5a5a\u7684\u91cd\u8981\u56e0\u7d20\u55ce\uff1f": [
+        {
+          "Rule": "1-government_support\u2192 2-agree_buying_house",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.8095238095238095",
+          "Lift": "N\\A"
+        }
+      ]
+    },
+    "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u50b3\u7d71\u4e0a\u7d50\u5a5a\u662f\u4eba\u751f\u7684\u5fc5\u7d93\u4e4b\u8def": {
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u50b3\u7d71\u4e0a\u7d50\u5a5a\u662f\u4eba\u751f\u7684\u5fc5\u7d93\u4e4b\u8def, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "1-tradition\u2192 1-afford_house_price",
+          "Support": "0.18253968253968253",
+          "Confidence": "0.6764705882352942",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u50b3\u7d71\u4e0a\u7d50\u5a5a\u662f\u4eba\u751f\u7684\u5fc5\u7d93\u4e4b\u8def, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u5c0f\u5b69": [
+        {
+          "Rule": "1-tradition\u2192 1-desire_for_children",
+          "Support": "0.15873015873015872",
+          "Confidence": "0.6666666666666666",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u50b3\u7d71\u4e0a\u7d50\u5a5a\u662f\u4eba\u751f\u7684\u5fc5\u7d93\u4e4b\u8def, \u60a8\u8a8d\u70ba\u653f\u5e9c\u5728\u8cb7\u623f\u4e0a\u5df2\u64c1\u6709\u5b8c\u5584\u914d\u5957\u63aa\u65bd\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "1-tradition\u2192 1-government_support",
+          "Support": "0.19047619047619047",
+          "Confidence": "0.7058823529411765",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u50b3\u7d71\u4e0a\u7d50\u5a5a\u662f\u4eba\u751f\u7684\u5fc5\u7d93\u4e4b\u8def, \u60a8\u76ee\u524d\u662f\u5426\u6709\u7d50\u5a5a\u610f\u9858(\u4e0d\u8ad6\u55ae\u8eab\u8207\u5426)\n\u5df2\u5a5a\u8005\u53ef\u4ee5\u662f\u5426\u5f8c\u6094\u7d50\u5a5a\u4f86\u8003\u91cf": [
+        {
+          "Rule": "1-tradition\u2192 1-marriage_intention",
+          "Support": "0.16666666666666666",
+          "Confidence": "0.6176470588235294",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u50b3\u7d71\u4e0a\u7d50\u5a5a\u662f\u4eba\u751f\u7684\u5fc5\u7d93\u4e4b\u8def, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "1-tradition\u2192 \u5426-is_married",
+          "Support": "0.21428571428571427",
+          "Confidence": "0.7941176470588235",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u50b3\u7d71\u4e0a\u7d50\u5a5a\u662f\u4eba\u751f\u7684\u5fc5\u7d93\u4e4b\u8def, \u751f\u7406\u6027\u5225": [
+        {
+          "Rule": "2-tradition\u2192 \u5973-gender",
+          "Support": "0.15079365079365079",
+          "Confidence": "0.7307692307692307",
+          "Lift": "N\\A"
+        }
+      ]
+    },
+    "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9": {
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "5-affordability\u2192 1-afford_house_price",
+          "Support": "0.21428571428571427",
+          "Confidence": "0.675",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u7d50\u5a5a\u958b\u92b7": [
+        {
+          "Rule": "5-affordability\u2192 5-marriage_expenses_affordability",
+          "Support": "0.1746031746031746",
+          "Confidence": "0.9166666666666666",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u4f34\u4fb6\u4e00\u540c\u627f\u64d4\u8cac\u4efb": [
+        {
+          "Rule": "5-affordability\u2192 5-responsibility_sharing",
+          "Support": "0.15873015873015872",
+          "Confidence": "0.625",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73": [
+        {
+          "Rule": "5-affordability\u2192 5-sacrifice_lifestyle",
+          "Support": "0.2222222222222222",
+          "Confidence": "0.7",
+          "Lift": "2.6727272727272724"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u60f3\u8981\u5148\u7a69\u5b9a\u4e8b\u696d\u518d\u7d44\u5efa\u5bb6\u5ead": [
+        {
+          "Rule": "5-affordability\u2192 5-stable_career_before_family",
+          "Support": "0.1984126984126984",
+          "Confidence": "0.625",
+          "Lift": "2.4609375"
+        }
+      ]
+    },
+    "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528": {
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "5-child_rearing_cost_affordability\u2192 1-afford_house_price",
+          "Support": "0.16666666666666666",
+          "Confidence": "0.65625",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u990a\u5c0f\u5b69": [
+        {
+          "Rule": "4-child_rearing_cost_affordability\u2192 4-fear_of_commitment",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.6206896551724138",
+          "Lift": "2.896551724137931"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u5a5a\u5f8c\u6703\u5931\u53bb\u81ea\u7531": [
+        {
+          "Rule": "4-child_rearing_cost_affordability\u2192 4-freedom_loss_after_marriage",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.6206896551724138",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u60f3\u8981\u5148\u7a69\u5b9a\u4e8b\u696d\u518d\u7d44\u5efa\u5bb6\u5ead": [
+        {
+          "Rule": "4-child_rearing_cost_affordability\u2192 4-stable_career_before_family",
+          "Support": "0.15079365079365079",
+          "Confidence": "0.6551724137931034",
+          "Lift": "2.9482758620689657"
+        },
+        {
+          "Rule": "5-child_rearing_cost_affordability\u2192 5-stable_career_before_family",
+          "Support": "0.1746031746031746",
+          "Confidence": "0.6875",
+          "Lift": "2.70703125"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9": [
+        {
+          "Rule": "5-child_rearing_cost_affordability\u2192 5-affordability",
+          "Support": "0.2222222222222222",
+          "Confidence": "0.7",
+          "Lift": "2.75625"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u7d50\u5a5a\u958b\u92b7": [
+        {
+          "Rule": "5-child_rearing_cost_affordability\u2192 5-marriage_expenses_affordability",
+          "Support": "0.1746031746031746",
+          "Confidence": "0.6875",
+          "Lift": "3.609375"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73": [
+        {
+          "Rule": "5-child_rearing_cost_affordability\u2192 5-sacrifice_lifestyle",
+          "Support": "0.19047619047619047",
+          "Confidence": "0.75",
+          "Lift": "2.8636363636363633"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "5-child_rearing_cost_affordability\u2192 \u5426-is_married",
+          "Support": "0.20634920634920634",
+          "Confidence": "0.8125",
+          "Lift": "N\\A"
+        }
+      ]
+    },
+    "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u7d50\u5a5a\u958b\u92b7": {
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u7d50\u5a5a\u958b\u92b7, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "5-marriage_expenses_affordability\u2192 1-afford_house_price",
+          "Support": "0.15873015873015872",
+          "Confidence": "0.8333333333333334",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u7d50\u5a5a\u958b\u92b7, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528": [
+        {
+          "Rule": "2-marriage_expenses_affordability\u2192 2-child_rearing_cost_affordability",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.72",
+          "Lift": "3.024"
+        },
+        {
+          "Rule": "4-marriage_expenses_affordability\u2192 4-child_rearing_cost_affordability",
+          "Support": "0.15873015873015872",
+          "Confidence": "0.6896551724137931",
+          "Lift": "2.7155172413793105"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u7d50\u5a5a\u958b\u92b7, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u990a\u5c0f\u5b69": [
+        {
+          "Rule": "4-marriage_expenses_affordability\u2192 4-fear_of_commitment",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.6666666666666666",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u7d50\u5a5a\u958b\u92b7, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u60f3\u8981\u5148\u7a69\u5b9a\u4e8b\u696d\u518d\u7d44\u5efa\u5bb6\u5ead": [
+        {
+          "Rule": "4-marriage_expenses_affordability\u2192 4-stable_career_before_family",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.6428571428571429",
+          "Lift": "N\\A"
+        },
+        {
+          "Rule": "5-marriage_expenses_affordability\u2192 5-stable_career_before_family",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.75",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u7d50\u5a5a\u958b\u92b7, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73": [
+        {
+          "Rule": "5-marriage_expenses_affordability\u2192 5-sacrifice_lifestyle",
+          "Support": "0.15079365079365079",
+          "Confidence": "0.7916666666666666",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u7d50\u5a5a\u958b\u92b7, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "5-marriage_expenses_affordability\u2192 \u5426-is_married",
+          "Support": "0.15079365079365079",
+          "Confidence": "0.7916666666666666",
+          "Lift": "N\\A"
+        }
+      ]
+    },
+    "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u60f3\u8981\u5148\u7a69\u5b9a\u4e8b\u696d\u518d\u7d44\u5efa\u5bb6\u5ead": {
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u60f3\u8981\u5148\u7a69\u5b9a\u4e8b\u696d\u518d\u7d44\u5efa\u5bb6\u5ead, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "5-stable_career_before_family\u2192 1-afford_house_price",
+          "Support": "0.15873015873015872",
+          "Confidence": "0.625",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u60f3\u8981\u5148\u7a69\u5b9a\u4e8b\u696d\u518d\u7d44\u5efa\u5bb6\u5ead, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u77e5\u662f\u5426\u5c0d\u65b9\u503c\u5f97\u4fe1\u4efb": [
+        {
+          "Rule": "3-stable_career_before_family\u2192 3-trustworthiness",
+          "Support": "0.1746031746031746",
+          "Confidence": "0.6470588235294118",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u60f3\u8981\u5148\u7a69\u5b9a\u4e8b\u696d\u518d\u7d44\u5efa\u5bb6\u5ead, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73": [
+        {
+          "Rule": "5-stable_career_before_family\u2192 5-sacrifice_lifestyle",
+          "Support": "0.1746031746031746",
+          "Confidence": "0.6666666666666666",
+          "Lift": "2.625"
+        }
+      ]
+    },
+    "\u60a8\u7684\u5e74\u9f61": {
+      "\u60a8\u7684\u5e74\u9f61, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u5c0f\u5b69": [
+        {
+          "Rule": "21\uff5e29-age\u2192 1-desire_for_children",
+          "Support": "0.15079365079365079",
+          "Confidence": "0.6333333333333333",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u60a8\u7684\u5e74\u9f61, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528": [
+        {
+          "Rule": "21\uff5e29-age\u2192 5-child_rearing_cost_affordability",
+          "Support": "0.16666666666666666",
+          "Confidence": "0.65625",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u60a8\u7684\u5e74\u9f61, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u60f3\u8981\u5148\u7a69\u5b9a\u4e8b\u696d\u518d\u7d44\u5efa\u5bb6\u5ead": [
+        {
+          "Rule": "21\uff5e29-age\u2192 5-stable_career_before_family",
+          "Support": "0.15873015873015872",
+          "Confidence": "0.625",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u60a8\u7684\u5e74\u9f61, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "21\uff5e29-age\u2192 \u5426-is_married",
+          "Support": "0.3412698412698413",
+          "Confidence": "0.9772727272727274",
+          "Lift": "1.810828877005348"
+        },
+        {
+          "Rule": "50\uff5e59-age\u2192 \u662f-is_married",
+          "Support": "0.2777777777777778",
+          "Confidence": "0.9210526315789475",
+          "Lift": "2.0009074410163343"
+        }
+      ],
+      "\u60a8\u7684\u5e74\u9f61, \u6700\u9ad8\u5b78\u6b77": [
+        {
+          "Rule": "21\uff5e29-age\u2192 \u5927\u5b78-education",
+          "Support": "0.24603174603174602",
+          "Confidence": "0.7045454545454546",
+          "Lift": "N\\A"
+        }
+      ]
+    },
+    "\u751f\u7406\u6027\u5225": {
+      "\u751f\u7406\u6027\u5225, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u5c0f\u5b69": [
+        {
+          "Rule": "\u5973-gender\u2192 1-desire_for_children",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.6",
+          "Lift": "N\\A"
+        },
+        {
+          "Rule": "\u7537-gender\u2192 5-desire_for_children",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.7619047619047619",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u751f\u7406\u6027\u5225, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u6c92\u6709\u5c0d\u8c61": [
+        {
+          "Rule": "\u5973-gender\u2192 1-no_partner",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.6071428571428571",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u751f\u7406\u6027\u5225, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u7d50\u5a5a\u958b\u92b7": [
+        {
+          "Rule": "\u7537-gender\u2192 2-marriage_expenses_affordability",
+          "Support": "0.1746031746031746",
+          "Confidence": "0.7333333333333333",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u751f\u7406\u6027\u5225, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u990a\u5c0f\u5b69": [
+        {
+          "Rule": "\u5973-gender\u2192 4-fear_of_commitment",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.6666666666666666",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u751f\u7406\u6027\u5225, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u60f3\u8981\u5148\u7a69\u5b9a\u4e8b\u696d\u518d\u7d44\u5efa\u5bb6\u5ead": [
+        {
+          "Rule": "\u5973-gender\u2192 4-stable_career_before_family",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.6071428571428571",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u751f\u7406\u6027\u5225, \u76ee\u524d\u6708\u85aa\u8cc7\u6c34\u5e73(\u53f0\u5e63)": [
+        {
+          "Rule": "\u7537-gender\u2192 60000~79999-salary",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.7391304347826086",
+          "Lift": "N\\A"
+        }
+      ]
+    },
+    "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u990a\u5c0f\u5b69": {
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u990a\u5c0f\u5b69, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u5a5a\u5f8c\u6703\u5931\u53bb\u81ea\u7531": [
+        {
+          "Rule": "1-fear_of_commitment\u2192 1-freedom_loss_after_marriage",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.8421052631578947",
+          "Lift": "N\\A"
+        },
+        {
+          "Rule": "4-fear_of_commitment\u2192 4-freedom_loss_after_marriage",
+          "Support": "0.1746031746031746",
+          "Confidence": "0.8148148148148148",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u990a\u5c0f\u5b69, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "5-fear_of_commitment\u2192 \u5426-is_married",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.85",
+          "Lift": "N\\A"
+        }
+      ]
+    },
+    "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u5bb3\u6015\u5a5a\u59fb\u5931\u6557": {
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u5bb3\u6015\u5a5a\u59fb\u5931\u6557, \u60a8\u8a8d\u70ba\u653f\u5e9c\u5728\u8cb7\u623f\u4e0a\u5df2\u64c1\u6709\u5b8c\u5584\u914d\u5957\u63aa\u65bd\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "1-fear_of_marriage_failure\u2192 1-government_support",
+          "Support": "0.15873015873015872",
+          "Confidence": "0.6666666666666666",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u5bb3\u6015\u5a5a\u59fb\u5931\u6557, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u6c92\u6709\u5c0d\u8c61": [
+        {
+          "Rule": "1-fear_of_marriage_failure\u2192 1-no_partner",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.6",
+          "Lift": "2.7"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u5bb3\u6015\u5a5a\u59fb\u5931\u6557, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u5bb3\u6015\u8981\u8207\u5c0d\u65b9\u5bb6\u5ead\u78e8\u5408": [
+        {
+          "Rule": "4-fear_of_marriage_failure\u2192 4-family_adjustment_concerns",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.75",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u5bb3\u6015\u5a5a\u59fb\u5931\u6557, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u5a5a\u5f8c\u6703\u5931\u53bb\u81ea\u7531": [
+        {
+          "Rule": "4-fear_of_marriage_failure\u2192 4-freedom_loss_after_marriage",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.75",
+          "Lift": "N\\A"
+        }
+      ]
+    },
+    "\u76ee\u524d\u6708\u85aa\u8cc7\u6c34\u5e73(\u53f0\u5e63)": {
+      "\u76ee\u524d\u6708\u85aa\u8cc7\u6c34\u5e73(\u53f0\u5e63), \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "20000\uff5e39999-salary\u2192 \u5426-is_married",
+          "Support": "0.19047619047619047",
+          "Confidence": "0.7741935483870968",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u76ee\u524d\u6708\u85aa\u8cc7\u6c34\u5e73(\u53f0\u5e63), \u6700\u9ad8\u5b78\u6b77": [
+        {
+          "Rule": "20000\uff5e39999-salary\u2192 \u5927\u5b78-education",
+          "Support": "0.15873015873015872",
+          "Confidence": "0.6451612903225806",
+          "Lift": "N\\A"
+        }
+      ]
+    },
+    "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8207\u5fc3\u611b\u7684\u4eba\u5171\u7d44\u5bb6\u5ead": {
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8207\u5fc3\u611b\u7684\u4eba\u5171\u7d44\u5bb6\u5ead, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8b93\u4f34\u4fb6\u95dc\u4fc2\u88ab\u6cd5\u5f8b\u6240\u8a8d\u540c": [
+        {
+          "Rule": "3-family_planning\u2192 3-legal_recognition",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.6666666666666666",
+          "Lift": "N\\A"
+        },
+        {
+          "Rule": "4-family_planning\u2192 4-legal_recognition",
+          "Support": "0.19047619047619047",
+          "Confidence": "0.7058823529411765",
+          "Lift": "N\\A"
+        },
+        {
+          "Rule": "5-family_planning\u2192 5-legal_recognition",
+          "Support": "0.25396825396825395",
+          "Confidence": "0.6808510638297872",
+          "Lift": "2.318573893041978"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8207\u5fc3\u611b\u7684\u4eba\u5171\u7d44\u5bb6\u5ead, \u60a8\u5c0d\u7d50\u5a5a\u4e00\u5b9a\u5f97\u8cb7\u623f\u7684\u8a8d\u540c\u5ea6\u70ba\u4f55\uff1f": [
+        {
+          "Rule": "4-family_planning\u2192 4-marriage_house_requirement",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.6538461538461539",
+          "Lift": "N\\A"
+        },
+        {
+          "Rule": "5-family_planning\u2192 5-marriage_house_requirement",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.6428571428571429",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8207\u5fc3\u611b\u7684\u4eba\u5171\u7d44\u5bb6\u5ead, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73": [
+        {
+          "Rule": "4-family_planning\u2192 4-sacrifice_lifestyle",
+          "Support": "0.1746031746031746",
+          "Confidence": "0.6285714285714286",
+          "Lift": "N\\A"
+        },
+        {
+          "Rule": "5-family_planning\u2192 5-sacrifice_lifestyle",
+          "Support": "0.16666666666666666",
+          "Confidence": "0.6363636363636362",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8207\u5fc3\u611b\u7684\u4eba\u5171\u7d44\u5bb6\u5ead, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u60f3\u8981\u5148\u7a69\u5b9a\u4e8b\u696d\u518d\u7d44\u5efa\u5bb6\u5ead": [
+        {
+          "Rule": "4-family_planning\u2192 4-stable_career_before_family",
+          "Support": "0.15079365079365079",
+          "Confidence": "0.6785714285714286",
+          "Lift": "N\\A"
+        },
+        {
+          "Rule": "5-family_planning\u2192 5-stable_career_before_family",
+          "Support": "0.1746031746031746",
+          "Confidence": "0.6875",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8207\u5fc3\u611b\u7684\u4eba\u5171\u7d44\u5bb6\u5ead, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9": [
+        {
+          "Rule": "5-family_planning\u2192 5-affordability",
+          "Support": "0.2222222222222222",
+          "Confidence": "0.7",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8207\u5fc3\u611b\u7684\u4eba\u5171\u7d44\u5bb6\u5ead, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u5c0f\u5b69": [
+        {
+          "Rule": "5-family_planning\u2192 5-desire_for_children",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.8095238095238095",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8207\u5fc3\u611b\u7684\u4eba\u5171\u7d44\u5bb6\u5ead, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u4f34\u4fb6\u4e00\u540c\u627f\u64d4\u8cac\u4efb": [
+        {
+          "Rule": "5-family_planning\u2192 5-responsibility_sharing",
+          "Support": "0.1984126984126984",
+          "Confidence": "0.78125",
+          "Lift": "N\\A"
+        }
+      ]
+    },
+    "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u6c92\u6709\u5c0d\u8c61": {
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u6c92\u6709\u5c0d\u8c61, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u990a\u5c0f\u5b69": [
+        {
+          "Rule": "3-no_partner\u2192 3-fear_of_commitment",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.6296296296296297",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u6c92\u6709\u5c0d\u8c61, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u5bb3\u6015\u5a5a\u59fb\u5931\u6557": [
+        {
+          "Rule": "3-no_partner\u2192 3-fear_of_marriage_failure",
+          "Support": "0.15873015873015872",
+          "Confidence": "0.606060606060606",
+          "Lift": "N\\A"
+        }
+      ]
+    },
+    "\u60a8\u5c0d\u7d50\u5a5a\u4e00\u5b9a\u5f97\u8cb7\u623f\u7684\u8a8d\u540c\u5ea6\u70ba\u4f55\uff1f": {
+      "\u60a8\u5c0d\u7d50\u5a5a\u4e00\u5b9a\u5f97\u8cb7\u623f\u7684\u8a8d\u540c\u5ea6\u70ba\u4f55\uff1f, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u77e5\u662f\u5426\u5c0d\u65b9\u503c\u5f97\u4fe1\u4efb": [
+        {
+          "Rule": "3-marriage_house_requirement\u2192 3-trustworthiness",
+          "Support": "0.15079365079365079",
+          "Confidence": "0.6333333333333333",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u60a8\u5c0d\u7d50\u5a5a\u4e00\u5b9a\u5f97\u8cb7\u623f\u7684\u8a8d\u540c\u5ea6\u70ba\u4f55\uff1f, \u8acb\u554f\u8cb7\u623f\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "5-marriage_house_requirement\u2192 5-buying_house_influence",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.6071428571428571",
+          "Lift": "2.732142857142857"
+        }
+      ]
+    },
+    "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73": {
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528": [
+        {
+          "Rule": "4-sacrifice_lifestyle\u2192 4-child_rearing_cost_affordability",
+          "Support": "0.15079365079365079",
+          "Confidence": "0.6551724137931034",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u990a\u5c0f\u5b69": [
+        {
+          "Rule": "4-sacrifice_lifestyle\u2192 4-fear_of_commitment",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.6296296296296297",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u60f3\u8981\u5148\u7a69\u5b9a\u4e8b\u696d\u518d\u7d44\u5efa\u5bb6\u5ead": [
+        {
+          "Rule": "4-sacrifice_lifestyle\u2192 4-stable_career_before_family",
+          "Support": "0.15873015873015872",
+          "Confidence": "0.7142857142857143",
+          "Lift": "N\\A"
+        }
+      ]
+    },
+    "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u5bb3\u6015\u8981\u8207\u5c0d\u65b9\u5bb6\u5ead\u78e8\u5408": {
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u5bb3\u6015\u8981\u8207\u5c0d\u65b9\u5bb6\u5ead\u78e8\u5408, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u990a\u5c0f\u5b69": [
+        {
+          "Rule": "4-family_adjustment_concerns\u2192 4-fear_of_commitment",
+          "Support": "0.16666666666666666",
+          "Confidence": "0.7777777777777778",
+          "Lift": "N\\A"
+        }
+      ]
+    },
+    "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u77e5\u662f\u5426\u5c0d\u65b9\u503c\u5f97\u4fe1\u4efb": {
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u77e5\u662f\u5426\u5c0d\u65b9\u503c\u5f97\u4fe1\u4efb, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u5bb3\u6015\u8981\u8207\u5c0d\u65b9\u5bb6\u5ead\u78e8\u5408": [
+        {
+          "Rule": "4-trustworthiness\u2192 4-family_adjustment_concerns",
+          "Support": "0.1984126984126984",
+          "Confidence": "0.6578947368421053",
+          "Lift": "2.3684210526315788"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u77e5\u662f\u5426\u5c0d\u65b9\u503c\u5f97\u4fe1\u4efb, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u990a\u5c0f\u5b69": [
+        {
+          "Rule": "4-trustworthiness\u2192 4-fear_of_commitment",
+          "Support": "0.15079365079365079",
+          "Confidence": "0.7037037037037037",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u77e5\u662f\u5426\u5c0d\u65b9\u503c\u5f97\u4fe1\u4efb, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u5bb3\u6015\u5a5a\u59fb\u5931\u6557": [
+        {
+          "Rule": "4-trustworthiness\u2192 4-fear_of_marriage_failure",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.6666666666666666",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u77e5\u662f\u5426\u5c0d\u65b9\u503c\u5f97\u4fe1\u4efb, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u5a5a\u5f8c\u6703\u5931\u53bb\u81ea\u7531": [
+        {
+          "Rule": "4-trustworthiness\u2192 4-freedom_loss_after_marriage",
+          "Support": "0.16666666666666666",
+          "Confidence": "0.6",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u77e5\u662f\u5426\u5c0d\u65b9\u503c\u5f97\u4fe1\u4efb, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u53ea\u9700\u8981\u60c5\u611f\u9700\u6c42\uff0c\u4e0d\u60f3\u7d81\u5b9a\u6cd5\u5f8b\u7fa9\u52d9": [
+        {
+          "Rule": "4-trustworthiness\u2192 4-non_economic_factor_relationship",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.64",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u77e5\u662f\u5426\u5c0d\u65b9\u503c\u5f97\u4fe1\u4efb, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "4-trustworthiness\u2192 \u5426-is_married",
+          "Support": "0.1984126984126984",
+          "Confidence": "0.7142857142857142",
+          "Lift": "N\\A"
+        }
+      ]
+    },
+    "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u53ea\u9700\u8981\u60c5\u611f\u9700\u6c42\uff0c\u4e0d\u60f3\u7d81\u5b9a\u6cd5\u5f8b\u7fa9\u52d9": {
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u53ea\u9700\u8981\u60c5\u611f\u9700\u6c42\uff0c\u4e0d\u60f3\u7d81\u5b9a\u6cd5\u5f8b\u7fa9\u52d9, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u5a5a\u5f8c\u6703\u5931\u53bb\u81ea\u7531": [
+        {
+          "Rule": "4-non_economic_factor_relationship\u2192 4-freedom_loss_after_marriage",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.68",
+          "Lift": "N\\A"
+        }
+      ]
+    },
+    "\u8acb\u554f\u8cb7\u623f\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7a0b\u5ea6\u70ba\uff1f": {
+      "\u8acb\u554f\u8cb7\u623f\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7a0b\u5ea6\u70ba\uff1f, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9": [
+        {
+          "Rule": "5-buying_house_influence\u2192 5-affordability",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.6071428571428571",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u8acb\u554f\u8cb7\u623f\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7a0b\u5ea6\u70ba\uff1f, \u60a8\u8a8d\u540c\u8cb7\u623f\u662f\u5f71\u97ff\u591a\u6578\u4eba\u7d50\u5a5a\u7684\u91cd\u8981\u56e0\u7d20\u55ce\uff1f": [
+        {
+          "Rule": "5-buying_house_influence\u2192 5-agree_buying_house",
+          "Support": "0.15079365079365079",
+          "Confidence": "0.6785714285714286",
+          "Lift": "N\\A"
+        }
+      ]
+    },
+    "\u60a8\u8a8d\u540c\u8cb7\u623f\u6703\u5f71\u97ff\u5230\u500b\u4eba\u751f\u6d3b\u6c34\u5e73\u7684\u7a0b\u5ea6\u70ba\uff1f": {
+      "\u60a8\u8a8d\u540c\u8cb7\u623f\u6703\u5f71\u97ff\u5230\u500b\u4eba\u751f\u6d3b\u6c34\u5e73\u7684\u7a0b\u5ea6\u70ba\uff1f, \u60a8\u8a8d\u540c\u8cb7\u623f\u662f\u5f71\u97ff\u591a\u6578\u4eba\u7d50\u5a5a\u7684\u91cd\u8981\u56e0\u7d20\u55ce\uff1f": [
+        {
+          "Rule": "5-buying_house_impact_life\u2192 5-agree_buying_house",
+          "Support": "0.1746031746031746",
+          "Confidence": "0.6666666666666666",
+          "Lift": "N\\A"
+        }
+      ]
+    },
+    "\u60a8\u76ee\u524d\u662f\u5426\u6709\u7d50\u5a5a\u610f\u9858(\u4e0d\u8ad6\u55ae\u8eab\u8207\u5426)\n\u5df2\u5a5a\u8005\u53ef\u4ee5\u662f\u5426\u5f8c\u6094\u7d50\u5a5a\u4f86\u8003\u91cf": {
+      "\u60a8\u76ee\u524d\u662f\u5426\u6709\u7d50\u5a5a\u610f\u9858(\u4e0d\u8ad6\u55ae\u8eab\u8207\u5426)\n\u5df2\u5a5a\u8005\u53ef\u4ee5\u662f\u5426\u5f8c\u6094\u7d50\u5a5a\u4f86\u8003\u91cf, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8207\u5fc3\u611b\u7684\u4eba\u5171\u7d44\u5bb6\u5ead": [
+        {
+          "Rule": "5-marriage_intention\u2192 5-family_planning",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.72",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u60a8\u76ee\u524d\u662f\u5426\u6709\u7d50\u5a5a\u610f\u9858(\u4e0d\u8ad6\u55ae\u8eab\u8207\u5426)\n\u5df2\u5a5a\u8005\u53ef\u4ee5\u662f\u5426\u5f8c\u6094\u7d50\u5a5a\u4f86\u8003\u91cf, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8b93\u4f34\u4fb6\u95dc\u4fc2\u88ab\u6cd5\u5f8b\u6240\u8a8d\u540c": [
+        {
+          "Rule": "5-marriage_intention\u2192 5-legal_recognition",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.64",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u60a8\u76ee\u524d\u662f\u5426\u6709\u7d50\u5a5a\u610f\u9858(\u4e0d\u8ad6\u55ae\u8eab\u8207\u5426)\n\u5df2\u5a5a\u8005\u53ef\u4ee5\u662f\u5426\u5f8c\u6094\u7d50\u5a5a\u4f86\u8003\u91cf, \u751f\u7406\u6027\u5225": [
+        {
+          "Rule": "5-marriage_intention\u2192 \u7537-gender",
+          "Support": "0.15873015873015872",
+          "Confidence": "0.8",
+          "Lift": "N\\A"
+        }
+      ]
+    },
+    "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8b93\u4f34\u4fb6\u95dc\u4fc2\u88ab\u6cd5\u5f8b\u6240\u8a8d\u540c": {
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8b93\u4f34\u4fb6\u95dc\u4fc2\u88ab\u6cd5\u5f8b\u6240\u8a8d\u540c, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u4f34\u4fb6\u4e00\u540c\u627f\u64d4\u8cac\u4efb": [
+        {
+          "Rule": "5-legal_recognition\u2192 5-responsibility_sharing",
+          "Support": "0.1746031746031746",
+          "Confidence": "0.6875",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8b93\u4f34\u4fb6\u95dc\u4fc2\u88ab\u6cd5\u5f8b\u6240\u8a8d\u540c, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73": [
+        {
+          "Rule": "5-legal_recognition\u2192 5-sacrifice_lifestyle",
+          "Support": "0.15873015873015872",
+          "Confidence": "0.606060606060606",
+          "Lift": "N\\A"
+        }
+      ]
+    }
+  },
+  "3": {
+    "\u60a8\u662f\u5426\u5df2\u5a5a\uff1f": {
+      "\u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f, \u76ee\u524d\u6708\u85aa\u8cc7\u6c34\u5e73(\u53f0\u5e63)": [
+        {
+          "Rule": "\u5426-is_married\u2192 1-afford_house_price\u2192 0\uff5e19999-salary",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.8",
+          "Lift": "1.7439446366782008"
+        }
+      ],
+      "\u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u60f3\u8981\u5148\u7a69\u5b9a\u4e8b\u696d\u518d\u7d44\u5efa\u5bb6\u5ead, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "\u5426-is_married\u2192 5-stable_career_before_family\u2192 1-afford_house_price",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.85",
+          "Lift": "1.7850000000000001"
+        }
+      ],
+      "\u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u60a8\u7684\u5e74\u9f61, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u5bb3\u6015\u8981\u8207\u5c0d\u65b9\u5bb6\u5ead\u78e8\u5408": [
+        {
+          "Rule": "\u662f-is_married\u2192 50\uff5e59-age\u2192 3-family_adjustment_concerns",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.9444444444444444",
+          "Lift": "2.562200956937799"
+        }
+      ],
+      "\u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u60f3\u8981\u5148\u7a69\u5b9a\u4e8b\u696d\u518d\u7d44\u5efa\u5bb6\u5ead, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73": [
+        {
+          "Rule": "\u5426-is_married\u2192 5-stable_career_before_family\u2192 5-sacrifice_lifestyle",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.8181818181818182",
+          "Lift": "3.2215909090909096"
+        }
+      ]
+    },
+    "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u50b3\u7d71\u4e0a\u7d50\u5a5a\u662f\u4eba\u751f\u7684\u5fc5\u7d93\u4e4b\u8def": {
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u50b3\u7d71\u4e0a\u7d50\u5a5a\u662f\u4eba\u751f\u7684\u5fc5\u7d93\u4e4b\u8def, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u5c0f\u5b69, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "1-tradition\u2192 1-desire_for_children\u2192 1-afford_house_price",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.8421052631578947",
+          "Lift": "2.9217391304347826"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u50b3\u7d71\u4e0a\u7d50\u5a5a\u662f\u4eba\u751f\u7684\u5fc5\u7d93\u4e4b\u8def, \u60a8\u8a8d\u70ba\u653f\u5e9c\u5728\u8cb7\u623f\u4e0a\u5df2\u64c1\u6709\u5b8c\u5584\u914d\u5957\u63aa\u65bd\u7684\u7a0b\u5ea6\u70ba\uff1f, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "1-tradition\u2192 1-government_support\u2192 1-afford_house_price",
+          "Support": "0.15079365079365079",
+          "Confidence": "0.8260869565217391",
+          "Lift": "2.078125"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u50b3\u7d71\u4e0a\u7d50\u5a5a\u662f\u4eba\u751f\u7684\u5fc5\u7d93\u4e4b\u8def, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "1-tradition\u2192 \u5426-is_married\u2192 1-afford_house_price",
+          "Support": "0.16666666666666666",
+          "Confidence": "0.6176470588235294",
+          "Lift": "1.6918158567774937"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u50b3\u7d71\u4e0a\u7d50\u5a5a\u662f\u4eba\u751f\u7684\u5fc5\u7d93\u4e4b\u8def, \u60a8\u8a8d\u70ba\u653f\u5e9c\u5728\u8cb7\u623f\u4e0a\u5df2\u64c1\u6709\u5b8c\u5584\u914d\u5957\u63aa\u65bd\u7684\u7a0b\u5ea6\u70ba\uff1f, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u5c0f\u5b69": [
+        {
+          "Rule": "1-tradition\u2192 1-government_support\u2192 1-desire_for_children",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.8421052631578947",
+          "Lift": "1.5750000000000002"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u50b3\u7d71\u4e0a\u7d50\u5a5a\u662f\u4eba\u751f\u7684\u5fc5\u7d93\u4e4b\u8def, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u5c0f\u5b69, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "1-tradition\u2192 1-desire_for_children\u2192 \u5426-is_married",
+          "Support": "0.15079365079365079",
+          "Confidence": "0.6333333333333333",
+          "Lift": "1.7602941176470588"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u50b3\u7d71\u4e0a\u7d50\u5a5a\u662f\u4eba\u751f\u7684\u5fc5\u7d93\u4e4b\u8def, \u60a8\u8a8d\u70ba\u653f\u5e9c\u5728\u8cb7\u623f\u4e0a\u5df2\u64c1\u6709\u5b8c\u5584\u914d\u5957\u63aa\u65bd\u7684\u7a0b\u5ea6\u70ba\uff1f, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "1-tradition\u2192 1-government_support\u2192 \u5426-is_married",
+          "Support": "0.15873015873015872",
+          "Confidence": "0.8333333333333334",
+          "Lift": "2.3161764705882355"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u50b3\u7d71\u4e0a\u7d50\u5a5a\u662f\u4eba\u751f\u7684\u5fc5\u7d93\u4e4b\u8def, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u60a8\u76ee\u524d\u662f\u5426\u6709\u7d50\u5a5a\u610f\u9858(\u4e0d\u8ad6\u55ae\u8eab\u8207\u5426)\n\u5df2\u5a5a\u8005\u53ef\u4ee5\u662f\u5426\u5f8c\u6094\u7d50\u5a5a\u4f86\u8003\u91cf": [
+        {
+          "Rule": "1-tradition\u2192 \u5426-is_married\u2192 1-marriage_intention",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.7619047619047619",
+          "Lift": "2.823529411764706"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u50b3\u7d71\u4e0a\u7d50\u5a5a\u662f\u4eba\u751f\u7684\u5fc5\u7d93\u4e4b\u8def, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u60a8\u7684\u5e74\u9f61": [
+        {
+          "Rule": "1-tradition\u2192 \u5426-is_married\u2192 21\uff5e29-age",
+          "Support": "0.15079365079365079",
+          "Confidence": "1.0",
+          "Lift": "2.015151515151515"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u50b3\u7d71\u4e0a\u7d50\u5a5a\u662f\u4eba\u751f\u7684\u5fc5\u7d93\u4e4b\u8def, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "1-tradition\u2192 5-affordability\u2192 \u5426-is_married",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.9411764705882353",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u50b3\u7d71\u4e0a\u7d50\u5a5a\u662f\u4eba\u751f\u7684\u5fc5\u7d93\u4e4b\u8def, \u6700\u9ad8\u5b78\u6b77, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "1-tradition\u2192 \u5927\u5b78-education\u2192 \u5426-is_married",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.6666666666666666",
+          "Lift": "1.588235294117647"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u50b3\u7d71\u4e0a\u7d50\u5a5a\u662f\u4eba\u751f\u7684\u5fc5\u7d93\u4e4b\u8def, \u751f\u7406\u6027\u5225, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "1-tradition\u2192 \u5973-gender\u2192 \u5426-is_married",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.8421052631578947",
+          "Lift": "N\\A"
+        }
+      ]
+    },
+    "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u5c0f\u5b69": {
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u5c0f\u5b69, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "1-desire_for_children\u2192 \u5426-is_married\u2192 1-afford_house_price",
+          "Support": "0.15079365079365079",
+          "Confidence": "0.6333333333333333",
+          "Lift": "1.8529411764705883"
+        }
+      ]
+    },
+    "\u60a8\u7684\u5e74\u9f61": {
+      "\u60a8\u7684\u5e74\u9f61, \u60a8\u8a8d\u70ba\u653f\u5e9c\u5728\u8cb7\u623f\u4e0a\u5df2\u64c1\u6709\u5b8c\u5584\u914d\u5957\u63aa\u65bd\u7684\u7a0b\u5ea6\u70ba\uff1f, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "21\uff5e29-age\u2192 1-government_support\u2192 1-afford_house_price",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.7083333333333334",
+          "Lift": "1.940217391304348"
+        }
+      ],
+      "\u60a8\u7684\u5e74\u9f61, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "21\uff5e29-age\u2192 5-affordability\u2192 1-afford_house_price",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.6666666666666666",
+          "Lift": "1.8260869565217392"
+        }
+      ],
+      "\u60a8\u7684\u5e74\u9f61, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "21\uff5e29-age\u2192 \u5426-is_married\u2192 1-afford_house_price",
+          "Support": "0.19047619047619047",
+          "Confidence": "1.0",
+          "Lift": "1.9636363636363634"
+        }
+      ],
+      "\u60a8\u7684\u5e74\u9f61, \u6700\u9ad8\u5b78\u6b77, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "21\uff5e29-age\u2192 \u5927\u5b78-education\u2192 1-afford_house_price",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.6666666666666666",
+          "Lift": "1.7622377622377625"
+        }
+      ],
+      "\u60a8\u7684\u5e74\u9f61, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u5c0f\u5b69, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "21\uff5e29-age\u2192 1-desire_for_children\u2192 \u5426-is_married",
+          "Support": "0.15079365079365079",
+          "Confidence": "0.6333333333333333",
+          "Lift": "1.8529411764705883"
+        }
+      ],
+      "\u60a8\u7684\u5e74\u9f61, \u60a8\u8a8d\u70ba\u653f\u5e9c\u5728\u8cb7\u623f\u4e0a\u5df2\u64c1\u6709\u5b8c\u5584\u914d\u5957\u63aa\u65bd\u7684\u7a0b\u5ea6\u70ba\uff1f, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "21\uff5e29-age\u2192 1-government_support\u2192 \u5426-is_married",
+          "Support": "0.1746031746031746",
+          "Confidence": "0.9565217391304348",
+          "Lift": "1.96875"
+        },
+        {
+          "Rule": "50\uff5e59-age\u2192 1-government_support\u2192 \u662f-is_married",
+          "Support": "0.15873015873015872",
+          "Confidence": "0.9090909090909091",
+          "Lift": "2.072368421052632"
+        }
+      ],
+      "\u60a8\u7684\u5e74\u9f61, \u60a8\u8a8d\u70ba\u653f\u5e9c\u5728\u8cb7\u623f\u4e0a\u5df2\u64c1\u6709\u5b8c\u5584\u914d\u5957\u63aa\u65bd\u7684\u7a0b\u5ea6\u70ba\uff1f, \u6700\u9ad8\u5b78\u6b77": [
+        {
+          "Rule": "21\uff5e29-age\u2192 1-government_support\u2192 \u5927\u5b78-education",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.6956521739130435",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u60a8\u7684\u5e74\u9f61, \u76ee\u524d\u6708\u85aa\u8cc7\u6c34\u5e73(\u53f0\u5e63), \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "21\uff5e29-age\u2192 20000\uff5e39999-salary\u2192 \u5426-is_married",
+          "Support": "0.14285714285714285",
+          "Confidence": "1.0",
+          "Lift": "2.147727272727273"
+        }
+      ],
+      "\u60a8\u7684\u5e74\u9f61, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u53ea\u9700\u8981\u60c5\u611f\u9700\u6c42\uff0c\u4e0d\u60f3\u7d81\u5b9a\u6cd5\u5f8b\u7fa9\u52d9": [
+        {
+          "Rule": "21\uff5e29-age\u2192 \u5426-is_married\u2192 3-non_economic_factor_relationship",
+          "Support": "0.12698412698412698",
+          "Confidence": "1.0",
+          "Lift": "2.1818181818181817"
+        }
+      ],
+      "\u60a8\u7684\u5e74\u9f61, \u60a8\u8a8d\u540c\u8cb7\u623f\u6703\u5f71\u97ff\u5230\u500b\u4eba\u751f\u6d3b\u6c34\u5e73\u7684\u7a0b\u5ea6\u70ba\uff1f, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "21\uff5e29-age\u2192 4-buying_house_impact_life\u2192 \u5426-is_married",
+          "Support": "0.15873015873015872",
+          "Confidence": "1.0",
+          "Lift": "2.121212121212121"
+        },
+        {
+          "Rule": "21\uff5e29-age\u2192 5-buying_house_impact_life\u2192 \u5426-is_married",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.9411764705882353",
+          "Lift": "1.9090909090909092"
+        }
+      ],
+      "\u60a8\u7684\u5e74\u9f61, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u5a5a\u5f8c\u6703\u5931\u53bb\u81ea\u7531": [
+        {
+          "Rule": "21\uff5e29-age\u2192 \u5426-is_married\u2192 4-freedom_loss_after_marriage",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.9411764705882353",
+          "Lift": "1.9090909090909092"
+        }
+      ],
+      "\u60a8\u7684\u5e74\u9f61, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u77e5\u662f\u5426\u5c0d\u65b9\u503c\u5f97\u4fe1\u4efb, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "21\uff5e29-age\u2192 4-trustworthiness\u2192 \u5426-is_married",
+          "Support": "0.14285714285714285",
+          "Confidence": "1.0",
+          "Lift": "2.061818181818182"
+        }
+      ],
+      "\u60a8\u7684\u5e74\u9f61, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9": [
+        {
+          "Rule": "21\uff5e29-age\u2192 5-child_rearing_cost_affordability\u2192 5-affordability",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.782608695652174",
+          "Lift": "2.7"
+        }
+      ],
+      "\u60a8\u7684\u5e74\u9f61, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8207\u5fc3\u611b\u7684\u4eba\u5171\u7d44\u5bb6\u5ead, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9": [
+        {
+          "Rule": "21\uff5e29-age\u2192 5-family_planning\u2192 5-affordability",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.7391304347826086",
+          "Lift": "2.3282608695652174"
+        }
+      ],
+      "\u60a8\u7684\u5e74\u9f61, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73": [
+        {
+          "Rule": "21\uff5e29-age\u2192 5-affordability\u2192 5-sacrifice_lifestyle",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.6956521739130435",
+          "Lift": "2.8"
+        }
+      ],
+      "\u60a8\u7684\u5e74\u9f61, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u60f3\u8981\u5148\u7a69\u5b9a\u4e8b\u696d\u518d\u7d44\u5efa\u5bb6\u5ead": [
+        {
+          "Rule": "21\uff5e29-age\u2192 5-affordability\u2192 5-stable_career_before_family",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.7391304347826086",
+          "Lift": "2.6775"
+        }
+      ],
+      "\u60a8\u7684\u5e74\u9f61, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "21\uff5e29-age\u2192 5-affordability\u2192 \u5426-is_married",
+          "Support": "0.18253968253968253",
+          "Confidence": "1.0",
+          "Lift": "2.3522727272727275"
+        }
+      ],
+      "\u60a8\u7684\u5e74\u9f61, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "21\uff5e29-age\u2192 5-child_rearing_cost_affordability\u2192 \u5426-is_married",
+          "Support": "0.16666666666666666",
+          "Confidence": "0.65625",
+          "Lift": "1.8529411764705883"
+        }
+      ],
+      "\u60a8\u7684\u5e74\u9f61, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8207\u5fc3\u611b\u7684\u4eba\u5171\u7d44\u5bb6\u5ead, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "21\uff5e29-age\u2192 5-family_planning\u2192 \u5426-is_married",
+          "Support": "0.18253968253968253",
+          "Confidence": "1.0",
+          "Lift": "2.3522727272727275"
+        }
+      ],
+      "\u60a8\u7684\u5e74\u9f61, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8207\u5fc3\u611b\u7684\u4eba\u5171\u7d44\u5bb6\u5ead, \u6700\u9ad8\u5b78\u6b77": [
+        {
+          "Rule": "21\uff5e29-age\u2192 5-family_planning\u2192 \u5927\u5b78-education",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.7391304347826086",
+          "Lift": "1.9472727272727275"
+        }
+      ],
+      "\u60a8\u7684\u5e74\u9f61, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8b93\u4f34\u4fb6\u95dc\u4fc2\u88ab\u6cd5\u5f8b\u6240\u8a8d\u540c": [
+        {
+          "Rule": "21\uff5e29-age\u2192 \u5426-is_married\u2192 5-legal_recognition",
+          "Support": "0.1349206349206349",
+          "Confidence": "1.0",
+          "Lift": "2.562200956937799"
+        }
+      ],
+      "\u60a8\u7684\u5e74\u9f61, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73": [
+        {
+          "Rule": "21\uff5e29-age\u2192 \u5426-is_married\u2192 5-sacrifice_lifestyle",
+          "Support": "0.14285714285714285",
+          "Confidence": "1.0",
+          "Lift": "2.3429752066115705"
+        }
+      ],
+      "\u60a8\u7684\u5e74\u9f61, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u60f3\u8981\u5148\u7a69\u5b9a\u4e8b\u696d\u518d\u7d44\u5efa\u5bb6\u5ead": [
+        {
+          "Rule": "21\uff5e29-age\u2192 \u5426-is_married\u2192 5-stable_career_before_family",
+          "Support": "0.15873015873015872",
+          "Confidence": "0.625",
+          "Lift": "1.8529411764705883"
+        }
+      ],
+      "\u60a8\u7684\u5e74\u9f61, \u6700\u9ad8\u5b78\u6b77, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "21\uff5e29-age\u2192 \u5927\u5b78-education\u2192 \u5426-is_married",
+          "Support": "0.23809523809523808",
+          "Confidence": "0.6818181818181818",
+          "Lift": "1.4178544636159038"
+        }
+      ],
+      "\u60a8\u7684\u5e74\u9f61, \u751f\u7406\u6027\u5225, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "21\uff5e29-age\u2192 \u5973-gender\u2192 \u5426-is_married",
+          "Support": "0.1984126984126984",
+          "Confidence": "1.0",
+          "Lift": "1.9886363636363638"
+        },
+        {
+          "Rule": "21\uff5e29-age\u2192 \u7537-gender\u2192 \u5426-is_married",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.9473684210526315",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u60a8\u7684\u5e74\u9f61, \u751f\u7406\u6027\u5225, \u6700\u9ad8\u5b78\u6b77": [
+        {
+          "Rule": "21\uff5e29-age\u2192 \u5973-gender\u2192 \u5927\u5b78-education",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.72",
+          "Lift": "N\\A"
+        }
+      ]
+    },
+    "\u60a8\u8a8d\u70ba\u653f\u5e9c\u5728\u8cb7\u623f\u4e0a\u5df2\u64c1\u6709\u5b8c\u5584\u914d\u5957\u63aa\u65bd\u7684\u7a0b\u5ea6\u70ba\uff1f": {
+      "\u60a8\u8a8d\u70ba\u653f\u5e9c\u5728\u8cb7\u623f\u4e0a\u5df2\u64c1\u6709\u5b8c\u5584\u914d\u5957\u63aa\u65bd\u7684\u7a0b\u5ea6\u70ba\uff1f, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "1-government_support\u2192 5-affordability\u2192 1-afford_house_price",
+          "Support": "0.15079365079365079",
+          "Confidence": "0.7037037037037037",
+          "Lift": "1.9182692307692308"
+        }
+      ],
+      "\u60a8\u8a8d\u70ba\u653f\u5e9c\u5728\u8cb7\u623f\u4e0a\u5df2\u64c1\u6709\u5b8c\u5584\u914d\u5957\u63aa\u65bd\u7684\u7a0b\u5ea6\u70ba\uff1f, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "1-government_support\u2192 \u5426-is_married\u2192 1-afford_house_price",
+          "Support": "0.1984126984126984",
+          "Confidence": "0.7142857142857142",
+          "Lift": "1.40625"
+        }
+      ],
+      "\u60a8\u8a8d\u70ba\u653f\u5e9c\u5728\u8cb7\u623f\u4e0a\u5df2\u64c1\u6709\u5b8c\u5584\u914d\u5957\u63aa\u65bd\u7684\u7a0b\u5ea6\u70ba\uff1f, \u6700\u9ad8\u5b78\u6b77, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "1-government_support\u2192 \u5927\u5b78-education\u2192 1-afford_house_price",
+          "Support": "0.15079365079365079",
+          "Confidence": "0.7307692307692307",
+          "Lift": "1.7812500000000002"
+        }
+      ],
+      "\u60a8\u8a8d\u70ba\u653f\u5e9c\u5728\u8cb7\u623f\u4e0a\u5df2\u64c1\u6709\u5b8c\u5584\u914d\u5957\u63aa\u65bd\u7684\u7a0b\u5ea6\u70ba\uff1f, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u5c0f\u5b69, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "1-government_support\u2192 1-desire_for_children\u2192 \u5426-is_married",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.8947368421052632",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u60a8\u8a8d\u70ba\u653f\u5e9c\u5728\u8cb7\u623f\u4e0a\u5df2\u64c1\u6709\u5b8c\u5584\u914d\u5957\u63aa\u65bd\u7684\u7a0b\u5ea6\u70ba\uff1f, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528": [
+        {
+          "Rule": "1-government_support\u2192 5-affordability\u2192 5-child_rearing_cost_affordability",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.6923076923076923",
+          "Lift": "2.8350000000000004"
+        }
+      ],
+      "\u60a8\u8a8d\u70ba\u653f\u5e9c\u5728\u8cb7\u623f\u4e0a\u5df2\u64c1\u6709\u5b8c\u5584\u914d\u5957\u63aa\u65bd\u7684\u7a0b\u5ea6\u70ba\uff1f, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73": [
+        {
+          "Rule": "1-government_support\u2192 5-affordability\u2192 5-sacrifice_lifestyle",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.6538461538461539",
+          "Lift": "2.818421052631579"
+        }
+      ],
+      "\u60a8\u8a8d\u70ba\u653f\u5e9c\u5728\u8cb7\u623f\u4e0a\u5df2\u64c1\u6709\u5b8c\u5584\u914d\u5957\u63aa\u65bd\u7684\u7a0b\u5ea6\u70ba\uff1f, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u60f3\u8981\u5148\u7a69\u5b9a\u4e8b\u696d\u518d\u7d44\u5efa\u5bb6\u5ead": [
+        {
+          "Rule": "1-government_support\u2192 5-affordability\u2192 5-stable_career_before_family",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.6153846153846154",
+          "Lift": "2.5200000000000005"
+        }
+      ],
+      "\u60a8\u8a8d\u70ba\u653f\u5e9c\u5728\u8cb7\u623f\u4e0a\u5df2\u64c1\u6709\u5b8c\u5584\u914d\u5957\u63aa\u65bd\u7684\u7a0b\u5ea6\u70ba\uff1f, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528": [
+        {
+          "Rule": "1-government_support\u2192 \u5426-is_married\u2192 5-child_rearing_cost_affordability",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.8",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u60a8\u8a8d\u70ba\u653f\u5e9c\u5728\u8cb7\u623f\u4e0a\u5df2\u64c1\u6709\u5b8c\u5584\u914d\u5957\u63aa\u65bd\u7684\u7a0b\u5ea6\u70ba\uff1f, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u6700\u9ad8\u5b78\u6b77": [
+        {
+          "Rule": "1-government_support\u2192 \u662f-is_married\u2192 \u78a9\u58eb-education",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.64",
+          "Lift": "1.4318181818181819"
+        }
+      ]
+    },
+    "\u60a8\u8a8d\u540c\u8cb7\u623f\u6703\u5f71\u97ff\u5230\u500b\u4eba\u751f\u6d3b\u6c34\u5e73\u7684\u7a0b\u5ea6\u70ba\uff1f": {
+      "\u60a8\u8a8d\u540c\u8cb7\u623f\u6703\u5f71\u97ff\u5230\u500b\u4eba\u751f\u6d3b\u6c34\u5e73\u7684\u7a0b\u5ea6\u70ba\uff1f, \u60a8\u8a8d\u70ba\u653f\u5e9c\u5728\u8cb7\u623f\u4e0a\u5df2\u64c1\u6709\u5b8c\u5584\u914d\u5957\u63aa\u65bd\u7684\u7a0b\u5ea6\u70ba\uff1f, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "5-buying_house_impact_life\u2192 1-government_support\u2192 1-afford_house_price",
+          "Support": "0.15079365079365079",
+          "Confidence": "0.7916666666666666",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u60a8\u8a8d\u540c\u8cb7\u623f\u6703\u5f71\u97ff\u5230\u500b\u4eba\u751f\u6d3b\u6c34\u5e73\u7684\u7a0b\u5ea6\u70ba\uff1f, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "5-buying_house_impact_life\u2192 \u5426-is_married\u2192 1-afford_house_price",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.7083333333333334",
+          "Lift": "1.8593750000000002"
+        }
+      ],
+      "\u60a8\u8a8d\u540c\u8cb7\u623f\u6703\u5f71\u97ff\u5230\u500b\u4eba\u751f\u6d3b\u6c34\u5e73\u7684\u7a0b\u5ea6\u70ba\uff1f, \u6700\u9ad8\u5b78\u6b77, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "5-buying_house_impact_life\u2192 \u5927\u5b78-education\u2192 1-afford_house_price",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.6666666666666666",
+          "Lift": "1.550769230769231"
+        }
+      ],
+      "\u60a8\u8a8d\u540c\u8cb7\u623f\u6703\u5f71\u97ff\u5230\u500b\u4eba\u751f\u6d3b\u6c34\u5e73\u7684\u7a0b\u5ea6\u70ba\uff1f, \u60a8\u8a8d\u70ba\u653f\u5e9c\u5728\u8cb7\u623f\u4e0a\u5df2\u64c1\u6709\u5b8c\u5584\u914d\u5957\u63aa\u65bd\u7684\u7a0b\u5ea6\u70ba\uff1f, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "5-buying_house_impact_life\u2192 1-government_support\u2192 \u5426-is_married",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.7083333333333334",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u60a8\u8a8d\u540c\u8cb7\u623f\u6703\u5f71\u97ff\u5230\u500b\u4eba\u751f\u6d3b\u6c34\u5e73\u7684\u7a0b\u5ea6\u70ba\uff1f, \u6700\u9ad8\u5b78\u6b77, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "4-buying_house_impact_life\u2192 \u5927\u5b78-education\u2192 \u5426-is_married",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.7619047619047619",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u60a8\u8a8d\u540c\u8cb7\u623f\u6703\u5f71\u97ff\u5230\u500b\u4eba\u751f\u6d3b\u6c34\u5e73\u7684\u7a0b\u5ea6\u70ba\uff1f, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73": [
+        {
+          "Rule": "5-buying_house_impact_life\u2192 5-affordability\u2192 5-sacrifice_lifestyle",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.8",
+          "Lift": "2.9647058823529413"
+        }
+      ],
+      "\u60a8\u8a8d\u540c\u8cb7\u623f\u6703\u5f71\u97ff\u5230\u500b\u4eba\u751f\u6d3b\u6c34\u5e73\u7684\u7a0b\u5ea6\u70ba\uff1f, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u60a8\u7684\u5e74\u9f61": [
+        {
+          "Rule": "5-buying_house_impact_life\u2192 \u662f-is_married\u2192 50\uff5e59-age",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.9",
+          "Lift": "2.2955465587044537"
+        }
+      ]
+    },
+    "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8207\u5fc3\u611b\u7684\u4eba\u5171\u7d44\u5bb6\u5ead": {
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8207\u5fc3\u611b\u7684\u4eba\u5171\u7d44\u5bb6\u5ead, \u60a8\u8a8d\u70ba\u653f\u5e9c\u5728\u8cb7\u623f\u4e0a\u5df2\u64c1\u6709\u5b8c\u5584\u914d\u5957\u63aa\u65bd\u7684\u7a0b\u5ea6\u70ba\uff1f, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "5-family_planning\u2192 1-government_support\u2192 1-afford_house_price",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.7272727272727273",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8207\u5fc3\u611b\u7684\u4eba\u5171\u7d44\u5bb6\u5ead, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "5-family_planning\u2192 5-affordability\u2192 1-afford_house_price",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.7272727272727273",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8207\u5fc3\u611b\u7684\u4eba\u5171\u7d44\u5bb6\u5ead, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "5-family_planning\u2192 \u5426-is_married\u2192 1-afford_house_price",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.7727272727272727",
+          "Lift": "1.59375"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8207\u5fc3\u611b\u7684\u4eba\u5171\u7d44\u5bb6\u5ead, \u60a8\u8a8d\u70ba\u653f\u5e9c\u5728\u8cb7\u623f\u4e0a\u5df2\u64c1\u6709\u5b8c\u5584\u914d\u5957\u63aa\u65bd\u7684\u7a0b\u5ea6\u70ba\uff1f, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9": [
+        {
+          "Rule": "5-family_planning\u2192 1-government_support\u2192 5-affordability",
+          "Support": "0.15079365079365079",
+          "Confidence": "0.7307692307692307",
+          "Lift": "2.216666666666667"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8207\u5fc3\u611b\u7684\u4eba\u5171\u7d44\u5bb6\u5ead, \u60a8\u8a8d\u70ba\u653f\u5e9c\u5728\u8cb7\u623f\u4e0a\u5df2\u64c1\u6709\u5b8c\u5584\u914d\u5957\u63aa\u65bd\u7684\u7a0b\u5ea6\u70ba\uff1f, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8b93\u4f34\u4fb6\u95dc\u4fc2\u88ab\u6cd5\u5f8b\u6240\u8a8d\u540c": [
+        {
+          "Rule": "5-family_planning\u2192 1-government_support\u2192 5-legal_recognition",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.6666666666666666",
+          "Lift": "2.4127659574468083"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8207\u5fc3\u611b\u7684\u4eba\u5171\u7d44\u5bb6\u5ead, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u60f3\u8981\u5148\u7a69\u5b9a\u4e8b\u696d\u518d\u7d44\u5efa\u5bb6\u5ead": [
+        {
+          "Rule": "4-family_planning\u2192 4-sacrifice_lifestyle\u2192 4-stable_career_before_family",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.7272727272727273",
+          "Lift": "3.0315789473684207"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8207\u5fc3\u611b\u7684\u4eba\u5171\u7d44\u5bb6\u5ead, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9": [
+        {
+          "Rule": "5-family_planning\u2192 5-child_rearing_cost_affordability\u2192 5-affordability",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.6428571428571429",
+          "Lift": "2.5312500000000004"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8207\u5fc3\u611b\u7684\u4eba\u5171\u7d44\u5bb6\u5ead, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8b93\u4f34\u4fb6\u95dc\u4fc2\u88ab\u6cd5\u5f8b\u6240\u8a8d\u540c": [
+        {
+          "Rule": "5-family_planning\u2192 5-affordability\u2192 5-legal_recognition",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.6428571428571429",
+          "Lift": "2.1934235976789167"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8207\u5fc3\u611b\u7684\u4eba\u5171\u7d44\u5bb6\u5ead, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u4f34\u4fb6\u4e00\u540c\u627f\u64d4\u8cac\u4efb": [
+        {
+          "Rule": "5-family_planning\u2192 5-affordability\u2192 5-responsibility_sharing",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.8",
+          "Lift": "2.016"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8207\u5fc3\u611b\u7684\u4eba\u5171\u7d44\u5bb6\u5ead, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73": [
+        {
+          "Rule": "5-family_planning\u2192 5-affordability\u2192 5-sacrifice_lifestyle",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.6428571428571429",
+          "Lift": "1.723404255319149"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8207\u5fc3\u611b\u7684\u4eba\u5171\u7d44\u5bb6\u5ead, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u60f3\u8981\u5148\u7a69\u5b9a\u4e8b\u696d\u518d\u7d44\u5efa\u5bb6\u5ead": [
+        {
+          "Rule": "5-family_planning\u2192 5-affordability\u2192 5-stable_career_before_family",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.6428571428571429",
+          "Lift": "1.9302127659574466"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8207\u5fc3\u611b\u7684\u4eba\u5171\u7d44\u5bb6\u5ead, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "5-family_planning\u2192 5-affordability\u2192 \u5426-is_married",
+          "Support": "0.15079365079365079",
+          "Confidence": "0.6785714285714286",
+          "Lift": "2.1375"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8207\u5fc3\u611b\u7684\u4eba\u5171\u7d44\u5bb6\u5ead, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8b93\u4f34\u4fb6\u95dc\u4fc2\u88ab\u6cd5\u5f8b\u6240\u8a8d\u540c, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u4f34\u4fb6\u4e00\u540c\u627f\u64d4\u8cac\u4efb": [
+        {
+          "Rule": "5-family_planning\u2192 5-legal_recognition\u2192 5-responsibility_sharing",
+          "Support": "0.15873015873015872",
+          "Confidence": "0.625",
+          "Lift": "2.4609375"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8207\u5fc3\u611b\u7684\u4eba\u5171\u7d44\u5bb6\u5ead, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8b93\u4f34\u4fb6\u95dc\u4fc2\u88ab\u6cd5\u5f8b\u6240\u8a8d\u540c, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73": [
+        {
+          "Rule": "5-family_planning\u2192 5-legal_recognition\u2192 5-sacrifice_lifestyle",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.7619047619047619",
+          "Lift": "2.1446808510638298"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8207\u5fc3\u611b\u7684\u4eba\u5171\u7d44\u5bb6\u5ead, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8b93\u4f34\u4fb6\u95dc\u4fc2\u88ab\u6cd5\u5f8b\u6240\u8a8d\u540c": [
+        {
+          "Rule": "5-family_planning\u2192 \u5426-is_married\u2192 5-legal_recognition",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.8421052631578947",
+          "Lift": "N\\A"
+        },
+        {
+          "Rule": "5-family_planning\u2192 \u662f-is_married\u2192 5-legal_recognition",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.8421052631578947",
+          "Lift": "2.382978723404255"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8207\u5fc3\u611b\u7684\u4eba\u5171\u7d44\u5bb6\u5ead, \u6700\u9ad8\u5b78\u6b77, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u4f34\u4fb6\u4e00\u540c\u627f\u64d4\u8cac\u4efb": [
+        {
+          "Rule": "5-family_planning\u2192 \u5927\u5b78-education\u2192 5-responsibility_sharing",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.64",
+          "Lift": "2.52"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8207\u5fc3\u611b\u7684\u4eba\u5171\u7d44\u5bb6\u5ead, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u60f3\u8981\u5148\u7a69\u5b9a\u4e8b\u696d\u518d\u7d44\u5efa\u5bb6\u5ead": [
+        {
+          "Rule": "5-family_planning\u2192 \u5426-is_married\u2192 5-stable_career_before_family",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.7727272727272727",
+          "Lift": "2.390625"
+        }
+      ]
+    },
+    "\u751f\u7406\u6027\u5225": {
+      "\u751f\u7406\u6027\u5225, \u60a8\u8a8d\u70ba\u653f\u5e9c\u5728\u8cb7\u623f\u4e0a\u5df2\u64c1\u6709\u5b8c\u5584\u914d\u5957\u63aa\u65bd\u7684\u7a0b\u5ea6\u70ba\uff1f, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "\u5973-gender\u2192 1-government_support\u2192 1-afford_house_price",
+          "Support": "0.15873015873015872",
+          "Confidence": "0.7692307692307693",
+          "Lift": "1.6935483870967742"
+        }
+      ],
+      "\u751f\u7406\u6027\u5225, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "\u5973-gender\u2192 \u5426-is_married\u2192 1-afford_house_price",
+          "Support": "0.15079365079365079",
+          "Confidence": "0.7307692307692307",
+          "Lift": "N\\A"
+        },
+        {
+          "Rule": "\u7537-gender\u2192 \u5426-is_married\u2192 1-afford_house_price",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.7272727272727273",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u751f\u7406\u6027\u5225, \u6700\u9ad8\u5b78\u6b77, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "\u5973-gender\u2192 \u5927\u5b78-education\u2192 1-afford_house_price",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.6153846153846154",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u751f\u7406\u6027\u5225, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u5c0f\u5b69, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "\u5973-gender\u2192 1-desire_for_children\u2192 \u5426-is_married",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.6538461538461539",
+          "Lift": "1.75"
+        }
+      ],
+      "\u751f\u7406\u6027\u5225, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u5bb3\u6015\u8981\u8207\u5c0d\u65b9\u5bb6\u5ead\u78e8\u5408": [
+        {
+          "Rule": "\u7537-gender\u2192 \u662f-is_married\u2192 3-family_adjustment_concerns",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.7272727272727273",
+          "Lift": "1.3368700265251992"
+        }
+      ],
+      "\u751f\u7406\u6027\u5225, \u60a8\u8a8d\u540c\u8cb7\u623f\u6703\u5f71\u97ff\u5230\u500b\u4eba\u751f\u6d3b\u6c34\u5e73\u7684\u7a0b\u5ea6\u70ba\uff1f, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u77e5\u662f\u5426\u5c0d\u65b9\u503c\u5f97\u4fe1\u4efb": [
+        {
+          "Rule": "\u7537-gender\u2192 5-buying_house_impact_life\u2192 3-trustworthiness",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.7619047619047619",
+          "Lift": "1.6128000000000002"
+        }
+      ],
+      "\u751f\u7406\u6027\u5225, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u77e5\u662f\u5426\u5c0d\u65b9\u503c\u5f97\u4fe1\u4efb": [
+        {
+          "Rule": "\u7537-gender\u2192 \u662f-is_married\u2192 3-trustworthiness",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.7083333333333334",
+          "Lift": "1.477241379310345"
+        }
+      ],
+      "\u751f\u7406\u6027\u5225, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73": [
+        {
+          "Rule": "\u7537-gender\u2192 5-affordability\u2192 5-sacrifice_lifestyle",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.7272727272727273",
+          "Lift": "2.6526315789473682"
+        }
+      ],
+      "\u751f\u7406\u6027\u5225, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8207\u5fc3\u611b\u7684\u4eba\u5171\u7d44\u5bb6\u5ead, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8b93\u4f34\u4fb6\u95dc\u4fc2\u88ab\u6cd5\u5f8b\u6240\u8a8d\u540c": [
+        {
+          "Rule": "\u7537-gender\u2192 5-family_planning\u2192 5-legal_recognition",
+          "Support": "0.15873015873015872",
+          "Confidence": "0.7407407407407407",
+          "Lift": "2.3311748381128585"
+        }
+      ],
+      "\u751f\u7406\u6027\u5225, \u60a8\u7684\u5e74\u9f61, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "\u7537-gender\u2192 50\uff5e59-age\u2192 \u662f-is_married",
+          "Support": "0.1746031746031746",
+          "Confidence": "0.9166666666666666",
+          "Lift": "2.0263157894736845"
+        }
+      ]
+    },
+    "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528": {
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "5-child_rearing_cost_affordability\u2192 5-affordability\u2192 1-afford_house_price",
+          "Support": "0.15079365079365079",
+          "Confidence": "0.7037037037037037",
+          "Lift": "2.85"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u7d50\u5a5a\u958b\u92b7, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "5-child_rearing_cost_affordability\u2192 5-marriage_expenses_affordability\u2192 1-afford_house_price",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.75",
+          "Lift": "4.5"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73": [
+        {
+          "Rule": "5-child_rearing_cost_affordability\u2192 1-afford_house_price\u2192 5-sacrifice_lifestyle",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.7619047619047619",
+          "Lift": "3.3157894736842106"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "5-child_rearing_cost_affordability\u2192 \u5426-is_married\u2192 1-afford_house_price",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.8571428571428571",
+          "Lift": "1.8173076923076923"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8b93\u4f34\u4fb6\u95dc\u4fc2\u88ab\u6cd5\u5f8b\u6240\u8a8d\u540c": [
+        {
+          "Rule": "5-child_rearing_cost_affordability\u2192 5-affordability\u2192 5-legal_recognition",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.6428571428571429",
+          "Lift": "3.2215909090909096"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u7d50\u5a5a\u958b\u92b7": [
+        {
+          "Rule": "5-child_rearing_cost_affordability\u2192 5-affordability\u2192 5-marriage_expenses_affordability",
+          "Support": "0.15873015873015872",
+          "Confidence": "0.625",
+          "Lift": "3.7500000000000004"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73": [
+        {
+          "Rule": "5-child_rearing_cost_affordability\u2192 5-affordability\u2192 5-sacrifice_lifestyle",
+          "Support": "0.18253968253968253",
+          "Confidence": "0.71875",
+          "Lift": "3.1363636363636362"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u60f3\u8981\u5148\u7a69\u5b9a\u4e8b\u696d\u518d\u7d44\u5efa\u5bb6\u5ead": [
+        {
+          "Rule": "5-child_rearing_cost_affordability\u2192 5-affordability\u2192 5-stable_career_before_family",
+          "Support": "0.15079365079365079",
+          "Confidence": "0.6785714285714286",
+          "Lift": "2.9925"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "5-child_rearing_cost_affordability\u2192 5-affordability\u2192 \u5426-is_married",
+          "Support": "0.1746031746031746",
+          "Confidence": "0.6875",
+          "Lift": "1.4558823529411766"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8b93\u4f34\u4fb6\u95dc\u4fc2\u88ab\u6cd5\u5f8b\u6240\u8a8d\u540c, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73": [
+        {
+          "Rule": "5-child_rearing_cost_affordability\u2192 5-legal_recognition\u2192 5-sacrifice_lifestyle",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.8421052631578947",
+          "Lift": "2.27027027027027"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u7d50\u5a5a\u958b\u92b7, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73": [
+        {
+          "Rule": "5-child_rearing_cost_affordability\u2192 5-marriage_expenses_affordability\u2192 5-sacrifice_lifestyle",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.75",
+          "Lift": "3.1239669421487606"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u7d50\u5a5a\u958b\u92b7, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u60f3\u8981\u5148\u7a69\u5b9a\u4e8b\u696d\u518d\u7d44\u5efa\u5bb6\u5ead": [
+        {
+          "Rule": "5-child_rearing_cost_affordability\u2192 5-marriage_expenses_affordability\u2192 5-stable_career_before_family",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.7083333333333334",
+          "Lift": "3.0426136363636362"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u7d50\u5a5a\u958b\u92b7, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "5-child_rearing_cost_affordability\u2192 5-marriage_expenses_affordability\u2192 \u5426-is_married",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.75",
+          "Lift": "1.5160427807486634"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u60f3\u8981\u5148\u7a69\u5b9a\u4e8b\u696d\u518d\u7d44\u5efa\u5bb6\u5ead, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73": [
+        {
+          "Rule": "5-child_rearing_cost_affordability\u2192 5-stable_career_before_family\u2192 5-sacrifice_lifestyle",
+          "Support": "0.15079365079365079",
+          "Confidence": "0.7916666666666666",
+          "Lift": "3.2975206611570247"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73": [
+        {
+          "Rule": "5-child_rearing_cost_affordability\u2192 \u5426-is_married\u2192 5-sacrifice_lifestyle",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.75",
+          "Lift": "2.6433566433566433"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u60f3\u8981\u5148\u7a69\u5b9a\u4e8b\u696d\u518d\u7d44\u5efa\u5bb6\u5ead": [
+        {
+          "Rule": "5-child_rearing_cost_affordability\u2192 \u5426-is_married\u2192 5-stable_career_before_family",
+          "Support": "0.15079365079365079",
+          "Confidence": "0.8636363636363636",
+          "Lift": "2.8774038461538463"
+        }
+      ]
+    },
+    "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u7d50\u5a5a\u958b\u92b7": {
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u7d50\u5a5a\u958b\u92b7, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "5-marriage_expenses_affordability\u2192 5-affordability\u2192 1-afford_house_price",
+          "Support": "0.15079365079365079",
+          "Confidence": "0.7916666666666666",
+          "Lift": "3.6944444444444446"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u7d50\u5a5a\u958b\u92b7, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73": [
+        {
+          "Rule": "5-marriage_expenses_affordability\u2192 1-afford_house_price\u2192 5-sacrifice_lifestyle",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.6666666666666666",
+          "Lift": "3.0545454545454547"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u7d50\u5a5a\u958b\u92b7, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "5-marriage_expenses_affordability\u2192 \u5426-is_married\u2192 1-afford_house_price",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.6666666666666666",
+          "Lift": "1.4823529411764707"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u7d50\u5a5a\u958b\u92b7, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u60f3\u8981\u5148\u7a69\u5b9a\u4e8b\u696d\u518d\u7d44\u5efa\u5bb6\u5ead": [
+        {
+          "Rule": "4-marriage_expenses_affordability\u2192 4-child_rearing_cost_affordability\u2192 4-stable_career_before_family",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.8",
+          "Lift": "3.3157894736842106"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u7d50\u5a5a\u958b\u92b7, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u60f3\u8981\u5148\u7a69\u5b9a\u4e8b\u696d\u518d\u7d44\u5efa\u5bb6\u5ead, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73": [
+        {
+          "Rule": "5-marriage_expenses_affordability\u2192 5-stable_career_before_family\u2192 5-sacrifice_lifestyle",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.6666666666666666",
+          "Lift": "3.3157894736842106"
+        }
+      ]
+    },
+    "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9": {
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73": [
+        {
+          "Rule": "5-affordability\u2192 1-afford_house_price\u2192 5-sacrifice_lifestyle",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.6666666666666666",
+          "Lift": "2.9842105263157896"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u60f3\u8981\u5148\u7a69\u5b9a\u4e8b\u696d\u518d\u7d44\u5efa\u5bb6\u5ead, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "5-affordability\u2192 5-stable_career_before_family\u2192 1-afford_house_price",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.6296296296296297",
+          "Lift": "2.6775"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "5-affordability\u2192 \u5426-is_married\u2192 1-afford_house_price",
+          "Support": "0.16666666666666666",
+          "Confidence": "0.7777777777777778",
+          "Lift": "1.8900000000000001"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8b93\u4f34\u4fb6\u95dc\u4fc2\u88ab\u6cd5\u5f8b\u6240\u8a8d\u540c, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73": [
+        {
+          "Rule": "5-affordability\u2192 5-legal_recognition\u2192 5-sacrifice_lifestyle",
+          "Support": "0.15079365079365079",
+          "Confidence": "0.8636363636363636",
+          "Lift": "2.310810810810811"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u7d50\u5a5a\u958b\u92b7, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73": [
+        {
+          "Rule": "5-affordability\u2192 5-marriage_expenses_affordability\u2192 5-sacrifice_lifestyle",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.75",
+          "Lift": "3.1239669421487606"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u60f3\u8981\u5148\u7a69\u5b9a\u4e8b\u696d\u518d\u7d44\u5efa\u5bb6\u5ead, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u7d50\u5a5a\u958b\u92b7": [
+        {
+          "Rule": "5-affordability\u2192 5-stable_career_before_family\u2192 5-marriage_expenses_affordability",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.6666666666666666",
+          "Lift": "2.8636363636363638"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u7d50\u5a5a\u958b\u92b7": [
+        {
+          "Rule": "5-affordability\u2192 \u5426-is_married\u2192 5-marriage_expenses_affordability",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.7083333333333334",
+          "Lift": "1.4318181818181819"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u60f3\u8981\u5148\u7a69\u5b9a\u4e8b\u696d\u518d\u7d44\u5efa\u5bb6\u5ead, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73": [
+        {
+          "Rule": "5-affordability\u2192 5-stable_career_before_family\u2192 5-sacrifice_lifestyle",
+          "Support": "0.16666666666666666",
+          "Confidence": "0.6363636363636362",
+          "Lift": "2.953125"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73": [
+        {
+          "Rule": "5-affordability\u2192 \u5426-is_married\u2192 5-sacrifice_lifestyle",
+          "Support": "0.15079365079365079",
+          "Confidence": "0.6785714285714286",
+          "Lift": "2.7204545454545457"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u60f3\u8981\u5148\u7a69\u5b9a\u4e8b\u696d\u518d\u7d44\u5efa\u5bb6\u5ead, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "5-affordability\u2192 5-stable_career_before_family\u2192 \u5426-is_married",
+          "Support": "0.15873015873015872",
+          "Confidence": "0.625",
+          "Lift": "1.4823529411764707"
+        }
+      ]
+    },
+    "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u60f3\u8981\u5148\u7a69\u5b9a\u4e8b\u696d\u518d\u7d44\u5efa\u5bb6\u5ead": {
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u60f3\u8981\u5148\u7a69\u5b9a\u4e8b\u696d\u518d\u7d44\u5efa\u5bb6\u5ead, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73": [
+        {
+          "Rule": "5-stable_career_before_family\u2192 1-afford_house_price\u2192 5-sacrifice_lifestyle",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.8421052631578947",
+          "Lift": "3.0545454545454547"
+        }
+      ]
+    },
+    "\u6700\u9ad8\u5b78\u6b77": {
+      "\u6700\u9ad8\u5b78\u6b77, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "\u5927\u5b78-education\u2192 \u5426-is_married\u2192 1-afford_house_price",
+          "Support": "0.16666666666666666",
+          "Confidence": "0.8076923076923077",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u6700\u9ad8\u5b78\u6b77, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u5c0f\u5b69, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "\u5927\u5b78-education\u2192 1-desire_for_children\u2192 \u5426-is_married",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.9411764705882353",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u6700\u9ad8\u5b78\u6b77, \u76ee\u524d\u6708\u85aa\u8cc7\u6c34\u5e73(\u53f0\u5e63), \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "\u5927\u5b78-education\u2192 20000\uff5e39999-salary\u2192 \u5426-is_married",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.7083333333333334",
+          "Lift": "1.575"
+        }
+      ],
+      "\u6700\u9ad8\u5b78\u6b77, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u5a5a\u5f8c\u6703\u5931\u53bb\u81ea\u7531": [
+        {
+          "Rule": "\u5927\u5b78-education\u2192 \u5426-is_married\u2192 4-freedom_loss_after_marriage",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.7083333333333334",
+          "Lift": "1.4318181818181819"
+        }
+      ],
+      "\u6700\u9ad8\u5b78\u6b77, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "\u5927\u5b78-education\u2192 5-affordability\u2192 \u5426-is_married",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.7619047619047619",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u6700\u9ad8\u5b78\u6b77, \u60a8\u8a8d\u540c\u8cb7\u623f\u6703\u5f71\u97ff\u5230\u500b\u4eba\u751f\u6d3b\u6c34\u5e73\u7684\u7a0b\u5ea6\u70ba\uff1f, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "\u5927\u5b78-education\u2192 5-buying_house_impact_life\u2192 \u5426-is_married",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.6666666666666666",
+          "Lift": "N\\A"
+        }
+      ],
+      "\u6700\u9ad8\u5b78\u6b77, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "\u5927\u5b78-education\u2192 5-child_rearing_cost_affordability\u2192 \u5426-is_married",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.6538461538461539",
+          "Lift": "1.6578947368421053"
+        }
+      ],
+      "\u6700\u9ad8\u5b78\u6b77, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8207\u5fc3\u611b\u7684\u4eba\u5171\u7d44\u5bb6\u5ead, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8b93\u4f34\u4fb6\u95dc\u4fc2\u88ab\u6cd5\u5f8b\u6240\u8a8d\u540c": [
+        {
+          "Rule": "\u5927\u5b78-education\u2192 5-family_planning\u2192 5-legal_recognition",
+          "Support": "0.15079365079365079",
+          "Confidence": "0.76",
+          "Lift": "2.425531914893617"
+        }
+      ],
+      "\u6700\u9ad8\u5b78\u6b77, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8207\u5fc3\u611b\u7684\u4eba\u5171\u7d44\u5bb6\u5ead, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "\u5927\u5b78-education\u2192 5-family_planning\u2192 \u5426-is_married",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.6428571428571429",
+          "Lift": "1.3341176470588236"
+        }
+      ],
+      "\u6700\u9ad8\u5b78\u6b77, \u751f\u7406\u6027\u5225, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "\u5927\u5b78-education\u2192 \u5973-gender\u2192 \u5426-is_married",
+          "Support": "0.1984126984126984",
+          "Confidence": "0.6944444444444444",
+          "Lift": "1.3624567474048446"
+        }
+      ]
+    },
+    "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73": {
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u60f3\u8981\u5148\u7a69\u5b9a\u4e8b\u696d\u518d\u7d44\u5efa\u5bb6\u5ead": [
+        {
+          "Rule": "4-sacrifice_lifestyle\u2192 4-child_rearing_cost_affordability\u2192 4-stable_career_before_family",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.8421052631578947",
+          "Lift": "3.0315789473684207"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u4f34\u4fb6\u4e00\u540c\u627f\u64d4\u8cac\u4efb": [
+        {
+          "Rule": "5-sacrifice_lifestyle\u2192 5-affordability\u2192 5-responsibility_sharing",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.8",
+          "Lift": "3.1500000000000004"
+        }
+      ]
+    },
+    "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u5bb3\u6015\u8981\u8207\u5c0d\u65b9\u5bb6\u5ead\u78e8\u5408": {
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u5bb3\u6015\u8981\u8207\u5c0d\u65b9\u5bb6\u5ead\u78e8\u5408, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u990a\u5c0f\u5b69, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u5a5a\u5f8c\u6703\u5931\u53bb\u81ea\u7531": [
+        {
+          "Rule": "4-family_adjustment_concerns\u2192 4-fear_of_commitment\u2192 4-freedom_loss_after_marriage",
+          "Support": "0.15079365079365079",
+          "Confidence": "0.7037037037037037",
+          "Lift": "3.081081081081081"
+        }
+      ]
+    },
+    "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u77e5\u662f\u5426\u5c0d\u65b9\u503c\u5f97\u4fe1\u4efb": {
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u77e5\u662f\u5426\u5c0d\u65b9\u503c\u5f97\u4fe1\u4efb, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u5bb3\u6015\u8981\u8207\u5c0d\u65b9\u5bb6\u5ead\u78e8\u5408, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u990a\u5c0f\u5b69": [
+        {
+          "Rule": "4-trustworthiness\u2192 4-family_adjustment_concerns\u2192 4-fear_of_commitment",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.6296296296296297",
+          "Lift": "2.914285714285714"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u77e5\u662f\u5426\u5c0d\u65b9\u503c\u5f97\u4fe1\u4efb, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u5bb3\u6015\u8981\u8207\u5c0d\u65b9\u5bb6\u5ead\u78e8\u5408, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u5a5a\u5f8c\u6703\u5931\u53bb\u81ea\u7531": [
+        {
+          "Rule": "4-trustworthiness\u2192 4-family_adjustment_concerns\u2192 4-freedom_loss_after_marriage",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.8181818181818182",
+          "Lift": "2.4518918918918917"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u77e5\u662f\u5426\u5c0d\u65b9\u503c\u5f97\u4fe1\u4efb, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u5bb3\u6015\u8981\u8207\u5c0d\u65b9\u5bb6\u5ead\u78e8\u5408": [
+        {
+          "Rule": "4-trustworthiness\u2192 \u5426-is_married\u2192 4-family_adjustment_concerns",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.72",
+          "Lift": "2.6999999999999997"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u77e5\u662f\u5426\u5c0d\u65b9\u503c\u5f97\u4fe1\u4efb, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u990a\u5c0f\u5b69, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u5a5a\u5f8c\u6703\u5931\u53bb\u81ea\u7531": [
+        {
+          "Rule": "4-trustworthiness\u2192 4-fear_of_commitment\u2192 4-freedom_loss_after_marriage",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.6296296296296297",
+          "Lift": "2.7818181818181817"
+        }
+      ]
+    }
+  },
+  "4": {
+    "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u50b3\u7d71\u4e0a\u7d50\u5a5a\u662f\u4eba\u751f\u7684\u5fc5\u7d93\u4e4b\u8def": {
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u50b3\u7d71\u4e0a\u7d50\u5a5a\u662f\u4eba\u751f\u7684\u5fc5\u7d93\u4e4b\u8def, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u5c0f\u5b69, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "1-tradition\u2192 1-desire_for_children\u2192 \u5426-is_married\u2192 1-afford_house_price",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.8421052631578947",
+          "Lift": "3.37123745819398"
+        }
+      ],
+      "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u50b3\u7d71\u4e0a\u7d50\u5a5a\u662f\u4eba\u751f\u7684\u5fc5\u7d93\u4e4b\u8def, \u60a8\u8a8d\u70ba\u653f\u5e9c\u5728\u8cb7\u623f\u4e0a\u5df2\u64c1\u6709\u5b8c\u5584\u914d\u5957\u63aa\u65bd\u7684\u7a0b\u5ea6\u70ba\uff1f, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "1-tradition\u2192 1-government_support\u2192 \u5426-is_married\u2192 1-afford_house_price",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.782608695652174",
+          "Lift": "2.6999999999999997"
+        }
+      ]
+    },
+    "\u60a8\u7684\u5e74\u9f61": {
+      "\u60a8\u7684\u5e74\u9f61, \u60a8\u8a8d\u70ba\u653f\u5e9c\u5728\u8cb7\u623f\u4e0a\u5df2\u64c1\u6709\u5b8c\u5584\u914d\u5957\u63aa\u65bd\u7684\u7a0b\u5ea6\u70ba\uff1f, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "21\uff5e29-age\u2192 1-government_support\u2192 \u5426-is_married\u2192 1-afford_house_price",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.7083333333333334",
+          "Lift": "2.660869565217391"
+        }
+      ],
+      "\u60a8\u7684\u5e74\u9f61, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "21\uff5e29-age\u2192 5-affordability\u2192 \u5426-is_married\u2192 1-afford_house_price",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.6666666666666666",
+          "Lift": "2.5043478260869563"
+        }
+      ],
+      "\u60a8\u7684\u5e74\u9f61, \u6700\u9ad8\u5b78\u6b77, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "21\uff5e29-age\u2192 \u5927\u5b78-education\u2192 \u5426-is_married\u2192 1-afford_house_price",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.6666666666666666",
+          "Lift": "1.8032200357781754"
+        }
+      ],
+      "\u60a8\u7684\u5e74\u9f61, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "21\uff5e29-age\u2192 5-child_rearing_cost_affordability\u2192 5-affordability\u2192 \u5426-is_married",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.782608695652174",
+          "Lift": "3.857142857142857"
+        }
+      ],
+      "\u60a8\u7684\u5e74\u9f61, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8207\u5fc3\u611b\u7684\u4eba\u5171\u7d44\u5bb6\u5ead, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "21\uff5e29-age\u2192 5-family_planning\u2192 5-affordability\u2192 \u5426-is_married",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.7391304347826086",
+          "Lift": "3.3260869565217392"
+        }
+      ],
+      "\u60a8\u7684\u5e74\u9f61, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73": [
+        {
+          "Rule": "21\uff5e29-age\u2192 5-affordability\u2192 \u5426-is_married\u2192 5-sacrifice_lifestyle",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.6956521739130435",
+          "Lift": "4.0"
+        }
+      ],
+      "\u60a8\u7684\u5e74\u9f61, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u60f3\u8981\u5148\u7a69\u5b9a\u4e8b\u696d\u518d\u7d44\u5efa\u5bb6\u5ead, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "21\uff5e29-age\u2192 5-affordability\u2192 5-stable_career_before_family\u2192 \u5426-is_married",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.7391304347826086",
+          "Lift": "3.825"
+        }
+      ],
+      "\u60a8\u7684\u5e74\u9f61, \u6700\u9ad8\u5b78\u6b77, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8207\u5fc3\u611b\u7684\u4eba\u5171\u7d44\u5bb6\u5ead, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "21\uff5e29-age\u2192 \u5927\u5b78-education\u2192 5-family_planning\u2192 \u5426-is_married",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.7391304347826086",
+          "Lift": "2.467741935483871"
+        }
+      ],
+      "\u60a8\u7684\u5e74\u9f61, \u6700\u9ad8\u5b78\u6b77, \u751f\u7406\u6027\u5225, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "21\uff5e29-age\u2192 \u5927\u5b78-education\u2192 \u5973-gender\u2192 \u5426-is_married",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.72",
+          "Lift": "1.303448275862069"
+        }
+      ]
+    },
+    "\u6700\u9ad8\u5b78\u6b77": {
+      "\u6700\u9ad8\u5b78\u6b77, \u60a8\u8a8d\u70ba\u653f\u5e9c\u5728\u8cb7\u623f\u4e0a\u5df2\u64c1\u6709\u5b8c\u5584\u914d\u5957\u63aa\u65bd\u7684\u7a0b\u5ea6\u70ba\uff1f, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "\u5927\u5b78-education\u2192 1-government_support\u2192 \u5426-is_married\u2192 1-afford_house_price",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.6153846153846154",
+          "Lift": "1.3006451612903227"
+        }
+      ]
+    },
+    "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u7d50\u5a5a\u958b\u92b7": {
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u7d50\u5a5a\u958b\u92b7, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "5-marriage_expenses_affordability\u2192 5-child_rearing_cost_affordability\u2192 5-affordability\u2192 1-afford_house_price",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.7083333333333334",
+          "Lift": "3.6060606060606064"
+        }
+      ]
+    },
+    "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528": {
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": [
+        {
+          "Rule": "5-child_rearing_cost_affordability\u2192 5-affordability\u2192 \u5426-is_married\u2192 1-afford_house_price",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.7619047619047619",
+          "Lift": "2.8717948717948723"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u8b93\u4f34\u4fb6\u95dc\u4fc2\u88ab\u6cd5\u5f8b\u6240\u8a8d\u540c, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73": [
+        {
+          "Rule": "5-child_rearing_cost_affordability\u2192 5-affordability\u2192 5-legal_recognition\u2192 5-sacrifice_lifestyle",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.7272727272727273",
+          "Lift": "3.789473684210526"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u7d50\u5a5a\u958b\u92b7, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73": [
+        {
+          "Rule": "5-child_rearing_cost_affordability\u2192 5-affordability\u2192 5-marriage_expenses_affordability\u2192 5-sacrifice_lifestyle",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.7083333333333334",
+          "Lift": "4.026315789473684"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u7d50\u5a5a\u958b\u92b7": [
+        {
+          "Rule": "5-child_rearing_cost_affordability\u2192 5-affordability\u2192 \u5426-is_married\u2192 5-marriage_expenses_affordability",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.6666666666666666",
+          "Lift": "3.5244755244755246"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u60f3\u8981\u5148\u7a69\u5b9a\u4e8b\u696d\u518d\u7d44\u5efa\u5bb6\u5ead, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73": [
+        {
+          "Rule": "5-child_rearing_cost_affordability\u2192 5-affordability\u2192 5-stable_career_before_family\u2192 5-sacrifice_lifestyle",
+          "Support": "0.14285714285714285",
+          "Confidence": "0.6428571428571429",
+          "Lift": "3.681818181818182"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73": [
+        {
+          "Rule": "5-child_rearing_cost_affordability\u2192 5-affordability\u2192 \u5426-is_married\u2192 5-sacrifice_lifestyle",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.6071428571428571",
+          "Lift": "2.942307692307692"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u60f3\u8981\u5148\u7a69\u5b9a\u4e8b\u696d\u518d\u7d44\u5efa\u5bb6\u5ead, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f": [
+        {
+          "Rule": "5-child_rearing_cost_affordability\u2192 5-affordability\u2192 5-stable_career_before_family\u2192 \u5426-is_married",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.64",
+          "Lift": "3.272727272727273"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u7d50\u5a5a\u958b\u92b7, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u60f3\u8981\u5148\u7a69\u5b9a\u4e8b\u696d\u518d\u7d44\u5efa\u5bb6\u5ead, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73": [
+        {
+          "Rule": "5-child_rearing_cost_affordability\u2192 5-marriage_expenses_affordability\u2192 5-stable_career_before_family\u2192 5-sacrifice_lifestyle",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.6666666666666666",
+          "Lift": "4.1652892561983474"
+        }
+      ],
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u60f3\u8981\u5148\u7a69\u5b9a\u4e8b\u696d\u518d\u7d44\u5efa\u5bb6\u5ead, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73": [
+        {
+          "Rule": "5-child_rearing_cost_affordability\u2192 \u5426-is_married\u2192 5-stable_career_before_family\u2192 5-sacrifice_lifestyle",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.6666666666666666",
+          "Lift": "4.1652892561983474"
+        }
+      ]
+    },
+    "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u77e5\u662f\u5426\u5c0d\u65b9\u503c\u5f97\u4fe1\u4efb": {
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u77e5\u662f\u5426\u5c0d\u65b9\u503c\u5f97\u4fe1\u4efb, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u5bb3\u6015\u8981\u8207\u5c0d\u65b9\u5bb6\u5ead\u78e8\u5408, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u990a\u5c0f\u5b69, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u5a5a\u5f8c\u6703\u5931\u53bb\u81ea\u7531": [
+        {
+          "Rule": "4-trustworthiness\u2192 4-family_adjustment_concerns\u2192 4-fear_of_commitment\u2192 4-freedom_loss_after_marriage",
+          "Support": "0.12698412698412698",
+          "Confidence": "0.7619047619047619",
+          "Lift": "4.822966507177034"
+        }
+      ]
+    },
+    "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9": {
+      "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u60f3\u8981\u5148\u7a69\u5b9a\u4e8b\u696d\u518d\u7d44\u5efa\u5bb6\u5ead, \u60a8\u662f\u5426\u5df2\u5a5a\uff1f, \u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73": [
+        {
+          "Rule": "5-affordability\u2192 5-stable_career_before_family\u2192 \u5426-is_married\u2192 5-sacrifice_lifestyle",
+          "Support": "0.1349206349206349",
+          "Confidence": "0.6071428571428571",
+          "Lift": "3.894545454545455"
+        }
+      ]
+    }
+  }
+}

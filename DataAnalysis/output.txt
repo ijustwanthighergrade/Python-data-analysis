@@ -1,426 +1,487 @@
 1
-Selected Columns: ['�������g', 'Ո���I��Ӱ����Y����ĳ̶Ȟ飿']
-Rule: 5 ��21��29
+all of selected: ['5', '21～29']
+Selected Columns: ['您的年齡', '請問買房影響您結婚意願的程度為？']
+Rule: 5 → 21～29
 Support: 0.12
 Confidence: 0.3488372093023256
 Lift: 1.5573089700996678
 ==================================
 2
-Selected Columns: ['�������g', '�����Y��һ�����I�����Jͬ�Ȟ�Σ�']
-Rule: 5 ��21��29
+all of selected: ['5', '21～29']
+Selected Columns: ['您的年齡', '您對結婚一定得買房的認同度為何？']
+Rule: 5 → 21～29
 Support: 0.12
 Confidence: 0.3488372093023256
 Lift: 1.5573089700996678
 ==================================
 3
-Selected Columns: ['���Ƿ��ѻ飿', '�����Y��һ�����I�����Jͬ�Ȟ�Σ�']
-Rule: 2 ����
+all of selected: ['是', '2']
+Selected Columns: ['您是否已婚？', '您對結婚一定得買房的認同度為何？']
+Rule: 是 → 2
 Support: 0.12
 Confidence: 0.6818181818181819
 Lift: N\A
 ==================================
 4
-Selected Columns: ['�������g', 'Ո�����J���Լ�Ŀǰн�Y�ܪ���ؓ�����������ķ��r�ĳ̶Ȟ飿']
-Rule: 21��29 ��1
+all of selected: ['21～29', '1']
+Selected Columns: ['您的年齡', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Rule: 21～29 → 1
 Support: 0.192
 Confidence: 0.5
 Lift: 1.4534883720930234
 ==================================
 5
-Selected Columns: ['Ŀǰ��н�Yˮƽ(̨��)', 'Ո�����J���Լ�Ŀǰн�Y�ܪ���ؓ�����������ķ��r�ĳ̶Ȟ飿']
-Rule: 1 ��0��19999
+all of selected: ['1', '0～19999']
+Selected Columns: ['目前月薪資水平(台幣)', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Rule: 1 → 0～19999
 Support: 0.136
 Confidence: 0.8500000000000001
 Lift: 2.2135416666666665
 ==================================
 6
-Selected Columns: ['Ŀǰ��н�Yˮƽ(̨��)', 'Ո�����J���Լ�Ŀǰн�Y�ܪ���ؓ�����������ķ��r�ĳ̶Ȟ飿']
-Rule: 20000��39999 ��1
+all of selected: ['1', '20000～39999']
+Selected Columns: ['目前月薪資水平(台幣)', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Rule: 1 → 20000～39999
 Support: 0.136
 Confidence: 0.3541666666666667
 Lift: 1.4756944444444446
 ==================================
 7
-Selected Columns: ['���Ƿ��ѻ飿', 'Ո�����J���Լ�Ŀǰн�Y�ܪ���ؓ�����������ķ��r�ĳ̶Ȟ飿']
-Rule: �� ��1
+all of selected: ['1', '否']
+Selected Columns: ['您是否已婚？', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Rule: 1 → 否
 Support: 0.28
 Confidence: 0.7291666666666667
 Lift: 1.3603855721393037
 ==================================
 8
-Selected Columns: ['�������g', '���Jͬ�I����Ӱ푵���������ˮƽ�ĳ̶Ȟ飿']
-Rule: 4 ��21��29
+all of selected: ['4', '21～29']
+Selected Columns: ['您的年齡', '您認同買房會影響到個人生活水平的程度為？']
+Rule: 4 → 21～29
 Support: 0.16
 Confidence: 0.4651162790697675
 Lift: 1.3213530655391124
 ==================================
 9
-Selected Columns: ['�������g', '���Jͬ�I����Ӱ푵���������ˮƽ�ĳ̶Ȟ飿']
-Rule: 5 ��50��59
+all of selected: ['5', '50～59']
+Selected Columns: ['您的年齡', '您認同買房會影響到個人生活水平的程度為？']
+Rule: 5 → 50～59
 Support: 0.16
 Confidence: 0.39999999999999997
 Lift: 1.3157894736842104
 ==================================
 10
-Selected Columns: ['��ߌW�v', '����ʹ���нY��������أ���Ҫ�c�Đ۵��˹��M��ͥ']
-Rule: 4 ���Tʿ
+all of selected: ['4', '碩士']
+Selected Columns: ['最高學歷', '可能使擁有結婚意願的因素：想要與心愛的人共組家庭']
+Rule: 4 → 碩士
 Support: 0.136
 Confidence: 0.41463414634146345
 Lift: 1.3639281129653402
 ==================================
 11
-Selected Columns: ['�������g', '����ʹ���нY��������أ���Ҫ�c�Đ۵��˹��M��ͥ']
-Rule: 5 ��21��29
+all of selected: ['5', '21～29']
+Selected Columns: ['您的年齡', '可能使擁有結婚意願的因素：想要與心愛的人共組家庭']
+Rule: 5 → 21～29
 Support: 0.184
 Confidence: 0.5348837209302326
 Lift: 1.4225630875804058
 ==================================
 12
-Selected Columns: ['�����Ԅe', '����ʹ���нY��������أ���ҪС��']
-Rule: Ů ��1
+all of selected: ['1', '女']
+Selected Columns: ['生理性別', '可能使擁有結婚意願的因素：想要小孩']
+Rule: 1 → 女
 Support: 0.144
 Confidence: 0.6
 Lift: 1.3157894736842104
 ==================================
 13
-Selected Columns: ['�����Ԅe', '����ʹ���нY��������أ���ҪС��']
-Rule: 5 ����
+all of selected: ['男', '5']
+Selected Columns: ['生理性別', '可能使擁有結婚意願的因素：想要小孩']
+Rule: 男 → 5
 Support: 0.128
 Confidence: 0.7619047619047619
 Lift: N\A
 ==================================
 14
-Selected Columns: ['�������g', '����ʹ���нY��������أ���ҪС��']
-Rule: 21��29 ��1
+all of selected: ['21～29', '1']
+Selected Columns: ['您的年齡', '可能使擁有結婚意願的因素：想要小孩']
+Rule: 21～29 → 1
 Support: 0.152
 Confidence: 0.6333333333333333
 Lift: 1.8410852713178296
 ==================================
 15
-Selected Columns: ['�������g', '����ʹ���нY��������أ���ҪС��']
-Rule: 50��59 ��3
+all of selected: ['50～59', '3']
+Selected Columns: ['您的年齡', '可能使擁有結婚意願的因素：想要小孩']
+Rule: 50～59 → 3
 Support: 0.12
 Confidence: 0.5
 Lift: 1.6447368421052633
 ==================================
 16
-Selected Columns: ['���Ƿ��ѻ飿', '����ʹ���нY��������أ���ҪС��']
-Rule: �� ��1
+all of selected: ['1', '否']
+Selected Columns: ['您是否已婚？', '可能使擁有結婚意願的因素：想要小孩']
+Rule: 1 → 否
 Support: 0.208
 Confidence: 0.8666666666666667
 Lift: 1.616915422885572
 ==================================
 17
-Selected Columns: ['���Ƿ��ѻ飿', '����ʹ���нY��������أ���ҪС��']
-Rule: 3 ����
+all of selected: ['3', '是']
+Selected Columns: ['您是否已婚？', '可能使擁有結婚意願的因素：想要小孩']
+Rule: 3 → 是
 Support: 0.16
 Confidence: 0.6666666666666667
 Lift: 1.4367816091954022
 ==================================
 18
-Selected Columns: ['��ߌW�v', '����ʹ���нY��������أ���Ҫ׌��H�P�S���������Jͬ']
-Rule: 4 ���Tʿ
+all of selected: ['4', '碩士']
+Selected Columns: ['最高學歷', '可能使擁有結婚意願的因素：想要讓伴侶關係被法律所認同']
+Rule: 4 → 碩士
 Support: 0.112
 Confidence: 0.42424242424242425
 Lift: 1.3955342902711325
 ==================================
 19
-Selected Columns: ['�������g', '����ʹ���нY��������أ���Ҫ׌��H�P�S���������Jͬ']
-Rule: 5 ��21��29
+all of selected: ['5', '21～29']
+Selected Columns: ['您的年齡', '可能使擁有結婚意願的因素：想要讓伴侶關係被法律所認同']
+Rule: 5 → 21～29
 Support: 0.136
 Confidence: 0.39534883720930236
 Lift: 1.3356379635449407
 ==================================
 20
-Selected Columns: ['�����Ԅe', '����ʹ���нY��������أ����y�ϽY���������ıؽ�֮·']
-Rule: Ů ��2
+all of selected: ['女', '2']
+Selected Columns: ['生理性別', '可能使擁有結婚意願的因素：傳統上結婚是人生的必經之路']
+Rule: 女 → 2
 Support: 0.152
 Confidence: 0.7307692307692308
 Lift: 1.6025641025641026
 ==================================
 21
-Selected Columns: ['�����Ԅe', '����ʹ���нY��������أ����y�ϽY���������ıؽ�֮·']
-Rule: 5 ����
+all of selected: ['男', '5']
+Selected Columns: ['生理性別', '可能使擁有結婚意願的因素：傳統上結婚是人生的必經之路']
+Rule: 男 → 5
 Support: 0.104
 Confidence: 0.8125
 Lift: N\A
 ==================================
 22
-Selected Columns: ['��ߌW�v', '����ʹ���нY��������أ����y�ϽY���������ıؽ�֮·']
-Rule: 4 ����W
+all of selected: ['大學', '4']
+Selected Columns: ['最高學歷', '可能使擁有結婚意願的因素：傳統上結婚是人生的必經之路']
+Rule: 大學 → 4
 Support: 0.12
 Confidence: 0.6818181818181819
 Lift: N\A
 ==================================
 23
-Selected Columns: ['�������g', '����ʹ���нY��������أ����y�ϽY���������ıؽ�֮·']
-Rule: 21��29 ��1
+all of selected: ['21～29', '1']
+Selected Columns: ['您的年齡', '可能使擁有結婚意願的因素：傳統上結婚是人生的必經之路']
+Rule: 21～29 → 1
 Support: 0.152
 Confidence: 0.5588235294117646
 Lift: 1.6244870041039672
 ==================================
 24
-Selected Columns: ['���Ƿ��ѻ飿', '����ʹ���нY��������أ����y�ϽY���������ıؽ�֮·']
-Rule: �� ��1
+all of selected: ['1', '否']
+Selected Columns: ['您是否已婚？', '可能使擁有結婚意願的因素：傳統上結婚是人生的必經之路']
+Rule: 1 → 否
 Support: 0.216
 Confidence: 0.7941176470588235
 Lift: 1.4815627743634767
 ==================================
 25
-Selected Columns: ['�������g', '����ʹ���нY��������أ���Ҫ��Hһͬ�Г�؟��']
-Rule: 5 ��21��29
+all of selected: ['5', '21～29']
+Selected Columns: ['您的年齡', '可能使擁有結婚意願的因素：想要伴侶一同承擔責任']
+Rule: 5 → 21～29
 Support: 0.12
 Confidence: 0.3488372093023256
 Lift: 1.3626453488372094
 ==================================
 26
-Selected Columns: ['�������g', '����Ӱ����Y����Ľ������أ��������Y������F������ˮƽ']
-Rule: 5 ��21��29
+all of selected: ['5', '21～29']
+Selected Columns: ['您的年齡', '可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平']
+Rule: 5 → 21～29
 Support: 0.144
 Confidence: 0.4186046511627907
 Lift: 1.5856236786469344
 ==================================
 27
-Selected Columns: ['���Ƿ��ѻ飿', '����Ӱ����Y����Ľ������أ��������Y������F������ˮƽ']
-Rule: 2 ����
+all of selected: ['是', '2']
+Selected Columns: ['您是否已婚？', '可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平']
+Rule: 是 → 2
 Support: 0.12
 Confidence: 0.7142857142857142
 Lift: N\A
 ==================================
 28
-Selected Columns: ['�������g', '����Ӱ����Y����Ľ������أ��o��ؓ�����~���r']
-Rule: 5 ��21��29
+all of selected: ['5', '21～29']
+Selected Columns: ['您的年齡', '可能影響您結婚意願的經濟因素：無法負擔高額房價']
+Rule: 5 → 21～29
 Support: 0.184
 Confidence: 0.5348837209302326
 Lift: 1.6715116279069768
 ==================================
 29
-Selected Columns: ['���Ƿ��ѻ飿', '����Ӱ����Y����Ľ������أ��o��ؓ�����~���r']
-Rule: 2 ����
+all of selected: ['是', '2']
+Selected Columns: ['您是否已婚？', '可能影響您結婚意願的經濟因素：無法負擔高額房價']
+Rule: 是 → 2
 Support: 0.112
 Confidence: 0.6086956521739131
 Lift: N\A
 ==================================
 30
-Selected Columns: ['���Ƿ��ѻ飿', '����Ӱ����Y����Ľ������أ��o��ؓ�����~���r']
-Rule: 5 ����
+all of selected: ['5', '否']
+Selected Columns: ['您是否已婚？', '可能影響您結婚意願的經濟因素：無法負擔高額房價']
+Rule: 5 → 否
 Support: 0.224
 Confidence: 0.7
 Lift: 1.3059701492537312
 ==================================
 31
-Selected Columns: ['�����Ԅe', '����Ӱ����Y����Ľ������أ��o��ؓ���Y���_�N']
-Rule: 2 ����
+all of selected: ['男', '2']
+Selected Columns: ['生理性別', '可能影響您結婚意願的經濟因素：無法負擔結婚開銷']
+Rule: 男 → 2
 Support: 0.176
 Confidence: 0.7333333333333333
 Lift: 1.3480392156862744
 ==================================
 32
-Selected Columns: ['�������g', '����Ӱ����Y����Ľ������أ��o��ؓ���Y���_�N']
-Rule: 5 ��21��29
+all of selected: ['5', '21～29']
+Selected Columns: ['您的年齡', '可能影響您結婚意願的經濟因素：無法負擔結婚開銷']
+Rule: 5 → 21～29
 Support: 0.112
 Confidence: 0.32558139534883723
 Lift: 1.6957364341085275
 ==================================
 33
-Selected Columns: ['���Ƿ��ѻ飿', '����Ӱ����Y����Ľ������أ��o��ؓ���Y���_�N']
-Rule: 2 ����
+all of selected: ['是', '2']
+Selected Columns: ['您是否已婚？', '可能影響您結婚意願的經濟因素：無法負擔結婚開銷']
+Rule: 是 → 2
 Support: 0.152
 Confidence: 0.6333333333333333
 Lift: 1.3649425287356323
 ==================================
 34
-Selected Columns: ['���Ƿ��ѻ飿', '����Ӱ����Y����Ľ������أ��o��ؓ���Y���_�N']
-Rule: 5 ����
+all of selected: ['5', '否']
+Selected Columns: ['您是否已婚？', '可能影響您結婚意願的經濟因素：無法負擔結婚開銷']
+Rule: 5 → 否
 Support: 0.152
 Confidence: 0.7916666666666666
 Lift: N\A
 ==================================
 35
-Selected Columns: ['�������g', '����Ӱ����Y����Ľ������أ���Ҫ�ȷ����I�ٽM����ͥ']
-Rule: 5 ��21��29
+all of selected: ['5', '21～29']
+Selected Columns: ['您的年齡', '可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭']
+Rule: 5 → 21～29
 Support: 0.16
 Confidence: 0.4651162790697675
 Lift: 1.8168604651162792
 ==================================
 36
-Selected Columns: ['�������g', '����Ӱ����Y����Ľ������أ���Ҫ�ȷ����I�ٽM����ͥ']
-Rule: 50��59 ��3
+all of selected: ['50～59', '3']
+Selected Columns: ['您的年齡', '可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭']
+Rule: 50～59 → 3
 Support: 0.112
 Confidence: 0.4117647058823529
 Lift: 1.3544891640866874
 ==================================
 37
-Selected Columns: ['���Ƿ��ѻ飿', '����Ӱ����Y����Ľ������أ���Ҫ�ȷ����I�ٽM����ͥ']
-Rule: 2 ����
+all of selected: ['是', '2']
+Selected Columns: ['您是否已婚？', '可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭']
+Rule: 是 → 2
 Support: 0.128
 Confidence: 0.6666666666666666
 Lift: N\A
 ==================================
 38
-Selected Columns: ['���Ƿ��ѻ飿', '����Ӱ����Y����Ľ������أ���Ҫ�ȷ����I�ٽM����ͥ']
-Rule: 5 ����
+all of selected: ['5', '否']
+Selected Columns: ['您是否已婚？', '可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭']
+Rule: 5 → 否
 Support: 0.2
 Confidence: 0.78125
 Lift: 1.4575559701492538
 ==================================
 39
-Selected Columns: ['�������g', '����Ӱ����Y����Ľ������أ��o��ؓ����Ů���B�M��']
-Rule: 2 ��50��59
+all of selected: ['50～59', '2']
+Selected Columns: ['您的年齡', '可能影響您結婚意願的經濟因素：無法負擔子女教養費用']
+Rule: 50～59 → 2
 Support: 0.104
 Confidence: 0.5199999999999999
 Lift: 1.7105263157894737
 ==================================
 40
-Selected Columns: ['�������g', '����Ӱ����Y����Ľ������أ��o��ؓ����Ů���B�M��']
-Rule: 5 ��21��29
+all of selected: ['5', '21～29']
+Selected Columns: ['您的年齡', '可能影響您結婚意願的經濟因素：無法負擔子女教養費用']
+Rule: 5 → 21～29
 Support: 0.168
 Confidence: 0.4883720930232559
 Lift: 1.9077034883720931
 ==================================
 41
-Selected Columns: ['���Ƿ��ѻ飿', '����Ӱ����Y����Ľ������أ��o��ؓ����Ů���B�M��']
-Rule: 2 ����
+all of selected: ['是', '2']
+Selected Columns: ['您是否已婚？', '可能影響您結婚意願的經濟因素：無法負擔子女教養費用']
+Rule: 是 → 2
 Support: 0.144
 Confidence: 0.7199999999999999
 Lift: 1.5517241379310343
 ==================================
 42
-Selected Columns: ['���Ƿ��ѻ飿', '����Ӱ����Y����Ľ������أ��o��ؓ����Ů���B�M��']
-Rule: 5 ����
+all of selected: ['5', '否']
+Selected Columns: ['您是否已婚？', '可能影響您結婚意願的經濟因素：無法負擔子女教養費用']
+Rule: 5 → 否
 Support: 0.208
 Confidence: 0.8125
 Lift: 1.5158582089552237
 ==================================
 43
-Selected Columns: ['�����Ԅe', '����Ӱ����Y����ķǽ������أ�����Ҫ�c������ͥĥ��']
-Rule: 5 ��Ů
+all of selected: ['5', '女']
+Selected Columns: ['生理性別', '可能影響您結婚意願的非經濟因素：害怕要與對方家庭磨合']
+Rule: 5 → 女
 Support: 0.112
 Confidence: 0.736842105263158
 Lift: N\A
 ==================================
 44
-Selected Columns: ['�������g', '����Ӱ����Y����ķǽ������أ�����Ҫ�c������ͥĥ��']
-Rule: 50��59 ��3
+all of selected: ['50～59', '3']
+Selected Columns: ['您的年齡', '可能影響您結婚意願的非經濟因素：害怕要與對方家庭磨合']
+Rule: 50～59 → 3
 Support: 0.144
 Confidence: 0.47368421052631576
 Lift: 1.5581717451523545
 ==================================
 45
-Selected Columns: ['���Ƿ��ѻ飿', '����Ӱ����Y����ķǽ������أ�����Ҫ�c������ͥĥ��']
-Rule: 5 ����
+all of selected: ['5', '否']
+Selected Columns: ['您是否已婚？', '可能影響您結婚意願的非經濟因素：害怕要與對方家庭磨合']
+Rule: 5 → 否
 Support: 0.12
 Confidence: 0.7894736842105263
 Lift: N\A
 ==================================
 46
-Selected Columns: ['�������g', '����Ӱ����Y����ķǽ������أ���֪�Ƿ񌦷�ֵ������']
-Rule: 4 ��21��29
+all of selected: ['4', '21～29']
+Selected Columns: ['您的年齡', '可能影響您結婚意願的非經濟因素：不知是否對方值得信任']
+Rule: 4 → 21～29
 Support: 0.136
 Confidence: 0.39534883720930236
 Lift: 1.4534883720930234
 ==================================
 47
-Selected Columns: ['���Ƿ��ѻ飿', '����Ӱ����Y����ķǽ������أ���֪�Ƿ񌦷�ֵ������']
-Rule: 4 ����
+all of selected: ['4', '否']
+Selected Columns: ['您是否已婚？', '可能影響您結婚意願的非經濟因素：不知是否對方值得信任']
+Rule: 4 → 否
 Support: 0.192
 Confidence: 0.7058823529411764
 Lift: 1.3169446883230902
 ==================================
 48
-Selected Columns: ['�����Ԅe', '����Ӱ����Y����ķǽ������أ������BС��']
-Rule: 4 ��Ů
+all of selected: ['4', '女']
+Selected Columns: ['生理性別', '可能影響您結婚意願的非經濟因素：不想養小孩']
+Rule: 4 → 女
 Support: 0.136
 Confidence: 0.653846153846154
 Lift: N\A
 ==================================
 49
-Selected Columns: ['�������g', '����Ӱ����Y����ķǽ������أ������BС��']
-Rule: 4 ��21��29
+all of selected: ['4', '21～29']
+Selected Columns: ['您的年齡', '可能影響您結婚意願的非經濟因素：不想養小孩']
+Rule: 4 → 21～29
 Support: 0.104
 Confidence: 0.3023255813953489
 Lift: 1.4534883720930234
 ==================================
 50
-Selected Columns: ['�������g', '����Ӱ����Y����ķǽ������أ������BС��']
-Rule: 5 ��21��29
+all of selected: ['5', '21～29']
+Selected Columns: ['您的年齡', '可能影響您結婚意願的非經濟因素：不想養小孩']
+Rule: 5 → 21～29
 Support: 0.12
 Confidence: 0.3488372093023256
 Lift: 2.180232558139535
 ==================================
 51
-Selected Columns: ['���Ƿ��ѻ飿', '����Ӱ����Y����ķǽ������أ������BС��']
-Rule: 2 ����
+all of selected: ['是', '2']
+Selected Columns: ['您是否已婚？', '可能影響您結婚意願的非經濟因素：不想養小孩']
+Rule: 是 → 2
 Support: 0.144
 Confidence: 0.7199999999999999
 Lift: 1.5517241379310343
 ==================================
 52
-Selected Columns: ['���Ƿ��ѻ飿', '����Ӱ����Y����ķǽ������أ������BС��']
-Rule: 5 ����
+all of selected: ['5', '否']
+Selected Columns: ['您是否已婚？', '可能影響您結婚意願的非經濟因素：不想養小孩']
+Rule: 5 → 否
 Support: 0.136
 Confidence: 0.8500000000000001
 Lift: N\A
 ==================================
 53
-Selected Columns: ['���Ƿ��ѻ飿', '����Ӱ����Y����ķǽ������أ������ʧȥ����']
-Rule: 2 ����
+all of selected: ['是', '2']
+Selected Columns: ['您是否已婚？', '可能影響您結婚意願的非經濟因素：婚後會失去自由']
+Rule: 是 → 2
 Support: 0.12
 Confidence: 0.6521739130434783
 Lift: N\A
 ==================================
 54
-Selected Columns: ['�����Ԅe', '����Ӱ����Y����ķǽ������أ��]�Ќ���']
-Rule: Ů ��1
+all of selected: ['1', '女']
+Selected Columns: ['生理性別', '可能影響您結婚意願的非經濟因素：沒有對象']
+Rule: 1 → 女
 Support: 0.136
 Confidence: 0.6071428571428572
 Lift: N\A
 ==================================
 55
-Selected Columns: ['�����Ԅe', '����Ӱ����Y����ķǽ������أ��]�Ќ���']
-Rule: 2 ����
+all of selected: ['男', '2']
+Selected Columns: ['生理性別', '可能影響您結婚意願的非經濟因素：沒有對象']
+Rule: 男 → 2
 Support: 0.104
 Confidence: 0.7222222222222222
 Lift: N\A
 ==================================
 56
-Selected Columns: ['�������g', '����Ӱ����Y����ķǽ������أ��]�Ќ���']
-Rule: 21��29 ��1
+all of selected: ['21～29', '1']
+Selected Columns: ['您的年齡', '可能影響您結婚意願的非經濟因素：沒有對象']
+Rule: 21～29 → 1
 Support: 0.112
 Confidence: 0.5
 Lift: 1.4534883720930234
 ==================================
 57
-Selected Columns: ['���Ƿ��ѻ飿', '����Ӱ����Y����ķǽ������أ��]�Ќ���']
-Rule: 2 ����
+all of selected: ['是', '2']
+Selected Columns: ['您是否已婚？', '可能影響您結婚意願的非經濟因素：沒有對象']
+Rule: 是 → 2
 Support: 0.112
 Confidence: 0.7777777777777779
 Lift: N\A
 ==================================
 58
-Selected Columns: ['���Ƿ��ѻ飿', '����Ӱ����Y����ķǽ������أ��]�Ќ���']
-Rule: 5 ����
+all of selected: ['5', '否']
+Selected Columns: ['您是否已婚？', '可能影響您結婚意願的非經濟因素：沒有對象']
+Rule: 5 → 否
 Support: 0.136
 Confidence: 0.8095238095238095
 Lift: N\A
 ==================================
 59
-Selected Columns: ['�����Ԅe', '����Ӱ����Y����ķǽ������أ����»���ʧ��']
-Rule: 2 ����
+all of selected: ['男', '2']
+Selected Columns: ['生理性別', '可能影響您結婚意願的非經濟因素：害怕婚姻失敗']
+Rule: 男 → 2
 Support: 0.104
 Confidence: 0.7222222222222222
 Lift: N\A
 ==================================
 60
-Selected Columns: ['��ߌW�v', '����Ӱ����Y����ķǽ������أ����»���ʧ��']
-Rule: 5 ����W
+all of selected: ['5', '大學']
+Selected Columns: ['最高學歷', '可能影響您結婚意願的非經濟因素：害怕婚姻失敗']
+Rule: 5 → 大學
 Support: 0.12
 Confidence: 0.7142857142857142
 Lift: N\A
 ==================================
 61
-Selected Columns: ['���Ƿ��ѻ飿', '����Ӱ����Y����ķǽ������أ����»���ʧ��']
-Rule: 5 ����
+all of selected: ['5', '否']
+Selected Columns: ['您是否已婚？', '可能影響您結婚意願的非經濟因素：害怕婚姻失敗']
+Rule: 5 → 否
 Support: 0.12
 Confidence: 0.7142857142857142
 Lift: N\A

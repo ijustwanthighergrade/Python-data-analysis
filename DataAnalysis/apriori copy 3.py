@@ -64,18 +64,18 @@ total_columns = len(all_columns)
 
 output_dict = {}
 
-output_file_path = os.path.join(script_dir, "output.txt")
+output_file_path = os.path.join(script_dir, "output3.txt")
 
-with open(output_file_path, "w", encoding="utf-8") as output_file:
-    for k in range(7, total_columns-1):
+with open(output_file_path, "w") as output_file:
+    for k in range(1, total_columns-1):
         # Move data_list initialization here
         data_list = df.values.tolist()
-        for i in range(6):
+        for i in range(7,total_columns-1):
             selected_columns = [i+1, k]
             selected_columns_names = [all_columns[j] for j in selected_columns]
 
             print(selected_columns_names)
-            if i < len(data_list[0]):  # check if i is within the range
+            if i < len(data_list[0]):  # Add this condition to check if i is within the range
 
                 df_copy = df.copy()
                 df_copy = df_copy.iloc[:, selected_columns]
@@ -83,14 +83,14 @@ with open(output_file_path, "w", encoding="utf-8") as output_file:
 
                 data_list_copy = df_copy.values.tolist()
 
-                # use apriori
-                results = list(apriori(data_list_copy, min_support=0.1, min_confidence=0.3, min_lift=1.3, max_length=3))
+                # 使用 apriori
+                results = list(apriori(data_list_copy, min_support=0.15, min_confidence=0.3, min_lift=1.3, max_length=2))
 
             for result in results:
                 pair = result[0]
                 products = [x for x in pair]
 
-                # 構建外層字典的鍵
+                                   # 構建外層字典的鍵
                 outer_key = selected_columns_names[-1]
 
                 # 構建內層字典的鍵 (加入 selected_columns_names)
@@ -129,7 +129,6 @@ with open(output_file_path, "w", encoding="utf-8") as output_file:
                 print("==================================")
                 outputnum = outputnum + 1
                 output_file.write(str(outputnum) + "\n")
-                output_file.write("all of selected: " + str(products) + "\n")
                 output_file.write("Selected Columns: " + str(selected_columns_names) + "\n")
                 output_file.write("Rule: " + inner_dict["Rule"] + "\n")
                 output_file.write("Support: " + inner_dict["Support"] + "\n")
@@ -139,7 +138,7 @@ with open(output_file_path, "w", encoding="utf-8") as output_file:
 # ...
 
 # 將最終的字典轉換為 JSON 寫入文件
-output_json_path = os.path.join(script_dir, "output.json")
+output_json_path = os.path.join(script_dir, "output3.json")
 with open(output_json_path, "w") as json_file:
     json.dump(output_dict, json_file, indent=2)
 

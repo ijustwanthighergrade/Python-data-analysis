@@ -1,0 +1,2160 @@
+0
+Columns: ['請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？', '目前月薪資水平(台幣)']
+Values: 1, 0～19999
+Rule: 1-afford_house_price→ 0～19999-salary
+Support: 0.1349206349206349
+Confidence: 0.85
+Lift: N/A
+==================================
+1
+Columns: ['您是否已婚？', '目前月薪資水平(台幣)']
+Values: 否, 0～19999
+Rule: 否-is_married→ 0～19999-salary
+Support: 0.15079365079365079
+Confidence: 0.95
+Lift: N/A
+==================================
+2
+Columns: ['可能使擁有結婚意願的因素：想要小孩', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 1, 1
+Rule: 1-desire_for_children→ 1-afford_house_price
+Support: 0.15079365079365079
+Confidence: 0.6333333333333333
+Lift: N/A
+==================================
+3
+Columns: ['您認為政府在買房上已擁有完善配套措施的程度為？', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 1, 1
+Rule: 1-government_support→ 1-afford_house_price
+Support: 0.2777777777777778
+Confidence: 0.7291666666666667
+Lift: N/A
+==================================
+4
+Columns: ['可能使擁有結婚意願的因素：傳統上結婚是人生的必經之路', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 1, 1
+Rule: 1-tradition→ 1-afford_house_price
+Support: 0.18253968253968253
+Confidence: 0.6764705882352942
+Lift: N/A
+==================================
+5
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔高額房價', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 5, 1
+Rule: 5-affordability→ 1-afford_house_price
+Support: 0.21428571428571427
+Confidence: 0.675
+Lift: N/A
+==================================
+6
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔子女教養費用', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 5, 1
+Rule: 5-child_rearing_cost_affordability→ 1-afford_house_price
+Support: 0.16666666666666666
+Confidence: 0.65625
+Lift: N/A
+==================================
+7
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔結婚開銷', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 5, 1
+Rule: 5-marriage_expenses_affordability→ 1-afford_house_price
+Support: 0.15873015873015872
+Confidence: 0.8333333333333334
+Lift: N/A
+==================================
+8
+Columns: ['可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 5, 1
+Rule: 5-stable_career_before_family→ 1-afford_house_price
+Support: 0.15873015873015872
+Confidence: 0.625
+Lift: N/A
+==================================
+9
+Columns: ['您是否已婚？', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 否, 1
+Rule: 否-is_married→ 1-afford_house_price
+Support: 0.2777777777777778
+Confidence: 0.7291666666666667
+Lift: N/A
+==================================
+10
+Columns: ['可能使擁有結婚意願的因素：傳統上結婚是人生的必經之路', '可能使擁有結婚意願的因素：想要小孩']
+Values: 1, 1
+Rule: 1-tradition→ 1-desire_for_children
+Support: 0.15873015873015872
+Confidence: 0.6666666666666666
+Lift: N/A
+==================================
+11
+Columns: ['您的年齡', '可能使擁有結婚意願的因素：想要小孩']
+Values: 21～29, 1
+Rule: 21～29-age→ 1-desire_for_children
+Support: 0.15079365079365079
+Confidence: 0.6333333333333333
+Lift: N/A
+==================================
+12
+Columns: ['可能使擁有結婚意願的因素：想要小孩', '可能影響您結婚意願的非經濟因素：不想養小孩']
+Values: 1, 5
+Rule: 1-desire_for_children→ 5-fear_of_commitment
+Support: 0.12698412698412698
+Confidence: 0.8
+Lift: N/A
+==================================
+13
+Columns: ['可能使擁有結婚意願的因素：想要小孩', '您是否已婚？']
+Values: 1, 否
+Rule: 1-desire_for_children→ 否-is_married
+Support: 0.20634920634920634
+Confidence: 0.8666666666666667
+Lift: N/A
+==================================
+14
+Columns: ['生理性別', '可能使擁有結婚意願的因素：想要小孩']
+Values: 女, 1
+Rule: 女-gender→ 1-desire_for_children
+Support: 0.14285714285714285
+Confidence: 0.6
+Lift: N/A
+==================================
+15
+Columns: ['可能影響您結婚意願的非經濟因素：不想養小孩', '可能影響您結婚意願的非經濟因素：婚後會失去自由']
+Values: 1, 1
+Rule: 1-fear_of_commitment→ 1-freedom_loss_after_marriage
+Support: 0.12698412698412698
+Confidence: 0.8421052631578947
+Lift: N/A
+==================================
+16
+Columns: ['可能影響您結婚意願的非經濟因素：害怕婚姻失敗', '您認為政府在買房上已擁有完善配套措施的程度為？']
+Values: 1, 1
+Rule: 1-fear_of_marriage_failure→ 1-government_support
+Support: 0.15873015873015872
+Confidence: 0.6666666666666666
+Lift: N/A
+==================================
+17
+Columns: ['可能影響您結婚意願的非經濟因素：害怕婚姻失敗', '可能影響您結婚意願的非經濟因素：沒有對象']
+Values: 1, 1
+Rule: 1-fear_of_marriage_failure→ 1-no_partner
+Support: 0.14285714285714285
+Confidence: 0.6
+Lift: 2.7
+==================================
+18
+Columns: ['可能使擁有結婚意願的因素：傳統上結婚是人生的必經之路', '您認為政府在買房上已擁有完善配套措施的程度為？']
+Values: 1, 1
+Rule: 1-tradition→ 1-government_support
+Support: 0.19047619047619047
+Confidence: 0.7058823529411765
+Lift: N/A
+==================================
+19
+Columns: ['您認為政府在買房上已擁有完善配套措施的程度為？', '您認同買房是影響多數人結婚的重要因素嗎？']
+Values: 1, 2
+Rule: 1-government_support→ 2-agree_buying_house
+Support: 0.1349206349206349
+Confidence: 0.8095238095238095
+Lift: N/A
+==================================
+20
+Columns: ['可能使擁有結婚意願的因素：傳統上結婚是人生的必經之路', '您目前是否有結婚意願(不論單身與否)\n已婚者可以是否後悔結婚來考量']
+Values: 1, 1
+Rule: 1-tradition→ 1-marriage_intention
+Support: 0.16666666666666666
+Confidence: 0.6176470588235294
+Lift: N/A
+==================================
+21
+Columns: ['生理性別', '可能影響您結婚意願的非經濟因素：沒有對象']
+Values: 女, 1
+Rule: 女-gender→ 1-no_partner
+Support: 0.1349206349206349
+Confidence: 0.6071428571428571
+Lift: N/A
+==================================
+22
+Columns: ['可能使擁有結婚意願的因素：傳統上結婚是人生的必經之路', '您是否已婚？']
+Values: 1, 否
+Rule: 1-tradition→ 否-is_married
+Support: 0.21428571428571427
+Confidence: 0.7941176470588235
+Lift: N/A
+==================================
+23
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔結婚開銷', '可能影響您結婚意願的經濟因素：無法負擔子女教養費用']
+Values: 2, 2
+Rule: 2-marriage_expenses_affordability→ 2-child_rearing_cost_affordability
+Support: 0.14285714285714285
+Confidence: 0.72
+Lift: 3.024
+==================================
+24
+Columns: ['您是否已婚？', '可能影響您結婚意願的經濟因素：無法負擔子女教養費用']
+Values: 是, 2
+Rule: 是-is_married→ 2-child_rearing_cost_affordability
+Support: 0.14285714285714285
+Confidence: 0.72
+Lift: N/A
+==================================
+25
+Columns: ['您是否已婚？', '可能影響您結婚意願的非經濟因素：不想養小孩']
+Values: 是, 2
+Rule: 是-is_married→ 2-fear_of_commitment
+Support: 0.14285714285714285
+Confidence: 0.72
+Lift: N/A
+==================================
+26
+Columns: ['您是否已婚？', '可能影響您結婚意願的經濟因素：無法負擔結婚開銷']
+Values: 是, 2
+Rule: 是-is_married→ 2-marriage_expenses_affordability
+Support: 0.15079365079365079
+Confidence: 0.6333333333333333
+Lift: N/A
+==================================
+27
+Columns: ['生理性別', '可能影響您結婚意願的經濟因素：無法負擔結婚開銷']
+Values: 男, 2
+Rule: 男-gender→ 2-marriage_expenses_affordability
+Support: 0.1746031746031746
+Confidence: 0.7333333333333333
+Lift: N/A
+==================================
+28
+Columns: ['您是否已婚？', '可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭']
+Values: 是, 2
+Rule: 是-is_married→ 2-stable_career_before_family
+Support: 0.12698412698412698
+Confidence: 0.6666666666666666
+Lift: N/A
+==================================
+29
+Columns: ['可能使擁有結婚意願的因素：傳統上結婚是人生的必經之路', '生理性別']
+Values: 2, 女
+Rule: 2-tradition→ 女-gender
+Support: 0.15079365079365079
+Confidence: 0.7307692307692307
+Lift: N/A
+==================================
+30
+Columns: ['目前月薪資水平(台幣)', '您是否已婚？']
+Values: 20000～39999, 否
+Rule: 20000～39999-salary→ 否-is_married
+Support: 0.19047619047619047
+Confidence: 0.7741935483870968
+Lift: N/A
+==================================
+31
+Columns: ['目前月薪資水平(台幣)', '最高學歷']
+Values: 20000～39999, 大學
+Rule: 20000～39999-salary→ 大學-education
+Support: 0.15873015873015872
+Confidence: 0.6451612903225806
+Lift: N/A
+==================================
+32
+Columns: ['您的年齡', '可能影響您結婚意願的經濟因素：無法負擔子女教養費用']
+Values: 21～29, 5
+Rule: 21～29-age→ 5-child_rearing_cost_affordability
+Support: 0.16666666666666666
+Confidence: 0.65625
+Lift: N/A
+==================================
+33
+Columns: ['您的年齡', '可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭']
+Values: 21～29, 5
+Rule: 21～29-age→ 5-stable_career_before_family
+Support: 0.15873015873015872
+Confidence: 0.625
+Lift: N/A
+==================================
+34
+Columns: ['您的年齡', '您是否已婚？']
+Values: 21～29, 否
+Rule: 21～29-age→ 否-is_married
+Support: 0.3412698412698413
+Confidence: 0.9772727272727274
+Lift: 1.810828877005348
+==================================
+35
+Columns: ['您的年齡', '最高學歷']
+Values: 21～29, 大學
+Rule: 21～29-age→ 大學-education
+Support: 0.24603174603174602
+Confidence: 0.7045454545454546
+Lift: N/A
+==================================
+36
+Columns: ['可能使擁有結婚意願的因素：想要小孩', '您是否已婚？']
+Values: 3, 是
+Rule: 3-desire_for_children→ 是-is_married
+Support: 0.15873015873015872
+Confidence: 0.6666666666666666
+Lift: N/A
+==================================
+37
+Columns: ['可能使擁有結婚意願的因素：想要與心愛的人共組家庭', '可能使擁有結婚意願的因素：想要讓伴侶關係被法律所認同']
+Values: 3, 3
+Rule: 3-family_planning→ 3-legal_recognition
+Support: 0.14285714285714285
+Confidence: 0.6666666666666666
+Lift: N/A
+==================================
+38
+Columns: ['可能影響您結婚意願的非經濟因素：沒有對象', '可能影響您結婚意願的非經濟因素：不想養小孩']
+Values: 3, 3
+Rule: 3-no_partner→ 3-fear_of_commitment
+Support: 0.1349206349206349
+Confidence: 0.6296296296296297
+Lift: N/A
+==================================
+39
+Columns: ['可能影響您結婚意願的非經濟因素：沒有對象', '可能影響您結婚意願的非經濟因素：害怕婚姻失敗']
+Values: 3, 3
+Rule: 3-no_partner→ 3-fear_of_marriage_failure
+Support: 0.15873015873015872
+Confidence: 0.606060606060606
+Lift: N/A
+==================================
+40
+Columns: ['您對結婚一定得買房的認同度為何？', '可能影響您結婚意願的非經濟因素：不知是否對方值得信任']
+Values: 3, 3
+Rule: 3-marriage_house_requirement→ 3-trustworthiness
+Support: 0.15079365079365079
+Confidence: 0.6333333333333333
+Lift: N/A
+==================================
+41
+Columns: ['可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭', '可能影響您結婚意願的非經濟因素：不知是否對方值得信任']
+Values: 3, 3
+Rule: 3-stable_career_before_family→ 3-trustworthiness
+Support: 0.1746031746031746
+Confidence: 0.6470588235294118
+Lift: N/A
+==================================
+42
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔子女教養費用', '可能影響您結婚意願的非經濟因素：不想養小孩']
+Values: 4, 4
+Rule: 4-child_rearing_cost_affordability→ 4-fear_of_commitment
+Support: 0.14285714285714285
+Confidence: 0.6206896551724138
+Lift: 2.896551724137931
+==================================
+43
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔子女教養費用', '可能影響您結婚意願的非經濟因素：婚後會失去自由']
+Values: 4, 4
+Rule: 4-child_rearing_cost_affordability→ 4-freedom_loss_after_marriage
+Support: 0.14285714285714285
+Confidence: 0.6206896551724138
+Lift: N/A
+==================================
+44
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔結婚開銷', '可能影響您結婚意願的經濟因素：無法負擔子女教養費用']
+Values: 4, 4
+Rule: 4-marriage_expenses_affordability→ 4-child_rearing_cost_affordability
+Support: 0.15873015873015872
+Confidence: 0.6896551724137931
+Lift: 2.7155172413793105
+==================================
+45
+Columns: ['可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平', '可能影響您結婚意願的經濟因素：無法負擔子女教養費用']
+Values: 4, 4
+Rule: 4-sacrifice_lifestyle→ 4-child_rearing_cost_affordability
+Support: 0.15079365079365079
+Confidence: 0.6551724137931034
+Lift: N/A
+==================================
+46
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔子女教養費用', '可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭']
+Values: 4, 4
+Rule: 4-child_rearing_cost_affordability→ 4-stable_career_before_family
+Support: 0.15079365079365079
+Confidence: 0.6551724137931034
+Lift: 2.9482758620689657
+==================================
+47
+Columns: ['可能使擁有結婚意願的因素：想要小孩', '可能使擁有結婚意願的因素：想要與心愛的人共組家庭']
+Values: 4, 4
+Rule: 4-desire_for_children→ 4-family_planning
+Support: 0.1349206349206349
+Confidence: 0.6071428571428571
+Lift: N/A
+==================================
+48
+Columns: ['可能使擁有結婚意願的因素：想要小孩', '可能使擁有結婚意願的因素：想要讓伴侶關係被法律所認同']
+Values: 4, 4
+Rule: 4-desire_for_children→ 4-legal_recognition
+Support: 0.14285714285714285
+Confidence: 0.6428571428571429
+Lift: N/A
+==================================
+49
+Columns: ['可能使擁有結婚意願的因素：想要小孩', '可能使擁有結婚意願的因素：想要伴侶一同承擔責任']
+Values: 4, 4
+Rule: 4-desire_for_children→ 4-responsibility_sharing
+Support: 0.1349206349206349
+Confidence: 0.6071428571428571
+Lift: N/A
+==================================
+50
+Columns: ['可能影響您結婚意願的非經濟因素：害怕要與對方家庭磨合', '可能影響您結婚意願的非經濟因素：不想養小孩']
+Values: 4, 4
+Rule: 4-family_adjustment_concerns→ 4-fear_of_commitment
+Support: 0.16666666666666666
+Confidence: 0.7777777777777778
+Lift: N/A
+==================================
+51
+Columns: ['可能影響您結婚意願的非經濟因素：害怕婚姻失敗', '可能影響您結婚意願的非經濟因素：害怕要與對方家庭磨合']
+Values: 4, 4
+Rule: 4-fear_of_marriage_failure→ 4-family_adjustment_concerns
+Support: 0.14285714285714285
+Confidence: 0.75
+Lift: N/A
+==================================
+52
+Columns: ['可能影響您結婚意願的非經濟因素：不知是否對方值得信任', '可能影響您結婚意願的非經濟因素：害怕要與對方家庭磨合']
+Values: 4, 4
+Rule: 4-trustworthiness→ 4-family_adjustment_concerns
+Support: 0.1984126984126984
+Confidence: 0.6578947368421053
+Lift: 2.3684210526315788
+==================================
+53
+Columns: ['可能使擁有結婚意願的因素：想要與心愛的人共組家庭', '可能使擁有結婚意願的因素：想要讓伴侶關係被法律所認同']
+Values: 4, 4
+Rule: 4-family_planning→ 4-legal_recognition
+Support: 0.19047619047619047
+Confidence: 0.7058823529411765
+Lift: N/A
+==================================
+54
+Columns: ['可能使擁有結婚意願的因素：想要與心愛的人共組家庭', '您對結婚一定得買房的認同度為何？']
+Values: 4, 4
+Rule: 4-family_planning→ 4-marriage_house_requirement
+Support: 0.1349206349206349
+Confidence: 0.6538461538461539
+Lift: N/A
+==================================
+55
+Columns: ['可能使擁有結婚意願的因素：想要與心愛的人共組家庭', '可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平']
+Values: 4, 4
+Rule: 4-family_planning→ 4-sacrifice_lifestyle
+Support: 0.1746031746031746
+Confidence: 0.6285714285714286
+Lift: N/A
+==================================
+56
+Columns: ['可能使擁有結婚意願的因素：想要與心愛的人共組家庭', '可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭']
+Values: 4, 4
+Rule: 4-family_planning→ 4-stable_career_before_family
+Support: 0.15079365079365079
+Confidence: 0.6785714285714286
+Lift: N/A
+==================================
+57
+Columns: ['可能影響您結婚意願的非經濟因素：不想養小孩', '可能影響您結婚意願的非經濟因素：婚後會失去自由']
+Values: 4, 4
+Rule: 4-fear_of_commitment→ 4-freedom_loss_after_marriage
+Support: 0.1746031746031746
+Confidence: 0.8148148148148148
+Lift: N/A
+==================================
+58
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔結婚開銷', '可能影響您結婚意願的非經濟因素：不想養小孩']
+Values: 4, 4
+Rule: 4-marriage_expenses_affordability→ 4-fear_of_commitment
+Support: 0.14285714285714285
+Confidence: 0.6666666666666666
+Lift: N/A
+==================================
+59
+Columns: ['可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平', '可能影響您結婚意願的非經濟因素：不想養小孩']
+Values: 4, 4
+Rule: 4-sacrifice_lifestyle→ 4-fear_of_commitment
+Support: 0.1349206349206349
+Confidence: 0.6296296296296297
+Lift: N/A
+==================================
+60
+Columns: ['可能影響您結婚意願的非經濟因素：不知是否對方值得信任', '可能影響您結婚意願的非經濟因素：不想養小孩']
+Values: 4, 4
+Rule: 4-trustworthiness→ 4-fear_of_commitment
+Support: 0.15079365079365079
+Confidence: 0.7037037037037037
+Lift: N/A
+==================================
+61
+Columns: ['生理性別', '可能影響您結婚意願的非經濟因素：不想養小孩']
+Values: 女, 4
+Rule: 女-gender→ 4-fear_of_commitment
+Support: 0.14285714285714285
+Confidence: 0.6666666666666666
+Lift: N/A
+==================================
+62
+Columns: ['可能影響您結婚意願的非經濟因素：害怕婚姻失敗', '可能影響您結婚意願的非經濟因素：婚後會失去自由']
+Values: 4, 4
+Rule: 4-fear_of_marriage_failure→ 4-freedom_loss_after_marriage
+Support: 0.14285714285714285
+Confidence: 0.75
+Lift: N/A
+==================================
+63
+Columns: ['可能影響您結婚意願的非經濟因素：不知是否對方值得信任', '可能影響您結婚意願的非經濟因素：害怕婚姻失敗']
+Values: 4, 4
+Rule: 4-trustworthiness→ 4-fear_of_marriage_failure
+Support: 0.12698412698412698
+Confidence: 0.6666666666666666
+Lift: N/A
+==================================
+64
+Columns: ['可能影響您結婚意願的非經濟因素：只需要情感需求，不想綁定法律義務', '可能影響您結婚意願的非經濟因素：婚後會失去自由']
+Values: 4, 4
+Rule: 4-non_economic_factor_relationship→ 4-freedom_loss_after_marriage
+Support: 0.1349206349206349
+Confidence: 0.68
+Lift: N/A
+==================================
+65
+Columns: ['可能影響您結婚意願的非經濟因素：不知是否對方值得信任', '可能影響您結婚意願的非經濟因素：婚後會失去自由']
+Values: 4, 4
+Rule: 4-trustworthiness→ 4-freedom_loss_after_marriage
+Support: 0.16666666666666666
+Confidence: 0.6
+Lift: N/A
+==================================
+66
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔結婚開銷', '可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭']
+Values: 4, 4
+Rule: 4-marriage_expenses_affordability→ 4-stable_career_before_family
+Support: 0.14285714285714285
+Confidence: 0.6428571428571429
+Lift: N/A
+==================================
+67
+Columns: ['可能影響您結婚意願的非經濟因素：不知是否對方值得信任', '可能影響您結婚意願的非經濟因素：只需要情感需求，不想綁定法律義務']
+Values: 4, 4
+Rule: 4-trustworthiness→ 4-non_economic_factor_relationship
+Support: 0.12698412698412698
+Confidence: 0.64
+Lift: N/A
+==================================
+68
+Columns: ['可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平', '可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭']
+Values: 4, 4
+Rule: 4-sacrifice_lifestyle→ 4-stable_career_before_family
+Support: 0.15873015873015872
+Confidence: 0.7142857142857143
+Lift: N/A
+==================================
+69
+Columns: ['生理性別', '可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭']
+Values: 女, 4
+Rule: 女-gender→ 4-stable_career_before_family
+Support: 0.1349206349206349
+Confidence: 0.6071428571428571
+Lift: N/A
+==================================
+70
+Columns: ['可能影響您結婚意願的非經濟因素：不知是否對方值得信任', '您是否已婚？']
+Values: 4, 否
+Rule: 4-trustworthiness→ 否-is_married
+Support: 0.1984126984126984
+Confidence: 0.7142857142857142
+Lift: N/A
+==================================
+71
+Columns: ['請問買房影響您結婚意願的程度為？', '可能影響您結婚意願的經濟因素：無法負擔高額房價']
+Values: 5, 5
+Rule: 5-buying_house_influence→ 5-affordability
+Support: 0.1349206349206349
+Confidence: 0.6071428571428571
+Lift: N/A
+==================================
+72
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔子女教養費用', '可能影響您結婚意願的經濟因素：無法負擔高額房價']
+Values: 5, 5
+Rule: 5-child_rearing_cost_affordability→ 5-affordability
+Support: 0.2222222222222222
+Confidence: 0.7
+Lift: 2.75625
+==================================
+73
+Columns: ['可能使擁有結婚意願的因素：想要與心愛的人共組家庭', '可能影響您結婚意願的經濟因素：無法負擔高額房價']
+Values: 5, 5
+Rule: 5-family_planning→ 5-affordability
+Support: 0.2222222222222222
+Confidence: 0.7
+Lift: N/A
+==================================
+74
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔高額房價', '可能影響您結婚意願的經濟因素：無法負擔結婚開銷']
+Values: 5, 5
+Rule: 5-affordability→ 5-marriage_expenses_affordability
+Support: 0.1746031746031746
+Confidence: 0.9166666666666666
+Lift: N/A
+==================================
+75
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔高額房價', '可能使擁有結婚意願的因素：想要伴侶一同承擔責任']
+Values: 5, 5
+Rule: 5-affordability→ 5-responsibility_sharing
+Support: 0.15873015873015872
+Confidence: 0.625
+Lift: N/A
+==================================
+76
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔高額房價', '可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平']
+Values: 5, 5
+Rule: 5-affordability→ 5-sacrifice_lifestyle
+Support: 0.2222222222222222
+Confidence: 0.7
+Lift: 2.6727272727272724
+==================================
+77
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔高額房價', '可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭']
+Values: 5, 5
+Rule: 5-affordability→ 5-stable_career_before_family
+Support: 0.1984126984126984
+Confidence: 0.625
+Lift: 2.4609375
+==================================
+78
+Columns: ['您認同買房會影響到個人生活水平的程度為？', '您認同買房是影響多數人結婚的重要因素嗎？']
+Values: 5, 5
+Rule: 5-buying_house_impact_life→ 5-agree_buying_house
+Support: 0.1746031746031746
+Confidence: 0.6666666666666666
+Lift: N/A
+==================================
+79
+Columns: ['請問買房影響您結婚意願的程度為？', '您認同買房是影響多數人結婚的重要因素嗎？']
+Values: 5, 5
+Rule: 5-buying_house_influence→ 5-agree_buying_house
+Support: 0.15079365079365079
+Confidence: 0.6785714285714286
+Lift: N/A
+==================================
+80
+Columns: ['您對結婚一定得買房的認同度為何？', '請問買房影響您結婚意願的程度為？']
+Values: 5, 5
+Rule: 5-marriage_house_requirement→ 5-buying_house_influence
+Support: 0.1349206349206349
+Confidence: 0.6071428571428571
+Lift: 2.732142857142857
+==================================
+81
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔子女教養費用', '可能影響您結婚意願的經濟因素：無法負擔結婚開銷']
+Values: 5, 5
+Rule: 5-child_rearing_cost_affordability→ 5-marriage_expenses_affordability
+Support: 0.1746031746031746
+Confidence: 0.6875
+Lift: 3.609375
+==================================
+82
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔子女教養費用', '可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平']
+Values: 5, 5
+Rule: 5-child_rearing_cost_affordability→ 5-sacrifice_lifestyle
+Support: 0.19047619047619047
+Confidence: 0.75
+Lift: 2.8636363636363633
+==================================
+83
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔子女教養費用', '可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭']
+Values: 5, 5
+Rule: 5-child_rearing_cost_affordability→ 5-stable_career_before_family
+Support: 0.1746031746031746
+Confidence: 0.6875
+Lift: 2.70703125
+==================================
+84
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔子女教養費用', '您是否已婚？']
+Values: 5, 否
+Rule: 5-child_rearing_cost_affordability→ 否-is_married
+Support: 0.20634920634920634
+Confidence: 0.8125
+Lift: N/A
+==================================
+85
+Columns: ['可能使擁有結婚意願的因素：想要與心愛的人共組家庭', '可能使擁有結婚意願的因素：想要小孩']
+Values: 5, 5
+Rule: 5-family_planning→ 5-desire_for_children
+Support: 0.1349206349206349
+Confidence: 0.8095238095238095
+Lift: N/A
+==================================
+86
+Columns: ['生理性別', '可能使擁有結婚意願的因素：想要小孩']
+Values: 男, 5
+Rule: 男-gender→ 5-desire_for_children
+Support: 0.12698412698412698
+Confidence: 0.7619047619047619
+Lift: N/A
+==================================
+87
+Columns: ['可能使擁有結婚意願的因素：想要與心愛的人共組家庭', '可能使擁有結婚意願的因素：想要讓伴侶關係被法律所認同']
+Values: 5, 5
+Rule: 5-family_planning→ 5-legal_recognition
+Support: 0.25396825396825395
+Confidence: 0.6808510638297872
+Lift: 2.318573893041978
+==================================
+88
+Columns: ['可能使擁有結婚意願的因素：想要與心愛的人共組家庭', '您對結婚一定得買房的認同度為何？']
+Values: 5, 5
+Rule: 5-family_planning→ 5-marriage_house_requirement
+Support: 0.14285714285714285
+Confidence: 0.6428571428571429
+Lift: N/A
+==================================
+89
+Columns: ['您目前是否有結婚意願(不論單身與否)\n已婚者可以是否後悔結婚來考量', '可能使擁有結婚意願的因素：想要與心愛的人共組家庭']
+Values: 5, 5
+Rule: 5-marriage_intention→ 5-family_planning
+Support: 0.14285714285714285
+Confidence: 0.72
+Lift: N/A
+==================================
+90
+Columns: ['可能使擁有結婚意願的因素：想要與心愛的人共組家庭', '可能使擁有結婚意願的因素：想要伴侶一同承擔責任']
+Values: 5, 5
+Rule: 5-family_planning→ 5-responsibility_sharing
+Support: 0.1984126984126984
+Confidence: 0.78125
+Lift: N/A
+==================================
+91
+Columns: ['可能使擁有結婚意願的因素：想要與心愛的人共組家庭', '可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平']
+Values: 5, 5
+Rule: 5-family_planning→ 5-sacrifice_lifestyle
+Support: 0.16666666666666666
+Confidence: 0.6363636363636362
+Lift: N/A
+==================================
+92
+Columns: ['可能使擁有結婚意願的因素：想要與心愛的人共組家庭', '可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭']
+Values: 5, 5
+Rule: 5-family_planning→ 5-stable_career_before_family
+Support: 0.1746031746031746
+Confidence: 0.6875
+Lift: N/A
+==================================
+93
+Columns: ['可能影響您結婚意願的非經濟因素：不想養小孩', '您是否已婚？']
+Values: 5, 否
+Rule: 5-fear_of_commitment→ 否-is_married
+Support: 0.1349206349206349
+Confidence: 0.85
+Lift: N/A
+==================================
+94
+Columns: ['您目前是否有結婚意願(不論單身與否)\n已婚者可以是否後悔結婚來考量', '可能使擁有結婚意願的因素：想要讓伴侶關係被法律所認同']
+Values: 5, 5
+Rule: 5-marriage_intention→ 5-legal_recognition
+Support: 0.12698412698412698
+Confidence: 0.64
+Lift: N/A
+==================================
+95
+Columns: ['可能使擁有結婚意願的因素：想要讓伴侶關係被法律所認同', '可能使擁有結婚意願的因素：想要伴侶一同承擔責任']
+Values: 5, 5
+Rule: 5-legal_recognition→ 5-responsibility_sharing
+Support: 0.1746031746031746
+Confidence: 0.6875
+Lift: N/A
+==================================
+96
+Columns: ['可能使擁有結婚意願的因素：想要讓伴侶關係被法律所認同', '可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平']
+Values: 5, 5
+Rule: 5-legal_recognition→ 5-sacrifice_lifestyle
+Support: 0.15873015873015872
+Confidence: 0.606060606060606
+Lift: N/A
+==================================
+97
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔結婚開銷', '可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平']
+Values: 5, 5
+Rule: 5-marriage_expenses_affordability→ 5-sacrifice_lifestyle
+Support: 0.15079365079365079
+Confidence: 0.7916666666666666
+Lift: N/A
+==================================
+98
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔結婚開銷', '可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭']
+Values: 5, 5
+Rule: 5-marriage_expenses_affordability→ 5-stable_career_before_family
+Support: 0.14285714285714285
+Confidence: 0.75
+Lift: N/A
+==================================
+99
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔結婚開銷', '您是否已婚？']
+Values: 5, 否
+Rule: 5-marriage_expenses_affordability→ 否-is_married
+Support: 0.15079365079365079
+Confidence: 0.7916666666666666
+Lift: N/A
+==================================
+100
+Columns: ['您目前是否有結婚意願(不論單身與否)\n已婚者可以是否後悔結婚來考量', '生理性別']
+Values: 5, 男
+Rule: 5-marriage_intention→ 男-gender
+Support: 0.15873015873015872
+Confidence: 0.8
+Lift: N/A
+==================================
+101
+Columns: ['您是否已婚？', '可能影響您結婚意願的非經濟因素：沒有對象']
+Values: 否, 5
+Rule: 否-is_married→ 5-no_partner
+Support: 0.1349206349206349
+Confidence: 0.8095238095238095
+Lift: N/A
+==================================
+102
+Columns: ['可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭', '可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平']
+Values: 5, 5
+Rule: 5-stable_career_before_family→ 5-sacrifice_lifestyle
+Support: 0.1746031746031746
+Confidence: 0.6666666666666666
+Lift: 2.625
+==================================
+103
+Columns: ['您是否已婚？', '可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭']
+Values: 否, 5
+Rule: 否-is_married→ 5-stable_career_before_family
+Support: 0.1984126984126984
+Confidence: 0.78125
+Lift: N/A
+==================================
+104
+Columns: ['您的年齡', '您是否已婚？']
+Values: 50～59, 是
+Rule: 50～59-age→ 是-is_married
+Support: 0.2777777777777778
+Confidence: 0.9210526315789475
+Lift: 2.0009074410163343
+==================================
+105
+Columns: ['您是否已婚？', '目前月薪資水平(台幣)']
+Values: 是, 60000~79999
+Rule: 是-is_married→ 60000~79999-salary
+Support: 0.1349206349206349
+Confidence: 0.7391304347826086
+Lift: N/A
+==================================
+106
+Columns: ['生理性別', '目前月薪資水平(台幣)']
+Values: 男, 60000~79999
+Rule: 男-gender→ 60000~79999-salary
+Support: 0.1349206349206349
+Confidence: 0.7391304347826086
+Lift: N/A
+==================================
+107
+Columns: ['您是否已婚？', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？', '目前月薪資水平(台幣)']
+Values: 否, 1, 0～19999
+Rule: 否-is_married→ 1-afford_house_price→ 0～19999-salary
+Support: 0.12698412698412698
+Confidence: 0.8
+Lift: 1.7439446366782008
+==================================
+108
+Columns: ['可能使擁有結婚意願的因素：傳統上結婚是人生的必經之路', '可能使擁有結婚意願的因素：想要小孩', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 1, 1, 1
+Rule: 1-tradition→ 1-desire_for_children→ 1-afford_house_price
+Support: 0.12698412698412698
+Confidence: 0.8421052631578947
+Lift: 2.9217391304347826
+==================================
+109
+Columns: ['可能使擁有結婚意願的因素：想要小孩', '您是否已婚？', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 1, 否, 1
+Rule: 1-desire_for_children→ 否-is_married→ 1-afford_house_price
+Support: 0.15079365079365079
+Confidence: 0.6333333333333333
+Lift: 1.8529411764705883
+==================================
+110
+Columns: ['可能使擁有結婚意願的因素：傳統上結婚是人生的必經之路', '您認為政府在買房上已擁有完善配套措施的程度為？', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 1, 1, 1
+Rule: 1-tradition→ 1-government_support→ 1-afford_house_price
+Support: 0.15079365079365079
+Confidence: 0.8260869565217391
+Lift: 2.078125
+==================================
+111
+Columns: ['您的年齡', '您認為政府在買房上已擁有完善配套措施的程度為？', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 21～29, 1, 1
+Rule: 21～29-age→ 1-government_support→ 1-afford_house_price
+Support: 0.1349206349206349
+Confidence: 0.7083333333333334
+Lift: 1.940217391304348
+==================================
+112
+Columns: ['您認為政府在買房上已擁有完善配套措施的程度為？', '可能影響您結婚意願的經濟因素：無法負擔高額房價', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 1, 5, 1
+Rule: 1-government_support→ 5-affordability→ 1-afford_house_price
+Support: 0.15079365079365079
+Confidence: 0.7037037037037037
+Lift: 1.9182692307692308
+==================================
+113
+Columns: ['您認同買房會影響到個人生活水平的程度為？', '您認為政府在買房上已擁有完善配套措施的程度為？', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 5, 1, 1
+Rule: 5-buying_house_impact_life→ 1-government_support→ 1-afford_house_price
+Support: 0.15079365079365079
+Confidence: 0.7916666666666666
+Lift: N/A
+==================================
+114
+Columns: ['可能使擁有結婚意願的因素：想要與心愛的人共組家庭', '您認為政府在買房上已擁有完善配套措施的程度為？', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 5, 1, 1
+Rule: 5-family_planning→ 1-government_support→ 1-afford_house_price
+Support: 0.12698412698412698
+Confidence: 0.7272727272727273
+Lift: N/A
+==================================
+115
+Columns: ['您認為政府在買房上已擁有完善配套措施的程度為？', '您是否已婚？', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 1, 否, 1
+Rule: 1-government_support→ 否-is_married→ 1-afford_house_price
+Support: 0.1984126984126984
+Confidence: 0.7142857142857142
+Lift: 1.40625
+==================================
+116
+Columns: ['您認為政府在買房上已擁有完善配套措施的程度為？', '最高學歷', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 1, 大學, 1
+Rule: 1-government_support→ 大學-education→ 1-afford_house_price
+Support: 0.15079365079365079
+Confidence: 0.7307692307692307
+Lift: 1.7812500000000002
+==================================
+117
+Columns: ['生理性別', '您認為政府在買房上已擁有完善配套措施的程度為？', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 女, 1, 1
+Rule: 女-gender→ 1-government_support→ 1-afford_house_price
+Support: 0.15873015873015872
+Confidence: 0.7692307692307693
+Lift: 1.6935483870967742
+==================================
+118
+Columns: ['可能使擁有結婚意願的因素：傳統上結婚是人生的必經之路', '您是否已婚？', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 1, 否, 1
+Rule: 1-tradition→ 否-is_married→ 1-afford_house_price
+Support: 0.16666666666666666
+Confidence: 0.6176470588235294
+Lift: 1.6918158567774937
+==================================
+119
+Columns: ['您的年齡', '可能影響您結婚意願的經濟因素：無法負擔高額房價', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 21～29, 5, 1
+Rule: 21～29-age→ 5-affordability→ 1-afford_house_price
+Support: 0.12698412698412698
+Confidence: 0.6666666666666666
+Lift: 1.8260869565217392
+==================================
+120
+Columns: ['您的年齡', '您是否已婚？', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 21～29, 否, 1
+Rule: 21～29-age→ 否-is_married→ 1-afford_house_price
+Support: 0.19047619047619047
+Confidence: 1.0
+Lift: 1.9636363636363634
+==================================
+121
+Columns: ['您的年齡', '最高學歷', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 21～29, 大學, 1
+Rule: 21～29-age→ 大學-education→ 1-afford_house_price
+Support: 0.12698412698412698
+Confidence: 0.6666666666666666
+Lift: 1.7622377622377625
+==================================
+122
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔子女教養費用', '可能影響您結婚意願的經濟因素：無法負擔高額房價', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 5, 5, 1
+Rule: 5-child_rearing_cost_affordability→ 5-affordability→ 1-afford_house_price
+Support: 0.15079365079365079
+Confidence: 0.7037037037037037
+Lift: 2.85
+==================================
+123
+Columns: ['可能使擁有結婚意願的因素：想要與心愛的人共組家庭', '可能影響您結婚意願的經濟因素：無法負擔高額房價', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 5, 5, 1
+Rule: 5-family_planning→ 5-affordability→ 1-afford_house_price
+Support: 0.12698412698412698
+Confidence: 0.7272727272727273
+Lift: N/A
+==================================
+124
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔結婚開銷', '可能影響您結婚意願的經濟因素：無法負擔高額房價', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 5, 5, 1
+Rule: 5-marriage_expenses_affordability→ 5-affordability→ 1-afford_house_price
+Support: 0.15079365079365079
+Confidence: 0.7916666666666666
+Lift: 3.6944444444444446
+==================================
+125
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔高額房價', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？', '可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平']
+Values: 5, 1, 5
+Rule: 5-affordability→ 1-afford_house_price→ 5-sacrifice_lifestyle
+Support: 0.14285714285714285
+Confidence: 0.6666666666666666
+Lift: 2.9842105263157896
+==================================
+126
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔高額房價', '可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 5, 5, 1
+Rule: 5-affordability→ 5-stable_career_before_family→ 1-afford_house_price
+Support: 0.1349206349206349
+Confidence: 0.6296296296296297
+Lift: 2.6775
+==================================
+127
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔高額房價', '您是否已婚？', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 5, 否, 1
+Rule: 5-affordability→ 否-is_married→ 1-afford_house_price
+Support: 0.16666666666666666
+Confidence: 0.7777777777777778
+Lift: 1.8900000000000001
+==================================
+128
+Columns: ['您認同買房會影響到個人生活水平的程度為？', '您是否已婚？', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 5, 否, 1
+Rule: 5-buying_house_impact_life→ 否-is_married→ 1-afford_house_price
+Support: 0.1349206349206349
+Confidence: 0.7083333333333334
+Lift: 1.8593750000000002
+==================================
+129
+Columns: ['您認同買房會影響到個人生活水平的程度為？', '最高學歷', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 5, 大學, 1
+Rule: 5-buying_house_impact_life→ 大學-education→ 1-afford_house_price
+Support: 0.12698412698412698
+Confidence: 0.6666666666666666
+Lift: 1.550769230769231
+==================================
+130
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔子女教養費用', '可能影響您結婚意願的經濟因素：無法負擔結婚開銷', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 5, 5, 1
+Rule: 5-child_rearing_cost_affordability→ 5-marriage_expenses_affordability→ 1-afford_house_price
+Support: 0.14285714285714285
+Confidence: 0.75
+Lift: 4.5
+==================================
+131
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔子女教養費用', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？', '可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平']
+Values: 5, 1, 5
+Rule: 5-child_rearing_cost_affordability→ 1-afford_house_price→ 5-sacrifice_lifestyle
+Support: 0.12698412698412698
+Confidence: 0.7619047619047619
+Lift: 3.3157894736842106
+==================================
+132
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔子女教養費用', '您是否已婚？', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 5, 否, 1
+Rule: 5-child_rearing_cost_affordability→ 否-is_married→ 1-afford_house_price
+Support: 0.14285714285714285
+Confidence: 0.8571428571428571
+Lift: 1.8173076923076923
+==================================
+133
+Columns: ['可能使擁有結婚意願的因素：想要與心愛的人共組家庭', '您是否已婚？', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 5, 否, 1
+Rule: 5-family_planning→ 否-is_married→ 1-afford_house_price
+Support: 0.1349206349206349
+Confidence: 0.7727272727272727
+Lift: 1.59375
+==================================
+134
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔結婚開銷', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？', '可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平']
+Values: 5, 1, 5
+Rule: 5-marriage_expenses_affordability→ 1-afford_house_price→ 5-sacrifice_lifestyle
+Support: 0.12698412698412698
+Confidence: 0.6666666666666666
+Lift: 3.0545454545454547
+==================================
+135
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔結婚開銷', '您是否已婚？', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 5, 否, 1
+Rule: 5-marriage_expenses_affordability→ 否-is_married→ 1-afford_house_price
+Support: 0.12698412698412698
+Confidence: 0.6666666666666666
+Lift: 1.4823529411764707
+==================================
+136
+Columns: ['可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？', '可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平']
+Values: 5, 1, 5
+Rule: 5-stable_career_before_family→ 1-afford_house_price→ 5-sacrifice_lifestyle
+Support: 0.12698412698412698
+Confidence: 0.8421052631578947
+Lift: 3.0545454545454547
+==================================
+137
+Columns: ['您是否已婚？', '可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 否, 5, 1
+Rule: 否-is_married→ 5-stable_career_before_family→ 1-afford_house_price
+Support: 0.1349206349206349
+Confidence: 0.85
+Lift: 1.7850000000000001
+==================================
+138
+Columns: ['最高學歷', '您是否已婚？', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 大學, 否, 1
+Rule: 大學-education→ 否-is_married→ 1-afford_house_price
+Support: 0.16666666666666666
+Confidence: 0.8076923076923077
+Lift: N/A
+==================================
+139
+Columns: ['生理性別', '您是否已婚？', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 女, 否, 1
+Rule: 女-gender→ 否-is_married→ 1-afford_house_price
+Support: 0.15079365079365079
+Confidence: 0.7307692307692307
+Lift: N/A
+==================================
+140
+Columns: ['生理性別', '您是否已婚？', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 男, 否, 1
+Rule: 男-gender→ 否-is_married→ 1-afford_house_price
+Support: 0.12698412698412698
+Confidence: 0.7272727272727273
+Lift: N/A
+==================================
+141
+Columns: ['生理性別', '最高學歷', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 女, 大學, 1
+Rule: 女-gender→ 大學-education→ 1-afford_house_price
+Support: 0.12698412698412698
+Confidence: 0.6153846153846154
+Lift: N/A
+==================================
+142
+Columns: ['可能使擁有結婚意願的因素：傳統上結婚是人生的必經之路', '您認為政府在買房上已擁有完善配套措施的程度為？', '可能使擁有結婚意願的因素：想要小孩']
+Values: 1, 1, 1
+Rule: 1-tradition→ 1-government_support→ 1-desire_for_children
+Support: 0.12698412698412698
+Confidence: 0.8421052631578947
+Lift: 1.5750000000000002
+==================================
+143
+Columns: ['您認為政府在買房上已擁有完善配套措施的程度為？', '可能使擁有結婚意願的因素：想要小孩', '您是否已婚？']
+Values: 1, 1, 否
+Rule: 1-government_support→ 1-desire_for_children→ 否-is_married
+Support: 0.1349206349206349
+Confidence: 0.8947368421052632
+Lift: N/A
+==================================
+144
+Columns: ['可能使擁有結婚意願的因素：傳統上結婚是人生的必經之路', '可能使擁有結婚意願的因素：想要小孩', '您是否已婚？']
+Values: 1, 1, 否
+Rule: 1-tradition→ 1-desire_for_children→ 否-is_married
+Support: 0.15079365079365079
+Confidence: 0.6333333333333333
+Lift: 1.7602941176470588
+==================================
+145
+Columns: ['您的年齡', '可能使擁有結婚意願的因素：想要小孩', '您是否已婚？']
+Values: 21～29, 1, 否
+Rule: 21～29-age→ 1-desire_for_children→ 否-is_married
+Support: 0.15079365079365079
+Confidence: 0.6333333333333333
+Lift: 1.8529411764705883
+==================================
+146
+Columns: ['最高學歷', '可能使擁有結婚意願的因素：想要小孩', '您是否已婚？']
+Values: 大學, 1, 否
+Rule: 大學-education→ 1-desire_for_children→ 否-is_married
+Support: 0.12698412698412698
+Confidence: 0.9411764705882353
+Lift: N/A
+==================================
+147
+Columns: ['生理性別', '可能使擁有結婚意願的因素：想要小孩', '您是否已婚？']
+Values: 女, 1, 否
+Rule: 女-gender→ 1-desire_for_children→ 否-is_married
+Support: 0.1349206349206349
+Confidence: 0.6538461538461539
+Lift: 1.75
+==================================
+148
+Columns: ['可能使擁有結婚意願的因素：傳統上結婚是人生的必經之路', '您認為政府在買房上已擁有完善配套措施的程度為？', '您是否已婚？']
+Values: 1, 1, 否
+Rule: 1-tradition→ 1-government_support→ 否-is_married
+Support: 0.15873015873015872
+Confidence: 0.8333333333333334
+Lift: 2.3161764705882355
+==================================
+149
+Columns: ['您的年齡', '您認為政府在買房上已擁有完善配套措施的程度為？', '您是否已婚？']
+Values: 21～29, 1, 否
+Rule: 21～29-age→ 1-government_support→ 否-is_married
+Support: 0.1746031746031746
+Confidence: 0.9565217391304348
+Lift: 1.96875
+==================================
+150
+Columns: ['您的年齡', '您認為政府在買房上已擁有完善配套措施的程度為？', '最高學歷']
+Values: 21～29, 1, 大學
+Rule: 21～29-age→ 1-government_support→ 大學-education
+Support: 0.12698412698412698
+Confidence: 0.6956521739130435
+Lift: N/A
+==================================
+151
+Columns: ['您認為政府在買房上已擁有完善配套措施的程度為？', '可能影響您結婚意願的經濟因素：無法負擔高額房價', '可能影響您結婚意願的經濟因素：無法負擔子女教養費用']
+Values: 1, 5, 5
+Rule: 1-government_support→ 5-affordability→ 5-child_rearing_cost_affordability
+Support: 0.14285714285714285
+Confidence: 0.6923076923076923
+Lift: 2.8350000000000004
+==================================
+152
+Columns: ['可能使擁有結婚意願的因素：想要與心愛的人共組家庭', '您認為政府在買房上已擁有完善配套措施的程度為？', '可能影響您結婚意願的經濟因素：無法負擔高額房價']
+Values: 5, 1, 5
+Rule: 5-family_planning→ 1-government_support→ 5-affordability
+Support: 0.15079365079365079
+Confidence: 0.7307692307692307
+Lift: 2.216666666666667
+==================================
+153
+Columns: ['您認為政府在買房上已擁有完善配套措施的程度為？', '可能影響您結婚意願的經濟因素：無法負擔高額房價', '可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平']
+Values: 1, 5, 5
+Rule: 1-government_support→ 5-affordability→ 5-sacrifice_lifestyle
+Support: 0.1349206349206349
+Confidence: 0.6538461538461539
+Lift: 2.818421052631579
+==================================
+154
+Columns: ['您認為政府在買房上已擁有完善配套措施的程度為？', '可能影響您結婚意願的經濟因素：無法負擔高額房價', '可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭']
+Values: 1, 5, 5
+Rule: 1-government_support→ 5-affordability→ 5-stable_career_before_family
+Support: 0.12698412698412698
+Confidence: 0.6153846153846154
+Lift: 2.5200000000000005
+==================================
+155
+Columns: ['您認同買房會影響到個人生活水平的程度為？', '您認為政府在買房上已擁有完善配套措施的程度為？', '您是否已婚？']
+Values: 5, 1, 否
+Rule: 5-buying_house_impact_life→ 1-government_support→ 否-is_married
+Support: 0.1349206349206349
+Confidence: 0.7083333333333334
+Lift: N/A
+==================================
+156
+Columns: ['您認為政府在買房上已擁有完善配套措施的程度為？', '您是否已婚？', '可能影響您結婚意願的經濟因素：無法負擔子女教養費用']
+Values: 1, 否, 5
+Rule: 1-government_support→ 否-is_married→ 5-child_rearing_cost_affordability
+Support: 0.12698412698412698
+Confidence: 0.8
+Lift: N/A
+==================================
+157
+Columns: ['可能使擁有結婚意願的因素：想要與心愛的人共組家庭', '您認為政府在買房上已擁有完善配套措施的程度為？', '可能使擁有結婚意願的因素：想要讓伴侶關係被法律所認同']
+Values: 5, 1, 5
+Rule: 5-family_planning→ 1-government_support→ 5-legal_recognition
+Support: 0.14285714285714285
+Confidence: 0.6666666666666666
+Lift: 2.4127659574468083
+==================================
+158
+Columns: ['您的年齡', '您認為政府在買房上已擁有完善配套措施的程度為？', '您是否已婚？']
+Values: 50～59, 1, 是
+Rule: 50～59-age→ 1-government_support→ 是-is_married
+Support: 0.15873015873015872
+Confidence: 0.9090909090909091
+Lift: 2.072368421052632
+==================================
+159
+Columns: ['您認為政府在買房上已擁有完善配套措施的程度為？', '您是否已婚？', '最高學歷']
+Values: 1, 是, 碩士
+Rule: 1-government_support→ 是-is_married→ 碩士-education
+Support: 0.12698412698412698
+Confidence: 0.64
+Lift: 1.4318181818181819
+==================================
+160
+Columns: ['可能使擁有結婚意願的因素：傳統上結婚是人生的必經之路', '您是否已婚？', '您目前是否有結婚意願(不論單身與否)\n已婚者可以是否後悔結婚來考量']
+Values: 1, 否, 1
+Rule: 1-tradition→ 否-is_married→ 1-marriage_intention
+Support: 0.12698412698412698
+Confidence: 0.7619047619047619
+Lift: 2.823529411764706
+==================================
+161
+Columns: ['可能使擁有結婚意願的因素：傳統上結婚是人生的必經之路', '您是否已婚？', '您的年齡']
+Values: 1, 否, 21～29
+Rule: 1-tradition→ 否-is_married→ 21～29-age
+Support: 0.15079365079365079
+Confidence: 1.0
+Lift: 2.015151515151515
+==================================
+162
+Columns: ['可能使擁有結婚意願的因素：傳統上結婚是人生的必經之路', '可能影響您結婚意願的經濟因素：無法負擔高額房價', '您是否已婚？']
+Values: 1, 5, 否
+Rule: 1-tradition→ 5-affordability→ 否-is_married
+Support: 0.12698412698412698
+Confidence: 0.9411764705882353
+Lift: N/A
+==================================
+163
+Columns: ['可能使擁有結婚意願的因素：傳統上結婚是人生的必經之路', '最高學歷', '您是否已婚？']
+Values: 1, 大學, 否
+Rule: 1-tradition→ 大學-education→ 否-is_married
+Support: 0.14285714285714285
+Confidence: 0.6666666666666666
+Lift: 1.588235294117647
+==================================
+164
+Columns: ['可能使擁有結婚意願的因素：傳統上結婚是人生的必經之路', '生理性別', '您是否已婚？']
+Values: 1, 女, 否
+Rule: 1-tradition→ 女-gender→ 否-is_married
+Support: 0.12698412698412698
+Confidence: 0.8421052631578947
+Lift: N/A
+==================================
+165
+Columns: ['您的年齡', '目前月薪資水平(台幣)', '您是否已婚？']
+Values: 21～29, 20000～39999, 否
+Rule: 21～29-age→ 20000～39999-salary→ 否-is_married
+Support: 0.14285714285714285
+Confidence: 1.0
+Lift: 2.147727272727273
+==================================
+166
+Columns: ['最高學歷', '目前月薪資水平(台幣)', '您是否已婚？']
+Values: 大學, 20000～39999, 否
+Rule: 大學-education→ 20000～39999-salary→ 否-is_married
+Support: 0.1349206349206349
+Confidence: 0.7083333333333334
+Lift: 1.575
+==================================
+167
+Columns: ['您的年齡', '您是否已婚？', '可能影響您結婚意願的非經濟因素：只需要情感需求，不想綁定法律義務']
+Values: 21～29, 否, 3
+Rule: 21～29-age→ 否-is_married→ 3-non_economic_factor_relationship
+Support: 0.12698412698412698
+Confidence: 1.0
+Lift: 2.1818181818181817
+==================================
+168
+Columns: ['您的年齡', '您認同買房會影響到個人生活水平的程度為？', '您是否已婚？']
+Values: 21～29, 4, 否
+Rule: 21～29-age→ 4-buying_house_impact_life→ 否-is_married
+Support: 0.15873015873015872
+Confidence: 1.0
+Lift: 2.121212121212121
+==================================
+169
+Columns: ['您的年齡', '您是否已婚？', '可能影響您結婚意願的非經濟因素：婚後會失去自由']
+Values: 21～29, 否, 4
+Rule: 21～29-age→ 否-is_married→ 4-freedom_loss_after_marriage
+Support: 0.12698412698412698
+Confidence: 0.9411764705882353
+Lift: 1.9090909090909092
+==================================
+170
+Columns: ['您的年齡', '可能影響您結婚意願的非經濟因素：不知是否對方值得信任', '您是否已婚？']
+Values: 21～29, 4, 否
+Rule: 21～29-age→ 4-trustworthiness→ 否-is_married
+Support: 0.14285714285714285
+Confidence: 1.0
+Lift: 2.061818181818182
+==================================
+171
+Columns: ['您的年齡', '可能影響您結婚意願的經濟因素：無法負擔子女教養費用', '可能影響您結婚意願的經濟因素：無法負擔高額房價']
+Values: 21～29, 5, 5
+Rule: 21～29-age→ 5-child_rearing_cost_affordability→ 5-affordability
+Support: 0.14285714285714285
+Confidence: 0.782608695652174
+Lift: 2.7
+==================================
+172
+Columns: ['您的年齡', '可能使擁有結婚意願的因素：想要與心愛的人共組家庭', '可能影響您結婚意願的經濟因素：無法負擔高額房價']
+Values: 21～29, 5, 5
+Rule: 21～29-age→ 5-family_planning→ 5-affordability
+Support: 0.1349206349206349
+Confidence: 0.7391304347826086
+Lift: 2.3282608695652174
+==================================
+173
+Columns: ['您的年齡', '可能影響您結婚意願的經濟因素：無法負擔高額房價', '可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平']
+Values: 21～29, 5, 5
+Rule: 21～29-age→ 5-affordability→ 5-sacrifice_lifestyle
+Support: 0.12698412698412698
+Confidence: 0.6956521739130435
+Lift: 2.8
+==================================
+174
+Columns: ['您的年齡', '可能影響您結婚意願的經濟因素：無法負擔高額房價', '可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭']
+Values: 21～29, 5, 5
+Rule: 21～29-age→ 5-affordability→ 5-stable_career_before_family
+Support: 0.1349206349206349
+Confidence: 0.7391304347826086
+Lift: 2.6775
+==================================
+175
+Columns: ['您的年齡', '可能影響您結婚意願的經濟因素：無法負擔高額房價', '您是否已婚？']
+Values: 21～29, 5, 否
+Rule: 21～29-age→ 5-affordability→ 否-is_married
+Support: 0.18253968253968253
+Confidence: 1.0
+Lift: 2.3522727272727275
+==================================
+176
+Columns: ['您的年齡', '您認同買房會影響到個人生活水平的程度為？', '您是否已婚？']
+Values: 21～29, 5, 否
+Rule: 21～29-age→ 5-buying_house_impact_life→ 否-is_married
+Support: 0.12698412698412698
+Confidence: 0.9411764705882353
+Lift: 1.9090909090909092
+==================================
+177
+Columns: ['您的年齡', '可能影響您結婚意願的經濟因素：無法負擔子女教養費用', '您是否已婚？']
+Values: 21～29, 5, 否
+Rule: 21～29-age→ 5-child_rearing_cost_affordability→ 否-is_married
+Support: 0.16666666666666666
+Confidence: 0.65625
+Lift: 1.8529411764705883
+==================================
+178
+Columns: ['您的年齡', '可能使擁有結婚意願的因素：想要與心愛的人共組家庭', '您是否已婚？']
+Values: 21～29, 5, 否
+Rule: 21～29-age→ 5-family_planning→ 否-is_married
+Support: 0.18253968253968253
+Confidence: 1.0
+Lift: 2.3522727272727275
+==================================
+179
+Columns: ['您的年齡', '可能使擁有結婚意願的因素：想要與心愛的人共組家庭', '最高學歷']
+Values: 21～29, 5, 大學
+Rule: 21～29-age→ 5-family_planning→ 大學-education
+Support: 0.1349206349206349
+Confidence: 0.7391304347826086
+Lift: 1.9472727272727275
+==================================
+180
+Columns: ['您的年齡', '您是否已婚？', '可能使擁有結婚意願的因素：想要讓伴侶關係被法律所認同']
+Values: 21～29, 否, 5
+Rule: 21～29-age→ 否-is_married→ 5-legal_recognition
+Support: 0.1349206349206349
+Confidence: 1.0
+Lift: 2.562200956937799
+==================================
+181
+Columns: ['您的年齡', '您是否已婚？', '可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平']
+Values: 21～29, 否, 5
+Rule: 21～29-age→ 否-is_married→ 5-sacrifice_lifestyle
+Support: 0.14285714285714285
+Confidence: 1.0
+Lift: 2.3429752066115705
+==================================
+182
+Columns: ['您的年齡', '您是否已婚？', '可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭']
+Values: 21～29, 否, 5
+Rule: 21～29-age→ 否-is_married→ 5-stable_career_before_family
+Support: 0.15873015873015872
+Confidence: 0.625
+Lift: 1.8529411764705883
+==================================
+183
+Columns: ['您的年齡', '最高學歷', '您是否已婚？']
+Values: 21～29, 大學, 否
+Rule: 21～29-age→ 大學-education→ 否-is_married
+Support: 0.23809523809523808
+Confidence: 0.6818181818181818
+Lift: 1.4178544636159038
+==================================
+184
+Columns: ['您的年齡', '生理性別', '您是否已婚？']
+Values: 21～29, 女, 否
+Rule: 21～29-age→ 女-gender→ 否-is_married
+Support: 0.1984126984126984
+Confidence: 1.0
+Lift: 1.9886363636363638
+==================================
+185
+Columns: ['您的年齡', '生理性別', '您是否已婚？']
+Values: 21～29, 男, 否
+Rule: 21～29-age→ 男-gender→ 否-is_married
+Support: 0.14285714285714285
+Confidence: 0.9473684210526315
+Lift: N/A
+==================================
+186
+Columns: ['您的年齡', '生理性別', '最高學歷']
+Values: 21～29, 女, 大學
+Rule: 21～29-age→ 女-gender→ 大學-education
+Support: 0.14285714285714285
+Confidence: 0.72
+Lift: N/A
+==================================
+187
+Columns: ['您是否已婚？', '您的年齡', '可能影響您結婚意願的非經濟因素：害怕要與對方家庭磨合']
+Values: 是, 50～59, 3
+Rule: 是-is_married→ 50～59-age→ 3-family_adjustment_concerns
+Support: 0.1349206349206349
+Confidence: 0.9444444444444444
+Lift: 2.562200956937799
+==================================
+188
+Columns: ['生理性別', '您是否已婚？', '可能影響您結婚意願的非經濟因素：害怕要與對方家庭磨合']
+Values: 男, 是, 3
+Rule: 男-gender→ 是-is_married→ 3-family_adjustment_concerns
+Support: 0.12698412698412698
+Confidence: 0.7272727272727273
+Lift: 1.3368700265251992
+==================================
+189
+Columns: ['生理性別', '您認同買房會影響到個人生活水平的程度為？', '可能影響您結婚意願的非經濟因素：不知是否對方值得信任']
+Values: 男, 5, 3
+Rule: 男-gender→ 5-buying_house_impact_life→ 3-trustworthiness
+Support: 0.12698412698412698
+Confidence: 0.7619047619047619
+Lift: 1.6128000000000002
+==================================
+190
+Columns: ['生理性別', '您是否已婚？', '可能影響您結婚意願的非經濟因素：不知是否對方值得信任']
+Values: 男, 是, 3
+Rule: 男-gender→ 是-is_married→ 3-trustworthiness
+Support: 0.1349206349206349
+Confidence: 0.7083333333333334
+Lift: 1.477241379310345
+==================================
+191
+Columns: ['您認同買房會影響到個人生活水平的程度為？', '最高學歷', '您是否已婚？']
+Values: 4, 大學, 否
+Rule: 4-buying_house_impact_life→ 大學-education→ 否-is_married
+Support: 0.12698412698412698
+Confidence: 0.7619047619047619
+Lift: N/A
+==================================
+192
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔結婚開銷', '可能影響您結婚意願的經濟因素：無法負擔子女教養費用', '可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭']
+Values: 4, 4, 4
+Rule: 4-marriage_expenses_affordability→ 4-child_rearing_cost_affordability→ 4-stable_career_before_family
+Support: 0.12698412698412698
+Confidence: 0.8
+Lift: 3.3157894736842106
+==================================
+193
+Columns: ['可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平', '可能影響您結婚意願的經濟因素：無法負擔子女教養費用', '可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭']
+Values: 4, 4, 4
+Rule: 4-sacrifice_lifestyle→ 4-child_rearing_cost_affordability→ 4-stable_career_before_family
+Support: 0.12698412698412698
+Confidence: 0.8421052631578947
+Lift: 3.0315789473684207
+==================================
+194
+Columns: ['可能影響您結婚意願的非經濟因素：害怕要與對方家庭磨合', '可能影響您結婚意願的非經濟因素：不想養小孩', '可能影響您結婚意願的非經濟因素：婚後會失去自由']
+Values: 4, 4, 4
+Rule: 4-family_adjustment_concerns→ 4-fear_of_commitment→ 4-freedom_loss_after_marriage
+Support: 0.15079365079365079
+Confidence: 0.7037037037037037
+Lift: 3.081081081081081
+==================================
+195
+Columns: ['可能影響您結婚意願的非經濟因素：不知是否對方值得信任', '可能影響您結婚意願的非經濟因素：害怕要與對方家庭磨合', '可能影響您結婚意願的非經濟因素：不想養小孩']
+Values: 4, 4, 4
+Rule: 4-trustworthiness→ 4-family_adjustment_concerns→ 4-fear_of_commitment
+Support: 0.1349206349206349
+Confidence: 0.6296296296296297
+Lift: 2.914285714285714
+==================================
+196
+Columns: ['可能影響您結婚意願的非經濟因素：不知是否對方值得信任', '可能影響您結婚意願的非經濟因素：害怕要與對方家庭磨合', '可能影響您結婚意願的非經濟因素：婚後會失去自由']
+Values: 4, 4, 4
+Rule: 4-trustworthiness→ 4-family_adjustment_concerns→ 4-freedom_loss_after_marriage
+Support: 0.14285714285714285
+Confidence: 0.8181818181818182
+Lift: 2.4518918918918917
+==================================
+197
+Columns: ['可能影響您結婚意願的非經濟因素：不知是否對方值得信任', '您是否已婚？', '可能影響您結婚意願的非經濟因素：害怕要與對方家庭磨合']
+Values: 4, 否, 4
+Rule: 4-trustworthiness→ 否-is_married→ 4-family_adjustment_concerns
+Support: 0.14285714285714285
+Confidence: 0.72
+Lift: 2.6999999999999997
+==================================
+198
+Columns: ['可能使擁有結婚意願的因素：想要與心愛的人共組家庭', '可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平', '可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭']
+Values: 4, 4, 4
+Rule: 4-family_planning→ 4-sacrifice_lifestyle→ 4-stable_career_before_family
+Support: 0.12698412698412698
+Confidence: 0.7272727272727273
+Lift: 3.0315789473684207
+==================================
+199
+Columns: ['可能影響您結婚意願的非經濟因素：不知是否對方值得信任', '可能影響您結婚意願的非經濟因素：不想養小孩', '可能影響您結婚意願的非經濟因素：婚後會失去自由']
+Values: 4, 4, 4
+Rule: 4-trustworthiness→ 4-fear_of_commitment→ 4-freedom_loss_after_marriage
+Support: 0.1349206349206349
+Confidence: 0.6296296296296297
+Lift: 2.7818181818181817
+==================================
+200
+Columns: ['最高學歷', '您是否已婚？', '可能影響您結婚意願的非經濟因素：婚後會失去自由']
+Values: 大學, 否, 4
+Rule: 大學-education→ 否-is_married→ 4-freedom_loss_after_marriage
+Support: 0.1349206349206349
+Confidence: 0.7083333333333334
+Lift: 1.4318181818181819
+==================================
+201
+Columns: ['您認同買房會影響到個人生活水平的程度為？', '可能影響您結婚意願的經濟因素：無法負擔高額房價', '可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平']
+Values: 5, 5, 5
+Rule: 5-buying_house_impact_life→ 5-affordability→ 5-sacrifice_lifestyle
+Support: 0.12698412698412698
+Confidence: 0.8
+Lift: 2.9647058823529413
+==================================
+202
+Columns: ['可能使擁有結婚意願的因素：想要與心愛的人共組家庭', '可能影響您結婚意願的經濟因素：無法負擔子女教養費用', '可能影響您結婚意願的經濟因素：無法負擔高額房價']
+Values: 5, 5, 5
+Rule: 5-family_planning→ 5-child_rearing_cost_affordability→ 5-affordability
+Support: 0.14285714285714285
+Confidence: 0.6428571428571429
+Lift: 2.5312500000000004
+==================================
+203
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔子女教養費用', '可能影響您結婚意願的經濟因素：無法負擔高額房價', '可能使擁有結婚意願的因素：想要讓伴侶關係被法律所認同']
+Values: 5, 5, 5
+Rule: 5-child_rearing_cost_affordability→ 5-affordability→ 5-legal_recognition
+Support: 0.14285714285714285
+Confidence: 0.6428571428571429
+Lift: 3.2215909090909096
+==================================
+204
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔子女教養費用', '可能影響您結婚意願的經濟因素：無法負擔高額房價', '可能影響您結婚意願的經濟因素：無法負擔結婚開銷']
+Values: 5, 5, 5
+Rule: 5-child_rearing_cost_affordability→ 5-affordability→ 5-marriage_expenses_affordability
+Support: 0.15873015873015872
+Confidence: 0.625
+Lift: 3.7500000000000004
+==================================
+205
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔子女教養費用', '可能影響您結婚意願的經濟因素：無法負擔高額房價', '可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平']
+Values: 5, 5, 5
+Rule: 5-child_rearing_cost_affordability→ 5-affordability→ 5-sacrifice_lifestyle
+Support: 0.18253968253968253
+Confidence: 0.71875
+Lift: 3.1363636363636362
+==================================
+206
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔子女教養費用', '可能影響您結婚意願的經濟因素：無法負擔高額房價', '可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭']
+Values: 5, 5, 5
+Rule: 5-child_rearing_cost_affordability→ 5-affordability→ 5-stable_career_before_family
+Support: 0.15079365079365079
+Confidence: 0.6785714285714286
+Lift: 2.9925
+==================================
+207
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔子女教養費用', '可能影響您結婚意願的經濟因素：無法負擔高額房價', '您是否已婚？']
+Values: 5, 5, 否
+Rule: 5-child_rearing_cost_affordability→ 5-affordability→ 否-is_married
+Support: 0.1746031746031746
+Confidence: 0.6875
+Lift: 1.4558823529411766
+==================================
+208
+Columns: ['可能使擁有結婚意願的因素：想要與心愛的人共組家庭', '可能影響您結婚意願的經濟因素：無法負擔高額房價', '可能使擁有結婚意願的因素：想要讓伴侶關係被法律所認同']
+Values: 5, 5, 5
+Rule: 5-family_planning→ 5-affordability→ 5-legal_recognition
+Support: 0.14285714285714285
+Confidence: 0.6428571428571429
+Lift: 2.1934235976789167
+==================================
+209
+Columns: ['可能使擁有結婚意願的因素：想要與心愛的人共組家庭', '可能影響您結婚意願的經濟因素：無法負擔高額房價', '可能使擁有結婚意願的因素：想要伴侶一同承擔責任']
+Values: 5, 5, 5
+Rule: 5-family_planning→ 5-affordability→ 5-responsibility_sharing
+Support: 0.12698412698412698
+Confidence: 0.8
+Lift: 2.016
+==================================
+210
+Columns: ['可能使擁有結婚意願的因素：想要與心愛的人共組家庭', '可能影響您結婚意願的經濟因素：無法負擔高額房價', '可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平']
+Values: 5, 5, 5
+Rule: 5-family_planning→ 5-affordability→ 5-sacrifice_lifestyle
+Support: 0.14285714285714285
+Confidence: 0.6428571428571429
+Lift: 1.723404255319149
+==================================
+211
+Columns: ['可能使擁有結婚意願的因素：想要與心愛的人共組家庭', '可能影響您結婚意願的經濟因素：無法負擔高額房價', '可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭']
+Values: 5, 5, 5
+Rule: 5-family_planning→ 5-affordability→ 5-stable_career_before_family
+Support: 0.14285714285714285
+Confidence: 0.6428571428571429
+Lift: 1.9302127659574466
+==================================
+212
+Columns: ['可能使擁有結婚意願的因素：想要與心愛的人共組家庭', '可能影響您結婚意願的經濟因素：無法負擔高額房價', '您是否已婚？']
+Values: 5, 5, 否
+Rule: 5-family_planning→ 5-affordability→ 否-is_married
+Support: 0.15079365079365079
+Confidence: 0.6785714285714286
+Lift: 2.1375
+==================================
+213
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔高額房價', '可能使擁有結婚意願的因素：想要讓伴侶關係被法律所認同', '可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平']
+Values: 5, 5, 5
+Rule: 5-affordability→ 5-legal_recognition→ 5-sacrifice_lifestyle
+Support: 0.15079365079365079
+Confidence: 0.8636363636363636
+Lift: 2.310810810810811
+==================================
+214
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔高額房價', '可能影響您結婚意願的經濟因素：無法負擔結婚開銷', '可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平']
+Values: 5, 5, 5
+Rule: 5-affordability→ 5-marriage_expenses_affordability→ 5-sacrifice_lifestyle
+Support: 0.14285714285714285
+Confidence: 0.75
+Lift: 3.1239669421487606
+==================================
+215
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔高額房價', '可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭', '可能影響您結婚意願的經濟因素：無法負擔結婚開銷']
+Values: 5, 5, 5
+Rule: 5-affordability→ 5-stable_career_before_family→ 5-marriage_expenses_affordability
+Support: 0.12698412698412698
+Confidence: 0.6666666666666666
+Lift: 2.8636363636363638
+==================================
+216
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔高額房價', '您是否已婚？', '可能影響您結婚意願的經濟因素：無法負擔結婚開銷']
+Values: 5, 否, 5
+Rule: 5-affordability→ 否-is_married→ 5-marriage_expenses_affordability
+Support: 0.1349206349206349
+Confidence: 0.7083333333333334
+Lift: 1.4318181818181819
+==================================
+217
+Columns: ['可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平', '可能影響您結婚意願的經濟因素：無法負擔高額房價', '可能使擁有結婚意願的因素：想要伴侶一同承擔責任']
+Values: 5, 5, 5
+Rule: 5-sacrifice_lifestyle→ 5-affordability→ 5-responsibility_sharing
+Support: 0.12698412698412698
+Confidence: 0.8
+Lift: 3.1500000000000004
+==================================
+218
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔高額房價', '可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭', '可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平']
+Values: 5, 5, 5
+Rule: 5-affordability→ 5-stable_career_before_family→ 5-sacrifice_lifestyle
+Support: 0.16666666666666666
+Confidence: 0.6363636363636362
+Lift: 2.953125
+==================================
+219
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔高額房價', '您是否已婚？', '可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平']
+Values: 5, 否, 5
+Rule: 5-affordability→ 否-is_married→ 5-sacrifice_lifestyle
+Support: 0.15079365079365079
+Confidence: 0.6785714285714286
+Lift: 2.7204545454545457
+==================================
+220
+Columns: ['生理性別', '可能影響您結婚意願的經濟因素：無法負擔高額房價', '可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平']
+Values: 男, 5, 5
+Rule: 男-gender→ 5-affordability→ 5-sacrifice_lifestyle
+Support: 0.12698412698412698
+Confidence: 0.7272727272727273
+Lift: 2.6526315789473682
+==================================
+221
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔高額房價', '可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭', '您是否已婚？']
+Values: 5, 5, 否
+Rule: 5-affordability→ 5-stable_career_before_family→ 否-is_married
+Support: 0.15873015873015872
+Confidence: 0.625
+Lift: 1.4823529411764707
+==================================
+222
+Columns: ['最高學歷', '可能影響您結婚意願的經濟因素：無法負擔高額房價', '您是否已婚？']
+Values: 大學, 5, 否
+Rule: 大學-education→ 5-affordability→ 否-is_married
+Support: 0.12698412698412698
+Confidence: 0.7619047619047619
+Lift: N/A
+==================================
+223
+Columns: ['您認同買房會影響到個人生活水平的程度為？', '您是否已婚？', '您的年齡']
+Values: 5, 是, 50～59
+Rule: 5-buying_house_impact_life→ 是-is_married→ 50～59-age
+Support: 0.14285714285714285
+Confidence: 0.9
+Lift: 2.2955465587044537
+==================================
+224
+Columns: ['最高學歷', '您認同買房會影響到個人生活水平的程度為？', '您是否已婚？']
+Values: 大學, 5, 否
+Rule: 大學-education→ 5-buying_house_impact_life→ 否-is_married
+Support: 0.12698412698412698
+Confidence: 0.6666666666666666
+Lift: N/A
+==================================
+225
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔子女教養費用', '可能使擁有結婚意願的因素：想要讓伴侶關係被法律所認同', '可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平']
+Values: 5, 5, 5
+Rule: 5-child_rearing_cost_affordability→ 5-legal_recognition→ 5-sacrifice_lifestyle
+Support: 0.12698412698412698
+Confidence: 0.8421052631578947
+Lift: 2.27027027027027
+==================================
+226
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔子女教養費用', '可能影響您結婚意願的經濟因素：無法負擔結婚開銷', '可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平']
+Values: 5, 5, 5
+Rule: 5-child_rearing_cost_affordability→ 5-marriage_expenses_affordability→ 5-sacrifice_lifestyle
+Support: 0.14285714285714285
+Confidence: 0.75
+Lift: 3.1239669421487606
+==================================
+227
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔子女教養費用', '可能影響您結婚意願的經濟因素：無法負擔結婚開銷', '可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭']
+Values: 5, 5, 5
+Rule: 5-child_rearing_cost_affordability→ 5-marriage_expenses_affordability→ 5-stable_career_before_family
+Support: 0.1349206349206349
+Confidence: 0.7083333333333334
+Lift: 3.0426136363636362
+==================================
+228
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔子女教養費用', '可能影響您結婚意願的經濟因素：無法負擔結婚開銷', '您是否已婚？']
+Values: 5, 5, 否
+Rule: 5-child_rearing_cost_affordability→ 5-marriage_expenses_affordability→ 否-is_married
+Support: 0.14285714285714285
+Confidence: 0.75
+Lift: 1.5160427807486634
+==================================
+229
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔子女教養費用', '可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭', '可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平']
+Values: 5, 5, 5
+Rule: 5-child_rearing_cost_affordability→ 5-stable_career_before_family→ 5-sacrifice_lifestyle
+Support: 0.15079365079365079
+Confidence: 0.7916666666666666
+Lift: 3.2975206611570247
+==================================
+230
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔子女教養費用', '您是否已婚？', '可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平']
+Values: 5, 否, 5
+Rule: 5-child_rearing_cost_affordability→ 否-is_married→ 5-sacrifice_lifestyle
+Support: 0.14285714285714285
+Confidence: 0.75
+Lift: 2.6433566433566433
+==================================
+231
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔子女教養費用', '您是否已婚？', '可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭']
+Values: 5, 否, 5
+Rule: 5-child_rearing_cost_affordability→ 否-is_married→ 5-stable_career_before_family
+Support: 0.15079365079365079
+Confidence: 0.8636363636363636
+Lift: 2.8774038461538463
+==================================
+232
+Columns: ['最高學歷', '可能影響您結婚意願的經濟因素：無法負擔子女教養費用', '您是否已婚？']
+Values: 大學, 5, 否
+Rule: 大學-education→ 5-child_rearing_cost_affordability→ 否-is_married
+Support: 0.1349206349206349
+Confidence: 0.6538461538461539
+Lift: 1.6578947368421053
+==================================
+233
+Columns: ['可能使擁有結婚意願的因素：想要與心愛的人共組家庭', '可能使擁有結婚意願的因素：想要讓伴侶關係被法律所認同', '可能使擁有結婚意願的因素：想要伴侶一同承擔責任']
+Values: 5, 5, 5
+Rule: 5-family_planning→ 5-legal_recognition→ 5-responsibility_sharing
+Support: 0.15873015873015872
+Confidence: 0.625
+Lift: 2.4609375
+==================================
+234
+Columns: ['可能使擁有結婚意願的因素：想要與心愛的人共組家庭', '可能使擁有結婚意願的因素：想要讓伴侶關係被法律所認同', '可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平']
+Values: 5, 5, 5
+Rule: 5-family_planning→ 5-legal_recognition→ 5-sacrifice_lifestyle
+Support: 0.12698412698412698
+Confidence: 0.7619047619047619
+Lift: 2.1446808510638298
+==================================
+235
+Columns: ['可能使擁有結婚意願的因素：想要與心愛的人共組家庭', '您是否已婚？', '可能使擁有結婚意願的因素：想要讓伴侶關係被法律所認同']
+Values: 5, 否, 5
+Rule: 5-family_planning→ 否-is_married→ 5-legal_recognition
+Support: 0.12698412698412698
+Confidence: 0.8421052631578947
+Lift: N/A
+==================================
+236
+Columns: ['最高學歷', '可能使擁有結婚意願的因素：想要與心愛的人共組家庭', '可能使擁有結婚意願的因素：想要讓伴侶關係被法律所認同']
+Values: 大學, 5, 5
+Rule: 大學-education→ 5-family_planning→ 5-legal_recognition
+Support: 0.15079365079365079
+Confidence: 0.76
+Lift: 2.425531914893617
+==================================
+237
+Columns: ['可能使擁有結婚意願的因素：想要與心愛的人共組家庭', '您是否已婚？', '可能使擁有結婚意願的因素：想要讓伴侶關係被法律所認同']
+Values: 5, 是, 5
+Rule: 5-family_planning→ 是-is_married→ 5-legal_recognition
+Support: 0.12698412698412698
+Confidence: 0.8421052631578947
+Lift: 2.382978723404255
+==================================
+238
+Columns: ['生理性別', '可能使擁有結婚意願的因素：想要與心愛的人共組家庭', '可能使擁有結婚意願的因素：想要讓伴侶關係被法律所認同']
+Values: 男, 5, 5
+Rule: 男-gender→ 5-family_planning→ 5-legal_recognition
+Support: 0.15873015873015872
+Confidence: 0.7407407407407407
+Lift: 2.3311748381128585
+==================================
+239
+Columns: ['可能使擁有結婚意願的因素：想要與心愛的人共組家庭', '最高學歷', '可能使擁有結婚意願的因素：想要伴侶一同承擔責任']
+Values: 5, 大學, 5
+Rule: 5-family_planning→ 大學-education→ 5-responsibility_sharing
+Support: 0.12698412698412698
+Confidence: 0.64
+Lift: 2.52
+==================================
+240
+Columns: ['可能使擁有結婚意願的因素：想要與心愛的人共組家庭', '您是否已婚？', '可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭']
+Values: 5, 否, 5
+Rule: 5-family_planning→ 否-is_married→ 5-stable_career_before_family
+Support: 0.1349206349206349
+Confidence: 0.7727272727272727
+Lift: 2.390625
+==================================
+241
+Columns: ['最高學歷', '可能使擁有結婚意願的因素：想要與心愛的人共組家庭', '您是否已婚？']
+Values: 大學, 5, 否
+Rule: 大學-education→ 5-family_planning→ 否-is_married
+Support: 0.14285714285714285
+Confidence: 0.6428571428571429
+Lift: 1.3341176470588236
+==================================
+242
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔結婚開銷', '可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭', '可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平']
+Values: 5, 5, 5
+Rule: 5-marriage_expenses_affordability→ 5-stable_career_before_family→ 5-sacrifice_lifestyle
+Support: 0.12698412698412698
+Confidence: 0.6666666666666666
+Lift: 3.3157894736842106
+==================================
+243
+Columns: ['您是否已婚？', '可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭', '可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平']
+Values: 否, 5, 5
+Rule: 否-is_married→ 5-stable_career_before_family→ 5-sacrifice_lifestyle
+Support: 0.14285714285714285
+Confidence: 0.8181818181818182
+Lift: 3.2215909090909096
+==================================
+244
+Columns: ['生理性別', '您的年齡', '您是否已婚？']
+Values: 男, 50～59, 是
+Rule: 男-gender→ 50～59-age→ 是-is_married
+Support: 0.1746031746031746
+Confidence: 0.9166666666666666
+Lift: 2.0263157894736845
+==================================
+245
+Columns: ['最高學歷', '生理性別', '您是否已婚？']
+Values: 大學, 女, 否
+Rule: 大學-education→ 女-gender→ 否-is_married
+Support: 0.1984126984126984
+Confidence: 0.6944444444444444
+Lift: 1.3624567474048446
+==================================
+246
+Columns: ['可能使擁有結婚意願的因素：傳統上結婚是人生的必經之路', '可能使擁有結婚意願的因素：想要小孩', '您是否已婚？', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 1, 1, 否, 1
+Rule: 1-tradition→ 1-desire_for_children→ 否-is_married→ 1-afford_house_price
+Support: 0.12698412698412698
+Confidence: 0.8421052631578947
+Lift: 3.37123745819398
+==================================
+247
+Columns: ['可能使擁有結婚意願的因素：傳統上結婚是人生的必經之路', '您認為政府在買房上已擁有完善配套措施的程度為？', '您是否已婚？', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 1, 1, 否, 1
+Rule: 1-tradition→ 1-government_support→ 否-is_married→ 1-afford_house_price
+Support: 0.14285714285714285
+Confidence: 0.782608695652174
+Lift: 2.6999999999999997
+==================================
+248
+Columns: ['您的年齡', '您認為政府在買房上已擁有完善配套措施的程度為？', '您是否已婚？', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 21～29, 1, 否, 1
+Rule: 21～29-age→ 1-government_support→ 否-is_married→ 1-afford_house_price
+Support: 0.1349206349206349
+Confidence: 0.7083333333333334
+Lift: 2.660869565217391
+==================================
+249
+Columns: ['最高學歷', '您認為政府在買房上已擁有完善配套措施的程度為？', '您是否已婚？', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 大學, 1, 否, 1
+Rule: 大學-education→ 1-government_support→ 否-is_married→ 1-afford_house_price
+Support: 0.12698412698412698
+Confidence: 0.6153846153846154
+Lift: 1.3006451612903227
+==================================
+250
+Columns: ['您的年齡', '可能影響您結婚意願的經濟因素：無法負擔高額房價', '您是否已婚？', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 21～29, 5, 否, 1
+Rule: 21～29-age→ 5-affordability→ 否-is_married→ 1-afford_house_price
+Support: 0.12698412698412698
+Confidence: 0.6666666666666666
+Lift: 2.5043478260869563
+==================================
+251
+Columns: ['您的年齡', '最高學歷', '您是否已婚？', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 21～29, 大學, 否, 1
+Rule: 21～29-age→ 大學-education→ 否-is_married→ 1-afford_house_price
+Support: 0.12698412698412698
+Confidence: 0.6666666666666666
+Lift: 1.8032200357781754
+==================================
+252
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔結婚開銷', '可能影響您結婚意願的經濟因素：無法負擔子女教養費用', '可能影響您結婚意願的經濟因素：無法負擔高額房價', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 5, 5, 5, 1
+Rule: 5-marriage_expenses_affordability→ 5-child_rearing_cost_affordability→ 5-affordability→ 1-afford_house_price
+Support: 0.1349206349206349
+Confidence: 0.7083333333333334
+Lift: 3.6060606060606064
+==================================
+253
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔子女教養費用', '可能影響您結婚意願的經濟因素：無法負擔高額房價', '您是否已婚？', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？']
+Values: 5, 5, 否, 1
+Rule: 5-child_rearing_cost_affordability→ 5-affordability→ 否-is_married→ 1-afford_house_price
+Support: 0.12698412698412698
+Confidence: 0.7619047619047619
+Lift: 2.8717948717948723
+==================================
+254
+Columns: ['您的年齡', '可能影響您結婚意願的經濟因素：無法負擔子女教養費用', '可能影響您結婚意願的經濟因素：無法負擔高額房價', '您是否已婚？']
+Values: 21～29, 5, 5, 否
+Rule: 21～29-age→ 5-child_rearing_cost_affordability→ 5-affordability→ 否-is_married
+Support: 0.14285714285714285
+Confidence: 0.782608695652174
+Lift: 3.857142857142857
+==================================
+255
+Columns: ['您的年齡', '可能使擁有結婚意願的因素：想要與心愛的人共組家庭', '可能影響您結婚意願的經濟因素：無法負擔高額房價', '您是否已婚？']
+Values: 21～29, 5, 5, 否
+Rule: 21～29-age→ 5-family_planning→ 5-affordability→ 否-is_married
+Support: 0.1349206349206349
+Confidence: 0.7391304347826086
+Lift: 3.3260869565217392
+==================================
+256
+Columns: ['您的年齡', '可能影響您結婚意願的經濟因素：無法負擔高額房價', '您是否已婚？', '可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平']
+Values: 21～29, 5, 否, 5
+Rule: 21～29-age→ 5-affordability→ 否-is_married→ 5-sacrifice_lifestyle
+Support: 0.12698412698412698
+Confidence: 0.6956521739130435
+Lift: 4.0
+==================================
+257
+Columns: ['您的年齡', '可能影響您結婚意願的經濟因素：無法負擔高額房價', '可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭', '您是否已婚？']
+Values: 21～29, 5, 5, 否
+Rule: 21～29-age→ 5-affordability→ 5-stable_career_before_family→ 否-is_married
+Support: 0.1349206349206349
+Confidence: 0.7391304347826086
+Lift: 3.825
+==================================
+258
+Columns: ['您的年齡', '最高學歷', '可能使擁有結婚意願的因素：想要與心愛的人共組家庭', '您是否已婚？']
+Values: 21～29, 大學, 5, 否
+Rule: 21～29-age→ 大學-education→ 5-family_planning→ 否-is_married
+Support: 0.1349206349206349
+Confidence: 0.7391304347826086
+Lift: 2.467741935483871
+==================================
+259
+Columns: ['您的年齡', '最高學歷', '生理性別', '您是否已婚？']
+Values: 21～29, 大學, 女, 否
+Rule: 21～29-age→ 大學-education→ 女-gender→ 否-is_married
+Support: 0.14285714285714285
+Confidence: 0.72
+Lift: 1.303448275862069
+==================================
+260
+Columns: ['可能影響您結婚意願的非經濟因素：不知是否對方值得信任', '可能影響您結婚意願的非經濟因素：害怕要與對方家庭磨合', '可能影響您結婚意願的非經濟因素：不想養小孩', '可能影響您結婚意願的非經濟因素：婚後會失去自由']
+Values: 4, 4, 4, 4
+Rule: 4-trustworthiness→ 4-family_adjustment_concerns→ 4-fear_of_commitment→ 4-freedom_loss_after_marriage
+Support: 0.12698412698412698
+Confidence: 0.7619047619047619
+Lift: 4.822966507177034
+==================================
+261
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔子女教養費用', '可能影響您結婚意願的經濟因素：無法負擔高額房價', '可能使擁有結婚意願的因素：想要讓伴侶關係被法律所認同', '可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平']
+Values: 5, 5, 5, 5
+Rule: 5-child_rearing_cost_affordability→ 5-affordability→ 5-legal_recognition→ 5-sacrifice_lifestyle
+Support: 0.12698412698412698
+Confidence: 0.7272727272727273
+Lift: 3.789473684210526
+==================================
+262
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔子女教養費用', '可能影響您結婚意願的經濟因素：無法負擔高額房價', '可能影響您結婚意願的經濟因素：無法負擔結婚開銷', '可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平']
+Values: 5, 5, 5, 5
+Rule: 5-child_rearing_cost_affordability→ 5-affordability→ 5-marriage_expenses_affordability→ 5-sacrifice_lifestyle
+Support: 0.1349206349206349
+Confidence: 0.7083333333333334
+Lift: 4.026315789473684
+==================================
+263
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔子女教養費用', '可能影響您結婚意願的經濟因素：無法負擔高額房價', '您是否已婚？', '可能影響您結婚意願的經濟因素：無法負擔結婚開銷']
+Values: 5, 5, 否, 5
+Rule: 5-child_rearing_cost_affordability→ 5-affordability→ 否-is_married→ 5-marriage_expenses_affordability
+Support: 0.12698412698412698
+Confidence: 0.6666666666666666
+Lift: 3.5244755244755246
+==================================
+264
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔子女教養費用', '可能影響您結婚意願的經濟因素：無法負擔高額房價', '可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭', '可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平']
+Values: 5, 5, 5, 5
+Rule: 5-child_rearing_cost_affordability→ 5-affordability→ 5-stable_career_before_family→ 5-sacrifice_lifestyle
+Support: 0.14285714285714285
+Confidence: 0.6428571428571429
+Lift: 3.681818181818182
+==================================
+265
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔子女教養費用', '可能影響您結婚意願的經濟因素：無法負擔高額房價', '您是否已婚？', '可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平']
+Values: 5, 5, 否, 5
+Rule: 5-child_rearing_cost_affordability→ 5-affordability→ 否-is_married→ 5-sacrifice_lifestyle
+Support: 0.1349206349206349
+Confidence: 0.6071428571428571
+Lift: 2.942307692307692
+==================================
+266
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔子女教養費用', '可能影響您結婚意願的經濟因素：無法負擔高額房價', '可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭', '您是否已婚？']
+Values: 5, 5, 5, 否
+Rule: 5-child_rearing_cost_affordability→ 5-affordability→ 5-stable_career_before_family→ 否-is_married
+Support: 0.12698412698412698
+Confidence: 0.64
+Lift: 3.272727272727273
+==================================
+267
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔高額房價', '可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭', '您是否已婚？', '可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平']
+Values: 5, 5, 否, 5
+Rule: 5-affordability→ 5-stable_career_before_family→ 否-is_married→ 5-sacrifice_lifestyle
+Support: 0.1349206349206349
+Confidence: 0.6071428571428571
+Lift: 3.894545454545455
+==================================
+268
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔子女教養費用', '可能影響您結婚意願的經濟因素：無法負擔結婚開銷', '可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭', '可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平']
+Values: 5, 5, 5, 5
+Rule: 5-child_rearing_cost_affordability→ 5-marriage_expenses_affordability→ 5-stable_career_before_family→ 5-sacrifice_lifestyle
+Support: 0.12698412698412698
+Confidence: 0.6666666666666666
+Lift: 4.1652892561983474
+==================================
+269
+Columns: ['可能影響您結婚意願的經濟因素：無法負擔子女教養費用', '您是否已婚？', '可能影響您結婚意願的經濟因素：想要先穩定事業再組建家庭', '可能影響您結婚意願的經濟因素：不想因為結婚犧牲現有生活水平']
+Values: 5, 否, 5, 5
+Rule: 5-child_rearing_cost_affordability→ 否-is_married→ 5-stable_career_before_family→ 5-sacrifice_lifestyle
+Support: 0.12698412698412698
+Confidence: 0.6666666666666666
+Lift: 4.1652892561983474
+==================================

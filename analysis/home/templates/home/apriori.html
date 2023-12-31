@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conclusion</title>
+    <script type="text/javascript" src="{% static "js/nav.js" %}"> </script>
+    <link href="{% static "css/apriori.css" %}" rel="stylesheet">   
+    
+    </style>
+</head>
+<body>
+
+    {% include 'home\header.html' %}
+    <div class="wrapper">
+
+        <div class="content">
+            <h1>Conclusion</h1>
+            
+            <div id="jsonOutput" class="adjustdiv">
+                
+                
+                
+            </div>    
+        </div>    
+    </div>
+
+
+
+</body>
+</html>
+   
+<script>
+    var jsonData = {{ json|safe }};
+    var num = 0;
+    var container = document.getElementById("jsonOutput");
+
+    // Loop through the main data
+    for (var mainKey in jsonData) {
+        // Create and append the main title
+        var mainTitle = document.createElement("h2");
+        mainTitle.textContent = mainKey+" Attributes";
+        container.appendChild(mainTitle);
+
+        // Get the content array
+        var content = jsonData[mainKey];
+
+        // Loop through the content
+        for (var subKey in content) {
+            // Create and append the sub-title
+            var subTitle = document.createElement("h3");
+            subTitle.textContent = "* "+subKey;
+            container.appendChild(subTitle);
+
+            // Get the sub-content
+            var subContent = content[subKey];
+
+            // Loop through the sub-content
+            for (var detailKey in subContent) {
+                // Create and append the sub-sub-title
+                var subSubTitle = document.createElement("h4");
+                subSubTitle.textContent = detailKey;
+                container.appendChild(subSubTitle);
+
+                // Get the details array
+                var details = subContent[detailKey];
+
+                // Create and append the details list
+                var detailsList = document.createElement("ul");
+                for (var i = 0; i < details.length; i++) {
+                    var detailItem = details[i];
+                    
+                    var divItem = document.createElement("div");
+                    divItem.textContent=num++;
+                    detailsList.appendChild(divItem);
+                    // Loop through the details and create list items
+                    for (var detailItemKey in detailItem) {
+                        var listItem = document.createElement("li");
+                        listItem.textContent = detailItemKey + ": " + detailItem[detailItemKey];
+                        detailsList.appendChild(listItem);
+                    }
+                }
+                container.appendChild(detailsList);
+            }
+        }
+    }
+</script>

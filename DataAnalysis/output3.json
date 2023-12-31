@@ -1,0 +1,64 @@
+{
+  "\u8acb\u554f\u60a8\u8a8d\u70ba\u81ea\u5df1\u76ee\u524d\u85aa\u8cc7\u80fd\u7368\u81ea\u8ca0\u64d4\u9010\u5e74\u6500\u5347\u7684\u623f\u50f9\u7684\u7a0b\u5ea6\u70ba\uff1f": {
+    "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u9ad8\u984d\u623f\u50f9": [
+      {
+        "Rule": "1 \u2192 5",
+        "Support": "0.216",
+        "Confidence": "0.5192307692307693",
+        "Lift": "1.509391771019678"
+      }
+    ],
+    "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u7d50\u5a5a\u958b\u92b7": [
+      {
+        "Rule": "1 \u2192 5",
+        "Support": "0.168",
+        "Confidence": "0.35000000000000003",
+        "Lift": "1.5625"
+      }
+    ],
+    "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u60f3\u8981\u5148\u7a69\u5b9a\u4e8b\u696d\u518d\u7d44\u5efa\u5bb6\u5ead": [
+      {
+        "Rule": "1 \u2192 5",
+        "Support": "0.16",
+        "Confidence": "0.3921568627450981",
+        "Lift": "1.3616557734204795"
+      }
+    ],
+    "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u7121\u6cd5\u8ca0\u64d4\u5b50\u5973\u6559\u990a\u8cbb\u7528": [
+      {
+        "Rule": "1 \u2192 5",
+        "Support": "0.184",
+        "Confidence": "0.3770491803278688",
+        "Lift": "1.3466042154566742"
+      }
+    ]
+  },
+  "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u60f3\u8981\u5c0f\u5b69": {
+    "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u990a\u5c0f\u5b69": [
+      {
+        "Rule": "1 \u2192 5",
+        "Support": "0.216",
+        "Confidence": "0.4909090909090909",
+        "Lift": "1.534090909090909"
+      }
+    ]
+  },
+  "\u53ef\u80fd\u4f7f\u64c1\u6709\u7d50\u5a5a\u610f\u9858\u7684\u56e0\u7d20\uff1a\u50b3\u7d71\u4e0a\u7d50\u5a5a\u662f\u4eba\u751f\u7684\u5fc5\u7d93\u4e4b\u8def": {
+    "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u56e0\u70ba\u7d50\u5a5a\u72a7\u7272\u73fe\u6709\u751f\u6d3b\u6c34\u5e73": [
+      {
+        "Rule": "1 \u2192 5",
+        "Support": "0.16",
+        "Confidence": "0.4651162790697675",
+        "Lift": "1.3842746400885937"
+      }
+    ],
+    "\u53ef\u80fd\u5f71\u97ff\u60a8\u7d50\u5a5a\u610f\u9858\u7684\u975e\u7d93\u6fdf\u56e0\u7d20\uff1a\u4e0d\u60f3\u990a\u5c0f\u5b69": [
+      {
+        "Rule": "1 \u2192 5",
+        "Support": "0.168",
+        "Confidence": "0.368421052631579",
+        "Lift": "1.3955342902711323"
+      }
+    ]
+  }
+}

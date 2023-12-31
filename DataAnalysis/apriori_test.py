@@ -1,52 +1,3 @@
-# import pandas as pd
-# from apyori import apriori
-# import os
-
-# script_dir = os.path.dirname(os.path.abspath(__file__))
-# age = os.path.join(script_dir, "collect.xlsx")
-# all_columns = pd.read_excel(age, nrows=0).columns.tolist()
-# df = pd.read_excel(age)
-# last_column_index = df.index[-1]
-# print("最后一列的索引:", last_column_index)
-# total_columns = len(all_columns)
-
-# outputnum=0
-# output_file_path = os.path.join(script_dir, "output.txt")
-# with open(output_file_path, "w") as output_file:
-#     for k in range(7,total_columns-1):
-#         for i in range(6):
-
-#             selected_columns = [i+1, k]
-            
-#             selected_columns_names = [all_columns[j] for j in selected_columns]
-            
-#             print(selected_columns_names)
-#             df = pd.read_excel(age, usecols=selected_columns)
-#             df = df.astype(str)  # Use this line for replacement
-
-#             data_list = df.values.tolist()
-#             # print(data_list)
-
-#             # 使用apriori
-#             results = list(apriori(data_list, min_support=0.1, min_confidence=0.3, min_lift=1.3, max_length=3))# print(results)
-#             # 
-            
-#             for result in results:
-#                 pair = result[0] 
-#                 products = [x for x in pair]
-#                 outputnum=outputnum+1
-#                 output_file.write(str(outputnum)+ "\n")
-#                 output_file.write("Selected Columns: " + str(selected_columns_names) + "\n")
-#                 output_file.write("Rule: " + products[0] + " →" + products[1] + "\n")
-#                 output_file.write("Support: " + str(result[1]) + "\n")
-#                 output_file.write("Confidence: " + str(result[2][0][2]) + "\n")
-#                 if len(result[2]) > 1:
-#                     output_file.write("Lift: " + str(result[2][1][3]) + "\n")
-#                 else:
-#                     output_file.write("Lift: " + "N\A" + "\n")
-#                 output_file.write("==================================\n")
-
-# print("Output written to:", output_file_path)import pandas as pd
 import pandas as pd
 from apyori import apriori
 import os
@@ -64,18 +15,18 @@ total_columns = len(all_columns)
 
 output_dict = {}
 
-output_file_path = os.path.join(script_dir, "output.txt")
+output_file_path = os.path.join(script_dir, "output3.txt")
 
-with open(output_file_path, "w", encoding="utf-8") as output_file:
+with open(output_file_path, "w") as output_file:
     for k in range(7, total_columns-1):
         # Move data_list initialization here
         data_list = df.values.tolist()
-        for i in range(6):
+        for i in range(k+1,total_columns-1):
             selected_columns = [i+1, k]
             selected_columns_names = [all_columns[j] for j in selected_columns]
 
             print(selected_columns_names)
-            if i < len(data_list[0]):  # check if i is within the range
+            if i < len(data_list[0]):  # Add this condition to check if i is within the range
 
                 df_copy = df.copy()
                 df_copy = df_copy.iloc[:, selected_columns]
@@ -83,14 +34,14 @@ with open(output_file_path, "w", encoding="utf-8") as output_file:
 
                 data_list_copy = df_copy.values.tolist()
 
-                # use apriori
-                results = list(apriori(data_list_copy, min_support=0.1, min_confidence=0.3, min_lift=1.3, max_length=3))
+                # 使用 apriori
+                results = list(apriori(data_list_copy, min_support=0.15, min_confidence=0.3, min_lift=1.3, max_length=2))
 
             for result in results:
                 pair = result[0]
                 products = [x for x in pair]
 
-                # 構建外層字典的鍵
+                                   # 構建外層字典的鍵
                 outer_key = selected_columns_names[-1]
 
                 # 構建內層字典的鍵 (加入 selected_columns_names)
@@ -129,7 +80,6 @@ with open(output_file_path, "w", encoding="utf-8") as output_file:
                 print("==================================")
                 outputnum = outputnum + 1
                 output_file.write(str(outputnum) + "\n")
-                output_file.write("all of selected: " + str(products) + "\n")
                 output_file.write("Selected Columns: " + str(selected_columns_names) + "\n")
                 output_file.write("Rule: " + inner_dict["Rule"] + "\n")
                 output_file.write("Support: " + inner_dict["Support"] + "\n")
@@ -139,7 +89,7 @@ with open(output_file_path, "w", encoding="utf-8") as output_file:
 # ...
 
 # 將最終的字典轉換為 JSON 寫入文件
-output_json_path = os.path.join(script_dir, "output.json")
+output_json_path = os.path.join(script_dir, "output3.json")
 with open(output_json_path, "w") as json_file:
     json.dump(output_dict, json_file, indent=2)
 

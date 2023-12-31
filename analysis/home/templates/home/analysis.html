@@ -19,13 +19,13 @@
             
             <div id="analysis_container">
                 <div id="analysis_sidebar">
-                    <div class="analysis_menu-title" onclick="toggleSubMenu('analysis_menu1')">Raw Data</div>
+                    <div class="analysis_menu-title" >Raw Data</div>
                     <div class="analysis_sub-menu" id="analysis_menu1">
                         <div class="analysis_sub-menu-item" onclick="showContent('content1')">Questionnaire Design</div>
                         <div class="analysis_sub-menu-item" onclick="showContent('content2')">Questionnaire Data</div>
                     </div>
 
-                    <div class="analysis_menu-title" onclick="toggleSubMenu('analysis_menu2')">Analysis</div>
+                    <div class="analysis_menu-title" >Analysis</div>
                     <div class="analysis_sub-menu" id="analysis_menu2">
                         <div class="analysis_sub-menu-item" onclick="showContent('content3')">K-Means</div>
                         <div class="analysis_sub-menu-item" onclick="showContent('content4')">Apriori</div>
@@ -199,17 +199,22 @@
                                 <input type="button" value="Filiter" id="filterButton"/>
                             </form>
                         </div>
-                        
-                        <div id="ajaxResponse">
-
+                        <div id="ajaxResponse" class="styled-div">
+                            <p class="optgroup">Optgroup: </p>
+                            <p class="option">Option: </p>
+                            <p class="filtered-data">Filtered Data Number: </p>
+                            <p class="ratio">Ratio of all data: </p>
                         </div>
+                        
                         <h3>Visualization</h3>
-                        <div id="sectiontoputgraph">
-                            {% for data_object in barchart %}
-                            <div class="wgraph"> 
-                                {{data_object|safe}}
+                        <div class="adjustdiv">
+                            <div id="sectiontoputgraph">
+                                {% for data_object in barchart %}
+                                <div class="wgraph"> 
+                                    {{data_object|safe}}
+                                </div>
+                                {% endfor %}
                             </div>
-                            {% endfor %}
                         </div>
                         <h3>Raw Data</h3>
                         <div class="adjustdiv">
@@ -265,6 +270,7 @@
                     </div>
                     <div id="content4" style="display: none;">
                         <h2>Relationl Factors for Marriage Intention</h2>
+                        <div id="jsonOutput" class="adjustdiv"></div>
                     </div>
                 </div>{% comment %} analysis_main-content  {% endcomment %}
 
@@ -280,10 +286,10 @@
 </body>
 </html>
 <script>
-    function toggleSubMenu(menuId) {
+    {% comment %} function toggleSubMenu(menuId) {
         const subMenu = document.getElementById(menuId);
         subMenu.style.display = subMenu.style.display === 'none' ? 'block' : 'none';
-    }
+    } {% endcomment %}
     function showContent(contentId) {
         const contentDiv = document.getElementById(contentId);
         // Hide all content divs
@@ -373,6 +379,61 @@
     
             // Append the row to the container
             container.append(rowHtml);
+        }
+    }
+
+    var jsonData = {{ json|safe }};
+    var num = 0;
+
+    var container = document.getElementById("jsonOutput");
+
+    // Loop through the main data
+    for (var mainKey in jsonData) {
+        // Create and append the main title
+        var mainTitle = document.createElement("h2");
+        mainTitle.textContent = mainKey+" Attributes";
+        container.appendChild(mainTitle);
+
+        // Get the content array
+        var content = jsonData[mainKey];
+
+        // Loop through the content
+        for (var subKey in content) {
+            // Create and append the sub-title
+            var subTitle = document.createElement("h3");
+            subTitle.textContent = "* "+subKey;
+            container.appendChild(subTitle);
+
+            // Get the sub-content
+            var subContent = content[subKey];
+
+            // Loop through the sub-content
+            for (var detailKey in subContent) {
+                // Create and append the sub-sub-title
+                var subSubTitle = document.createElement("h4");
+                subSubTitle.textContent = detailKey;
+                container.appendChild(subSubTitle);
+
+                // Get the details array
+                var details = subContent[detailKey];
+
+                // Create and append the details list
+                var detailsList = document.createElement("ul");
+                for (var i = 0; i < details.length; i++) {
+                    var detailItem = details[i];
+                    
+                    var divItem = document.createElement("div");
+                    divItem.textContent=num++;
+                    detailsList.appendChild(divItem);
+                    // Loop through the details and create list items
+                    for (var detailItemKey in detailItem) {
+                        var listItem = document.createElement("li");
+                        listItem.textContent = detailItemKey + ": " + detailItem[detailItemKey];
+                        detailsList.appendChild(listItem);
+                    }
+                }
+                container.appendChild(detailsList);
+            }
         }
     }
 </script>
