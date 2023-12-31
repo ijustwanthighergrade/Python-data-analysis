@@ -7,3 +7,4 @@ apyori
 mpld3
 seaborn
 sklearn
+prettytable

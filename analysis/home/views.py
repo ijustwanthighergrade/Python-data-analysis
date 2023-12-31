@@ -109,21 +109,19 @@ def analysis(request: HttpRequest):
     '學生無收入'
     ]
     alliwanttoshow['marriageornot']=["是","否"]
-    alliwanttoshow['column_names'] = [
-    '時間戳記', '生理性別', '最高學歷', '您的年齡', '目前月薪資水平(台幣)', '您是否已婚？',
-    '您目前是否有結婚意願(不論單身與否)', '您認同買房是影響多數人結婚的重要因素嗎？', '請問買房影響您結婚意願的程度為？',
-    '您對結婚一定得買房的認同度為何？', '請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？',
-    '您認同買房會影響到個人生活水平的程度為？', '您認為政府在買房上已擁有完善配套措施的程度為？',
-    '想要與心愛的人共組家庭', '想要小孩', '想要讓伴侶關係被法律所認同', '傳統上結婚是人生的必經之路',
-    '想要伴侶一同承擔責任', '不想因為結婚犧牲現有生活水平', '無法負擔高額房價', '無法負擔結婚開銷',
-    '想要先穩定事業再組建家庭', '無法負擔子女教養費用', '只需要情感需求，不想綁定法律義務',
-    '害怕因為結婚要進行家庭調整', '信任度', '害怕承擔長期法律義務', '害怕婚後失去個人自由', '尚未找到適合的結婚對象',
-    '害怕婚姻失敗', '任何指教'
-    ]
+    alliwanttoshow['column_names'] = ["時間戳記", "生理性別", "最高學歷", "您的年齡", "目前月薪資水平(台幣)", "您是否已婚？", "您目前是否有結婚意願(不論單身與否)",
+     "您認同買房是影響多數人結婚的重要因素嗎？", "請問買房影響您結婚意願的程度為？", "您對結婚一定得買房的認同度為何？",
+     "請問您認為自己目前薪資能獨自負擔逐年攀升的房價的程度為？", "您認同買房會影響到個人生活水平的程度為？",
+     "您認為政府在買房上已擁有完善配套措施的程度為？", "想要與心愛的人共組家庭", "想要小孩", "想要讓伴侶關係被法律所認同",
+     "傳統上結婚是人生的必經之路", "想要伴侶一同承擔責任", "不想因為結婚犧牲現有生活水平", "無法負擔高額房價", "無法負擔結婚開銷",
+     "想要先穩定事業再組建家庭", "無法負擔子女教養費用", "只需要情感需求，不想綁定法律義務", "害怕要與對方家庭磨合", "不知是否對方值得信任",
+     "不想養小孩", "婚後會失去自由", "沒有對象", "害怕婚姻失敗", "任何指教"]
     alliwanttoshow['data_list']=[]
     alliwanttoshow['optionalnum']=[1,2,3,4,5]
     allofdata=getalldata()
     allofdatanum=len(allofdata)
+    dictfordatalist1={}
+    dictfordatalist={}
     if request.GET.get('selected_option'):
         selected_option = request.GET.get('selected_option')
         html=""
@@ -133,12 +131,14 @@ def analysis(request: HttpRequest):
             alliwanttoshow['data_list']=filiterdata(optgroup,option)
             filiterdatanum=len(alliwanttoshow['data_list'])
             alliwanttoshow['html']=f"<div>Optgroup: {optgroup}, Option: {option}, Filitered Data Number: {filiterdatanum}, Ratio of all data: {filiterdatanum/allofdatanum}</div>"
-            alliwanttoshow['barchart']=create_bar_chart(count_results(alliwanttoshow['data_list']))
+            dictfordatalist=count_results(alliwanttoshow['data_list'])
+            alliwanttoshow['barchart']=create_bar_chart(dictfordatalist)
+            
         return JsonResponse(alliwanttoshow)
     else:
         alliwanttoshow['data_list']=allofdata
-        
-        alliwanttoshow['barchart']=create_bar_chart(count_results(allofdata))
+        dictfordatalist=count_results(alliwanttoshow['data_list'])
+        alliwanttoshow['barchart']=create_bar_chart(dictfordatalist)
         # print(alliwanttoshow['barchart'])
         return render(request, 'home/analysis.html',alliwanttoshow)
 def count_results(allofdata):
@@ -261,6 +261,8 @@ def create_bar_chart(data):
             fig=fig_to_base64(fig)
             allofchart.append(fig)
     return allofchart
+
+
 
 # The graph in home
 def birthrate():

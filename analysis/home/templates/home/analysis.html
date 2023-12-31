@@ -44,6 +44,7 @@
                     </div>
                     <div id="content2" style="display: none;">
                         <h2>Questionnaire Data</h2>
+                        <h3>Filiter</h3>
                         <div>
                             <form action="/analysis">
                                 <select id="attr_select" name="selected_option">
@@ -198,9 +199,19 @@
                                 <input type="button" value="Filiter" id="filterButton"/>
                             </form>
                         </div>
+                        
                         <div id="ajaxResponse">
 
                         </div>
+                        <h3>Chart</h3>
+                        <div id="sectiontoputgraph">
+                            {% for data_object in barchart %}
+                            <div class="wgraph"> 
+                                {{data_object|safe}}
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <h3>Raw Data</h3>
                         <div class="adjustdiv">
                             <table id="dataListContainer">
                                 <tr>
@@ -244,13 +255,6 @@
                                 </tr>
                                 {% endfor %}
                             </table>
-                        </div>
-                        <div id="sectiontoputgraph">
-                            {% for data_object in barchart %}
-                            <div class="wgraph"> 
-                                {{data_object|safe}}
-                            </div>
-                            {% endfor %}
                         </div>
                     </div>
                     <div id="content3" style="display: none;">

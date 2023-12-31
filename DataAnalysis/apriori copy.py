@@ -6,6 +6,15 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 age = os.path.join(script_dir, "collect.xlsx")
 all_columns = pd.read_excel(age, nrows=0).columns.tolist()
 df = pd.read_excel(age)
+# 定義一個將數值轉換為正向、負向或中立的函數
+def classify_value(value):
+    if value >= 4:
+        return '正向'
+    elif value <= 2:
+        return '負向'
+    else:
+        return '中立'
+
 
 total_columns = len(all_columns)
 
@@ -30,7 +39,7 @@ with open(output_file_path, "w") as output_file:
                 # print(data_list)
 
                 # 使用apriori
-                results = list(apriori(data_list, min_support=0.1, min_confidence=0.3, min_lift=1.3, max_length=2))# print(results)
+                results = list(apriori(data_list, min_support=0.1, min_confidence=0.3, min_lift=1.3, max_length=3))# print(results)
                 # 
                 
                 for result in results:
