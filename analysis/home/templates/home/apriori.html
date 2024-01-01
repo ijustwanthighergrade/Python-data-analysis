@@ -36,33 +36,63 @@
     var jsonData = {{ json|safe }};
     var num = 0;
     var container = document.getElementById("jsonOutput");
-
+    var butnum=1;
     // Loop through the main data
     for (var mainKey in jsonData) {
         // Create and append the main title
+        var mainTitlediv = document.createElement("div");
+        container.appendChild(mainTitlediv);
         var mainTitle = document.createElement("h2");
+        mainTitle.setAttribute('class','analysis_menu-title');
+        var thisbutnum= 'toggleButton'+butnum;
+        mainTitle.setAttribute('id',thisbutnum);
+        
         mainTitle.textContent = mainKey+" Attributes";
-        container.appendChild(mainTitle);
+        mainTitlediv.appendChild(mainTitle);
 
         // Get the content array
         var content = jsonData[mainKey];
 
+        var  subTitlediv= document.createElement("div");
+        subTitlediv.setAttribute('class','analysis_sub-menu');
+
+        thisbutnum='analysis_menu'+butnum;
+        subTitlediv.setAttribute('id',thisbutnum);
+        subTitlediv.style.display = 'block';
+        mainTitlediv.appendChild(subTitlediv);
         // Loop through the content
         for (var subKey in content) {
             // Create and append the sub-title
-            var subTitle = document.createElement("h3");
-            subTitle.textContent = "* "+subKey;
-            container.appendChild(subTitle);
+            
 
+            var subTitle = document.createElement("h3");
+            subTitle.setAttribute('class','analysis_sub_menu-title');
+            thisbutnum= 'subtoggleButton'+butnum;
+            subTitle.setAttribute('id',thisbutnum);
+            subTitle.textContent = "* "+subKey;
+            
+            subTitlediv.appendChild(subTitle);
+
+            var  subsubTitlediv= document.createElement("div");
+            subsubTitlediv.setAttribute('class','analysis_sub_sub-menu');
+
+            thisbutnum='analysis_submenu'+butnum++;
+            subsubTitlediv.setAttribute('id',thisbutnum);
+            subsubTitlediv.style.display = 'block';
+            subTitlediv.appendChild(subsubTitlediv);
             // Get the sub-content
             var subContent = content[subKey];
 
             // Loop through the sub-content
             for (var detailKey in subContent) {
                 // Create and append the sub-sub-title
+                var  detailTitlediv= document.createElement("div");
+                detailTitlediv.setAttribute('class','analysis_sub-menu-item');
+                subsubTitlediv.appendChild(detailTitlediv);
+
                 var subSubTitle = document.createElement("h4");
                 subSubTitle.textContent = detailKey;
-                container.appendChild(subSubTitle);
+                detailTitlediv.appendChild(subSubTitle);
 
                 // Get the details array
                 var details = subContent[detailKey];
@@ -82,8 +112,34 @@
                         detailsList.appendChild(listItem);
                     }
                 }
-                container.appendChild(detailsList);
+                detailTitlediv.appendChild(detailsList);
             }
         }
     }
+
+    var toggleButtons = document.querySelectorAll('.analysis_menu-title');
+    var subtoggleButtons = document.querySelectorAll('.analysis_sub_menu-title');
+
+    // Add a click event listener to the h2 element
+    toggleButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+        // Get the corresponding 'div' element
+        var menuId = this.id.replace('toggleButton', ''); // Extract numeric part from ID
+        var subMenu = document.getElementById('analysis_menu' + menuId);
+
+        // Toggle the display property between 'block' and 'none'
+        subMenu.style.display = subMenu.style.display === 'block' ? 'none' : 'block';
+        });
+    });
+
+    subtoggleButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+        // Get the corresponding 'div' element
+        var menuId = this.id.replace('subtoggleButton', ''); // Extract numeric part from ID
+        var subMenu = document.getElementById('analysis_submenu' + menuId);
+
+        // Toggle the display property between 'block' and 'none'
+        subMenu.style.display = subMenu.style.display === 'block' ? 'none' : 'block';
+        });
+    });
 </script>

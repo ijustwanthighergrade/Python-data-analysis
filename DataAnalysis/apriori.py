@@ -84,7 +84,7 @@ with open(output_file_path, "w", encoding="utf-8") as output_file:
                 data_list_copy = df_copy.values.tolist()
 
                 # use apriori
-                results = list(apriori(data_list_copy, min_support=0.1, min_confidence=0.3, min_lift=1.3, max_length=3))
+                results = list(apriori(data_list_copy, min_support=0.1, min_confidence=0.3, min_lift=1.3, max_length=6))
 
             for result in results:
                 pair = result[0]

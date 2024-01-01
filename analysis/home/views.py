@@ -123,7 +123,7 @@ def analysis(request: HttpRequest):
     dictfordatalist={}
     
     
-    jsonf = os.path.join(script_dir, r'C:\Users\DAIYUNWU\Desktop\Python-data-analysis\analysis\output.json')
+    jsonf = os.path.join(script_dir, r'C:\Users\DAIYUNWU\Desktop\Python-data-analysis\analysis\outputtest.json')
     with open(jsonf, 'r') as json_file:
             data = json.load(json_file)
     alliwanttoshow['json']=data
@@ -139,7 +139,7 @@ def analysis(request: HttpRequest):
             alliwanttoshow['html']=f"<p class='optgroup'>Optgroup: {optgroup}</p>"
             alliwanttoshow['html']+=f"<p class='option'>Option: {option}</p>"
             alliwanttoshow['html']+=f"<p class='filtered-data'>Filtered Data Number: {filiterdatanum}</p>"
-            alliwanttoshow['html']+=f"<p class='ratio'>Ratio of all data: {filiterdatanum/allofdatanum}</p>"
+            alliwanttoshow['html']+=f"<p class='ratio'>Ratio of all data: {round(filiterdatanum/allofdatanum*100,4)}%</p>"
             dictfordatalist=count_results(alliwanttoshow['data_list'])
             alliwanttoshow['barchart']=create_bar_chart(dictfordatalist)
             
@@ -148,6 +148,7 @@ def analysis(request: HttpRequest):
         alliwanttoshow['data_list']=allofdata
         dictfordatalist=count_results(alliwanttoshow['data_list'])
         alliwanttoshow['barchart']=create_bar_chart(dictfordatalist)
+        alliwanttoshow['data_num']=allofdatanum
         # print(alliwanttoshow['barchart'])
         return render(request, 'home/analysis.html',alliwanttoshow)
 def count_results(allofdata):
@@ -159,7 +160,7 @@ def count_results(allofdata):
 
 def apriori(request):
     alliwanttoshow={}
-    jsonf = os.path.join(script_dir, r'C:\Users\DAIYUNWU\Desktop\Python-data-analysis\analysis\output.json')
+    jsonf = os.path.join(script_dir, r'C:\Users\DAIYUNWU\Desktop\Python-data-analysis\analysis\outputtest.json')
     with open(jsonf, 'r') as json_file:
             data = json.load(json_file)
     alliwanttoshow['json']=data
