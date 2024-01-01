@@ -111,7 +111,7 @@ with open(output_file_path, "w", encoding="utf-8") as output_file:
 
     
         inner_dict= {
-                    # "Values": f"{', '.join(selectedcolumn)}",
+                    "Attibutes": len(selectedcolumn),
                     "Rule": f"{'→ '.join(products)}",
                     "Support": str(product[1]),
                     "Confidence": str(product[2][0][2]),
