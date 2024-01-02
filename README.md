@@ -14,3 +14,5 @@ Then you can see the website.
 Use vscode open the terminal, and make sure the termial path is on project path,
 then type "git pull" on the terminal. p.s. don't type "" on terminal.
 
+If there's any problem please tell me - Dai Yun Wu
+
