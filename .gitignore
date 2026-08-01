@@ -1,0 +1,36 @@
+# Python 編譯快取
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 虛擬環境
+venv/
+.venv/
+env/
+ENV/
+
+# Django
+*.log
+local_settings.py
+staticfiles/
+media/
+
+# 環境變數（若日後把 SECRET_KEY 等敏感設定移出 settings.py）
+.env
+.env.*
+
+# 作業系統產生的檔案
+Thumbs.db
+ehthumbs.db
+desktop.ini
+.DS_Store
+
+# 編輯器／IDE
+.idea/
+*.swp
+*~
+
+# 注意：以下檔案「刻意」保持追蹤，請勿加入本檔案
+#   analysis/db.sqlite3   —— 內含 126 筆問卷資料，clone 後即可直接執行網站
+#   .vscode/settings.json —— 共用的編輯器設定
+#   analysis/outputtest.json —— Apriori 分析結果，/apriori 頁面需要
