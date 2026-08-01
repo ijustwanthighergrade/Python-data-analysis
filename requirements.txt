@@ -6,5 +6,5 @@ matplotlib
 apyori
 mpld3
 seaborn
-sklearn
+scikit-learn
 prettytable

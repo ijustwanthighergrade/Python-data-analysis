@@ -32,8 +32,9 @@ rcParams['font.sans-serif'] = ['Microsoft JhengHei']
 # 顯示全形字符警告
 rcParams['axes.unicode_minus'] = False
 script_dir = os.path.dirname(os.path.abspath(__file__))
+project_dir = os.path.dirname(script_dir)
 
-maritalstatus = os.path.join(script_dir, 'data\maritalstatus1.xlsx')
+maritalstatus = os.path.join(script_dir, r'data\maritalstatus1.xlsx')
 totalmarriages = os.path.join(script_dir, r'data\number_of_marriages1.xlsx')
 educationlevel = os.path.join(script_dir, r'data\educationlevel1.xlsx')
 file_path = os.path.join(script_dir, r'data\income1.xlsx')
@@ -123,7 +124,7 @@ def analysis(request: HttpRequest):
     dictfordatalist={}
     
     
-    jsonf = os.path.join(script_dir, r'C:\Users\DAIYUNWU\Desktop\Python-data-analysis\analysis\outputtest.json')
+    jsonf = os.path.join(project_dir, 'outputtest.json')
     with open(jsonf, 'r') as json_file:
             data = json.load(json_file)
     alliwanttoshow['json']=data
@@ -160,7 +161,7 @@ def count_results(allofdata):
 
 def apriori(request):
     alliwanttoshow={}
-    jsonf = os.path.join(script_dir, r'C:\Users\DAIYUNWU\Desktop\Python-data-analysis\analysis\outputtest.json')
+    jsonf = os.path.join(project_dir, 'outputtest.json')
     with open(jsonf, 'r') as json_file:
             data = json.load(json_file)
     alliwanttoshow['json']=data
@@ -641,7 +642,7 @@ def educationlevelM():
     script_dir = os.path.dirname(os.path.abspath(__file__))
 
         # Construct the full path to the Excel file
-    educationlevel = os.path.join(script_dir, 'data\educationlevel1.xlsx')
+    educationlevel = os.path.join(script_dir, r'data\educationlevel1.xlsx')
 
     df = pd.read_excel(educationlevel)
 
@@ -685,7 +686,7 @@ def educationlevelF():
     script_dir = os.path.dirname(os.path.abspath(__file__))
 
         # Construct the full path to the Excel file
-    educationlevel = os.path.join(script_dir, 'data\educationlevel1.xlsx')
+    educationlevel = os.path.join(script_dir, r'data\educationlevel1.xlsx')
 
     df = pd.read_excel(educationlevel)
 
@@ -755,7 +756,7 @@ def maritalstatusUNMARRIED():
     script_dir = os.path.dirname(os.path.abspath(__file__))
 
     # Construct the full path to the Excel file
-    maritalstatus = os.path.join(script_dir, 'data\maritalstatus1.xlsx')
+    maritalstatus = os.path.join(script_dir, r'data\maritalstatus1.xlsx')
 
     df = pd.read_excel(maritalstatus)
 
@@ -803,7 +804,7 @@ def maritalstatusDIVORCED():
     script_dir = os.path.dirname(os.path.abspath(__file__))
 
         # Construct the full path to the Excel file
-    maritalstatus = os.path.join(script_dir, 'data\maritalstatus1.xlsx')
+    maritalstatus = os.path.join(script_dir, r'data\maritalstatus1.xlsx')
 
     df = pd.read_excel(maritalstatus)
 
@@ -850,7 +851,7 @@ def maritalstatusWIDOWED():
     script_dir = os.path.dirname(os.path.abspath(__file__))
 
         # Construct the full path to the Excel file
-    maritalstatus = os.path.join(script_dir, 'data\maritalstatus1.xlsx')
+    maritalstatus = os.path.join(script_dir, r'data\maritalstatus1.xlsx')
 
     df = pd.read_excel(maritalstatus)
     # Filter data for 'Male' and 'Female'
@@ -894,7 +895,7 @@ def maritalstatusWIDOWED():
     script_dir = os.path.dirname(os.path.abspath(__file__))
 
         # Construct the full path to the Excel file
-    maritalstatus = os.path.join(script_dir, 'data\maritalstatus1.xlsx')
+    maritalstatus = os.path.join(script_dir, r'data\maritalstatus1.xlsx')
 
     file = pd.read_excel(maritalstatus)
 
@@ -1335,7 +1336,7 @@ def importdata():
     MarriageSurvey.objects.all().delete()
 
     # Path to Excel file
-    excel_file_path = r"C:\Users\DAIYUNWU\Desktop\Python-data-analysis\analysis\home\data\collect.xlsx"
+    excel_file_path = os.path.join(script_dir, r'data\collect.xlsx')
 
     # Read the Excel file and insert data into the database
     df = pd.read_excel(excel_file_path)

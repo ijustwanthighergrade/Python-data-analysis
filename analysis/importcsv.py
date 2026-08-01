@@ -12,7 +12,8 @@ from home.models import MarriageSurvey
 MarriageSurvey.objects.all().delete()
 
 # Path to Excel file
-excel_file_path = r"C:\Users\DAIYUNWU\Desktop\Python-data-analysis\analysis\home\data\collect.xlsx"
+script_dir = os.path.dirname(os.path.abspath(__file__))
+excel_file_path = os.path.join(script_dir, r'home\data\collect.xlsx')
 
 # Read the Excel file and insert data into the database
 df = pd.read_excel(excel_file_path)
